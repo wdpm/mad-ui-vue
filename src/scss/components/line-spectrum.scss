@@ -1,0 +1,27 @@
+.line-spectrum {
+  width: 100%;
+  // default height
+  height: 200px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.line-spectrum-canvas {
+  position: absolute;
+  z-index: -1;
+}
+
+.line-spectrum-body {
+  //stub
+}
+
+.line-spectrum-content {
+  font-size: 1.5rem;
+  font-weight: 400;
+}

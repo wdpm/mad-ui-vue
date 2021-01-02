@@ -1,4 +1,6 @@
 # mad-ui-vue
+- write components in components/
+- write docs on views/
 
 ## Project setup
 ```

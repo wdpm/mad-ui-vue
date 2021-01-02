@@ -1,0 +1,40 @@
+/*
+remove all padding and margin
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/*
+set global box-sizing to border-box
+ */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+// Optimize --webkit-scrollbar
+/* tune smaller scrollbar width*/
+html::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* disable the buttons on the scrollbar (arrows pointing upwards and downwards). */
+html::-webkit-scrollbar-button {
+  display: none;
+}
+
+/*  custom the draggable scrolling handle. */
+html::-webkit-scrollbar-thumb {
+  min-height: 16px;
+  background-color: #999999;
+  background-clip: padding-box;
+  border: 3px solid #fdfdfd;
+  border-radius: 5px;
+}

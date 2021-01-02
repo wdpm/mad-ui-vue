@@ -1,0 +1,133 @@
+.gear-group {
+  padding: 15px;
+}
+
+/*normal size = 100 x 100*/
+.gear {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.gear > [class*="sawtooth-"] {
+  position: absolute;
+  width: 126px;
+  height: 16px;
+  background-color: gray;
+  top: 42px; /* 42 = 100/2 - 16/2= 50 -8*/
+  left: -13px; /* 13 = (126-100)/2 =26/2  "-" represents move left*/
+  border-radius: 5px;
+}
+
+/* small size =60 x 60*/
+.gear-small {
+  width: 60px;
+  height: 60px;
+  left: 80px; /* hardcode offset left*/
+}
+
+.gear-small > [class*="sawtooth-"] {
+  position: absolute;
+  width: 88px;
+  height: 8px;
+  background-color: gray;
+  top: 26px; /* 26 = 60/2 - 8/2= 30-4*/
+  left: -14px; /* 14 = (88-60)/2 =28/2  "-" represents move left*/
+  border-radius: 4px;
+}
+
+/* set outline to container and sawtooth*/
+.gear-outline-black,
+.gear-outline-black > [class*="sawtooth-"] {
+  border: 1px solid black;
+}
+
+/* tricks: override center circle*/
+.gear-outline-black::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.gear-outline-black > [class*="sawtooth-"] {
+  background-color: white !important;
+}
+
+// gear colors
+$gear-colors: (
+        'red':$color-red-200,
+        'green':$color-green-200,
+        'blue':$color-blue-400,
+        'black':$color-black,
+) !default;
+
+@each $name, $color in $gear-colors {
+  .gear-#{$name},
+  .gear-#{$name} > [class*="sawtooth-"] {
+    background-color: $color;
+  }
+}
+
+/* sawtooth */
+.sawtooth-1 {
+  transform: rotate(0deg);
+}
+
+.sawtooth-2 {
+  transform: rotate(30deg);
+}
+
+.sawtooth-3 {
+  transform: rotate(60deg);
+}
+
+.sawtooth-4 {
+  transform: rotate(90deg);
+}
+
+.sawtooth-5 {
+  transform: rotate(120deg);
+}
+
+.sawtooth-6 {
+  transform: rotate(150deg);
+}
+
+/* gear animation */
+.gear-clockwise-rotate {
+  animation-name: gear-clockwise-rotate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes gear-clockwise-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.gear-counterclockwise-rotate {
+  animation-name: gear-counterclockwise-rotate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes gear-counterclockwise-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

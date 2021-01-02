@@ -1,0 +1,71 @@
+# Bulma docs structure
+
+- [ ] overview
+  - [ ] start
+  - [ ] css classes
+  - [ ] modifiers syntax
+  - [ ] modularity
+  - [ ] responsiveness
+  - [ ] colors
+  - [ ] functions
+  - [ ] mixins
+- [ ] customize
+  - [ ] concepts
+  - [ ] variables
+  - [ ] with node-sass
+  - [ ] with sass cli
+  - [ ] with webpack
+- [ ] helpers
+  - [ ] color
+  - [ ] spacing
+  - [ ] typography
+  - [ ] visibility
+  - [ ] flexbox
+  - [ ] other
+- [ ] columns
+  - [ ] basics
+  - [ ] sizes
+  - [ ] responsiveness
+  - [ ] nesting
+  - [ ] gap
+  - [ ] options
+- [ ] layouts
+  - [ ] containers
+  - [ ] level
+  - [ ] media object(move to comps)
+  - [ ] hero(move to comps)
+  - [ ] section
+  - [ ] footer
+  - [ ] tiles
+- [ ] form
+  - [ ] general
+  - [ ] input
+  - [ ] textarea
+  - [ ] select
+  - [ ] checkbox
+  - [ ] radio
+  - [ ] file
+- [ ] elements
+  - [x] block
+  - [x] box
+  - [ ] button
+  - [ ] content
+  - [ ] delete
+  - [ ] icon
+  - [ ] image
+  - [ ] notification
+  - [ ] progress bars
+  - [ ] table
+  - [ ] tag
+  - [ ] title
+- [ ] components
+  - [ ] breadcrumb
+  - [ ] card
+  - [ ] dropdown
+  - [ ] menu
+  - [ ] message
+  - [ ] modal
+  - [ ] navbar
+  - [ ] pagination
+  - [ ] panel
+  - [ ] tabs

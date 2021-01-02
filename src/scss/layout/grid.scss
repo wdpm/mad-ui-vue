@@ -1,0 +1,117 @@
+// GRID
+// ==============================
+
+$col-count: 12 !default;
+$col-spacing: 10px !default;
+$row-spacing: 10px !default;
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; // wrap all items in parent container
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  &.row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .col {
+    flex-grow: 1; // all col cells grow 1 factor
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: $row-spacing/2 $col-spacing/2;
+
+    &.col-reverse {
+      flex-direction: column-reverse;
+    }
+  }
+
+  // viewport range description
+  // 0-sm, sm~md, md~lg, lg~xlg, xlg~ +infinity
+  // ---------sm---------md--------lg--------xlg------------
+  //   [xs]      [sm-md]    [md-lg]  [lg-xlg]   [xlg~ +infinity]
+
+  // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }
+
+  // Note: .col-* is alias of  .col-xs-*
+
+  // from 1...$col-count, current ele is $i
+  // set .col-xs-#{$i} flex basis and max-width
+  @for $i from 1 through $col-count {
+    .col-#{$i},
+    .col-xs-#{$i} {
+      flex-basis: ($i / $col-count) * 100%;
+      max-width: ($i / $col-count) * 100%;
+    }
+  }
+
+  // set .col-xs-#{$i} margin-left as offset
+  @for $i from 1 through $col-count {
+    .col-offset-#{$i},
+    .col-xs-offset-#{$i} {
+      margin-left: ($i / $col-count) * 100%;
+    }
+  }
+
+  // >= sm
+  @include breakpoint-min($bp-small) {
+    @for $i from 1 through $col-count {
+      .col-sm-#{$i} {
+        flex-basis: ($i / $col-count) * 100%;
+        max-width: ($i / $col-count) * 100%;
+      }
+    }
+    @for $i from 1 through $col-count {
+      .col-sm-offset-#{$i} {
+        margin-left: ($i / $col-count) * 100%;
+      }
+    }
+  }
+
+  // >= md
+  @include breakpoint-min($bp-medium) {
+    @for $i from 1 through $col-count {
+      .col-md-#{$i} {
+        flex-basis: ($i / $col-count) * 100%;
+        max-width: ($i / $col-count) * 100%;
+      }
+    }
+    @for $i from 1 through $col-count {
+      .col-md-offset-#{$i} {
+        margin-left: ($i / $col-count) * 100%;
+      }
+    }
+  }
+
+  // >=lg
+  @include breakpoint-min($bp-large) {
+    @for $i from 1 through $col-count {
+      .col-lg-#{$i} {
+        flex-basis: ($i / $col-count) * 100%;
+        max-width: ($i / $col-count) * 100%;
+      }
+    }
+    @for $i from 1 through $col-count {
+      .col-lg-offset-#{$i} {
+        margin-left: ($i / $col-count) * 100%;
+      }
+    }
+  }
+
+  // >=xlg
+  @include breakpoint-min($bp-xlarge) {
+    @for $i from 1 through $col-count {
+      .col-xlg-#{$i} {
+        flex-basis: ($i / $col-count) * 100%;
+        max-width: ($i / $col-count) * 100%;
+      }
+    }
+    @for $i from 1 through $col-count {
+      .col-xlg-offset-#{$i} {
+        margin-left: ($i / $col-count) * 100%;
+      }
+    }
+  }
+
+}

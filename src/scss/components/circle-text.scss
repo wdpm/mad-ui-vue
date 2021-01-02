@@ -1,0 +1,50 @@
+.circle-text-group {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  // default height. @override
+  height: 400px;
+  border: 1px solid black;
+}
+
+.circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.circle-clockwise-rotate {
+  animation-name: circle-clockwise-rotate;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
+
+.circle-counterclockwise-rotate {
+  animation-name: circle-counterclockwise-rotate;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
+
+@keyframes circle-clockwise-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes circle-counterclockwise-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}

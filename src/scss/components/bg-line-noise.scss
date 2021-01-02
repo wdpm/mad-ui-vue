@@ -1,0 +1,57 @@
+// BG-LINE-NOISE
+// ===============================
+
+// basic style
+.bg-line-noise {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-line-noise-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[class*="line-noise-"]::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+/* line noise direction variants style*/
+.line-noise-vertical::after {
+  /* One thing to realize is that the first defined background image is topmost in the stack.
+  The last defined image will be bottommost. That means, to have a background gradient behind an image, you would need */
+  background-image: linear-gradient(transparent 4px, black 5px);
+  background-size: 100% 5px;
+  opacity: .7;
+}
+
+.line-noise-horizontal::after {
+  background-image: linear-gradient(to right, transparent 4px, black 5px);
+  background-size: 5px 100%;
+  opacity: .7;
+}
+
+.line-noise-right-leaning::after {
+  /* square(25+25) = 7.07 based on line gap 5px*/
+  background-image: linear-gradient(45deg,
+          transparent 0, transparent 50%,
+          black 50%, black 51%,
+          transparent 51%, transparent 100%);
+  background-size: 7.07px 7.07px, cover;
+  opacity: .7;
+}
+
+.line-noise-left-leaning::after {
+  /* square(25+25) = 7.07 based on line gap 5px*/
+  background-image: linear-gradient(-45deg,
+          transparent 0, transparent 50%,
+          black 50%, black 51%,
+          transparent 51%, transparent 100%);
+  background-size: 7.07px 7.07px, cover;
+  opacity: .7;
+}
