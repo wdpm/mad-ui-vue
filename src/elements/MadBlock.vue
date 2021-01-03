@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../src/scss/mixins/block.scss';
+@import '../../src/scss/mixins/block';
 
 .block {
   @include block;

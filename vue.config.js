@@ -7,7 +7,7 @@ module.exports = {
         {
           test: /\.css$/,
           oneOf: [
-            // 这里匹配 `<style module>`
+            // match `<style module>`
             {
               resourceQuery: /module/,
               use: [
@@ -21,22 +21,10 @@ module.exports = {
                 },
               ],
             },
-            // 这里匹配普通的 `<style>` 或 `<style scoped>`
+            // match `<style>` or `<style scoped>`
             {
               use: ['vue-style-loader', 'css-loader'],
             },
-          ],
-        },
-        // scss
-        {
-          test: /\.scss$/,
-          use: [
-            'vue-style-loader',
-            {
-              loader: 'css-loader',
-              options: { modules: true },
-            },
-            'sass-loader',
           ],
         },
       ],
