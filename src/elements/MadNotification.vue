@@ -21,4 +21,16 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@import 'src/scss/mixins/_all';
+
+.notification {
+  position: relative;
+  > .delete {
+    @include delete;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+</style>
