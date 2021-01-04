@@ -52,7 +52,7 @@
   - [ ] ~~content~~
   - [ ] ~~delete~~(use fontawesome icon)
   - [ ] ~~icon~~(use font awesome icon)
-  - [ ] image
+  - [x] image
   - [ ] notification
   - [ ] progress bars
   - [ ] table
