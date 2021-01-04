@@ -88,6 +88,12 @@
       :height="'180px'"
       :max-width="'400px'"
     ></mad-image>
+    <mad-image
+      is-rounded
+      :size="'1by1'"
+      :width="'50px'"
+      :src="'https://bulma.io/images/placeholders/128x128.png'"
+    ></mad-image>
     <p>text</p>
   </div>
 </template>
