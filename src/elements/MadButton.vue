@@ -34,9 +34,7 @@ export default {
       type: String,
       default: '',
       validator: function (value) {
-        return (
-          ['small', 'normal', 'medium', 'large'].indexOf(value) !== -1 || ''
-        )
+        return ['small', 'normal', 'medium', 'large', ''].indexOf(value) !== -1
       },
     },
     color: {
@@ -55,7 +53,8 @@ export default {
             'success',
             'warning',
             'danger',
-          ].indexOf(value) !== -1 || ''
+            '',
+          ].indexOf(value) !== -1
         )
       },
     },
@@ -71,6 +70,9 @@ export default {
     isRounded: {
       type: Boolean,
     },
+    disabled: {
+      type: Boolean,
+    },
   },
   render() {
     // input element no slots
@@ -82,6 +84,9 @@ export default {
     const fullwidthStyle = this.isFullwidth ? this.$style['is-fullwidth'] : ''
     const outlinedStyle = this.isOutlined ? this.$style['is-outlined'] : ''
     const roundedStyle = this.isRounded ? this.$style['is-rounded'] : ''
+    // fix `a` tag disabled='false' bug
+    const disabledProp =
+      this.tag === 'a' && !this.disabled ? null : { disabled: this.disabled }
     return h(
       this.tag,
       {
@@ -94,7 +99,7 @@ export default {
           outlinedStyle,
           roundedStyle,
         ],
-        disabled: this.disabled,
+        ...disabledProp,
       },
       slots
     )
@@ -104,7 +109,7 @@ export default {
 
 <style module lang="scss">
 @use 'sass:color';
-@import '../../src/scss/vars/derived-variables';
+@import 'src/scss/mixins/_all';
 
 $button-color: $color-gray-900 !default;
 $button-background-color: $color-white !default;

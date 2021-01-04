@@ -26,7 +26,8 @@
     </mad-box>
     <hr />
     <mad-button>button</mad-button>
-    <mad-button :tag="'a'">button</mad-button>
+    <mad-button :tag="'a'" disabled>a disabled</mad-button>
+    <mad-button :tag="'a'">a</mad-button>
     <mad-button :tag="'input'" type="submit" value="submit button"></mad-button>
     <hr />
     <mad-button :size="'small'">small</mad-button>
@@ -53,7 +54,7 @@
     <mad-button :color="'danger'" is-light>danger</mad-button>
     <hr />
     <mad-button is-fullwidth :size="'small'">small fullwidth</mad-button>
-    <mad-button is-fullwidth :size="'larger'">large fullwidth</mad-button>
+    <mad-button is-fullwidth :size="'large'">large fullwidth</mad-button>
     <hr />
     <mad-button :color="'primary'" is-outlined>primary</mad-button>
     <mad-button :color="'info'" is-outlined>info</mad-button>
@@ -66,6 +67,28 @@
     <mad-button disabled>disabled</mad-button>
     <mad-button :color="'danger'" disabled>danger disabled</mad-button>
     <mad-button :color="'success'" disabled>success disabled</mad-button>
+    <hr />
+    <!--you should know original image respect ratio, set ratio and set fixed width-->
+    <mad-image
+      :src="'https://cdn.vuetifyjs.com/images/parallax/material.jpg'"
+      :size="'16by9'"
+      :width="'300px'"
+    ></mad-image>
+    <hr />
+    <!-- if set fixed height-->
+    <mad-image
+      :src="'https://cdn.vuetifyjs.com/images/parallax/material.jpg'"
+      :size="'16by9'"
+      :height="'200px'"
+    ></mad-image>
+    <!-- if set fixed height and max-width-->
+    <mad-image
+      :src="'https://cdn.vuetifyjs.com/images/parallax/material.jpg'"
+      :size="'16by9'"
+      :height="'180px'"
+      :max-width="'400px'"
+    ></mad-image>
+    <p>text</p>
   </div>
 </template>
 
@@ -76,6 +99,7 @@ import MadBlock from '@/elements/MadBlock.vue'
 import MadTitle from '@/elements/MadTitle.vue'
 import MadBox from '@/elements/MadBox.vue'
 import MadButton from '@/elements/MadButton.vue'
+import MadImage from '@/elements/MadImage.vue'
 
 @Options({
   components: {
@@ -84,6 +108,7 @@ import MadButton from '@/elements/MadButton.vue'
     MadTitle,
     MadBox,
     MadButton,
+    MadImage,
   },
 })
 export default class Home extends Vue {}

@@ -2,7 +2,7 @@
 
 @use 'sass:color';
 @import "initial-variables";
-@import "functions";
+//@import "../utilities/functions";
 
 $primary: $color-black !default;
 

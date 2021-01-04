@@ -49,9 +49,9 @@
   - [x] block
   - [x] box
   - [x] button
-  - [ ] content
-  - [ ] delete
-  - [ ] icon
+  - [ ] ~~content~~
+  - [ ] ~~delete~~(use fontawesome icon)
+  - [ ] ~~icon~~(use font awesome icon)
   - [ ] image
   - [ ] notification
   - [ ] progress bars

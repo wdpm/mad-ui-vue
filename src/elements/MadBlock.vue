@@ -8,7 +8,6 @@
 /**
  * most basic spacer block
  *
- * TODO: pass props to make margin-bottom configurable
  */
 export default {
   name: 'MadBlock',
