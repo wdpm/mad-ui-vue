@@ -2,8 +2,9 @@
 
 @use 'sass:color';
 @import "initial-variables";
-//@import "../utilities/functions";
+@import "../utilities/functions";
 
+// semantic color variants
 $primary: $color-black !default;
 
 $info: $color-blue-400 !default;
@@ -14,8 +15,30 @@ $danger: $color-red-400 !default;
 $light: $color-gray-200 !default;
 $dark: $color-gray-700 !default;
 
-// alternatives: here can calculate complement/invert colors
-// but i prefer to use [color-?-number] variables
+// invert colors
+$primary-invert: invert-custom($primary) !default;
+$info-invert: invert-custom($info) !default;
+$success-invert: invert-custom($success) !default;
+$warning-invert: invert-custom($warning) !default;
+$danger-invert: invert-custom($danger) !default;
+$light-invert: invert-custom($light) !default;
+$dark-invert: invert-custom($dark) !default;
+
+// light colors
+$primary-light: lighten-custom($primary) !default;
+$info-light: lighten-custom($info) !default;
+$success-light: lighten-custom($success) !default;
+$warning-light: lighten-custom($warning) !default;
+$danger-light: lighten-custom($danger) !default;
+
+// dark colors
+$primary-dark: darken-custom($primary) !default;
+$info-dark: darken-custom($info) !default;
+$success-dark: darken-custom($success) !default;
+$warning-dark: darken-custom($warning) !default;
+$danger-dark: darken-custom($danger) !default;
+
+// $light and $dark no light and dark variants
 
 // border colors
 $border: $color-gray-200 !default;
@@ -23,11 +46,9 @@ $border-hover: $color-gray-400 !default;
 $border-light: $color-gray-50 !default;
 $border-light-hover: $color-gray-400 !default;
 
-// text colors
-
 // link colors
 $link: $color-black !default;
-$link-invert: color.invert($link, 50%) !default;
+$link-invert: invert($link, 50%) !default;
 $link-light: lighten($link, 50%) !default;
 $link-dark: darken($link, 50%) !default;
 $link-visited: $color-orange-400 !default;
@@ -43,3 +64,17 @@ $link-active-border: $color-gray-700 !default;
 
 // sizes
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default;
+
+// colors map for color variants
+$colors-map: (
+        'white':($color-white, $color-black),
+        'black':($color-black, $color-white),
+        'light':($light, $light-invert),
+        'dark':($dark, $dark-invert),
+  // these has variants
+        "primary": ($primary, $primary-invert, $primary-light, $primary-dark),
+        "info": ($info, $info-invert, $info-light, $info-dark),
+        "success": ($success, $success-invert, $success-light, $success-dark),
+        "warning": ($warning, $warning-invert, $warning-light, $warning-dark),
+        "danger": ($danger, $danger-invert, $danger-light, $danger-dark),
+)

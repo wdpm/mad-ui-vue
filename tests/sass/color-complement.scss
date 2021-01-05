@@ -6,7 +6,6 @@
 
 // Hue 222deg becomes 42deg.
 @debug color.complement(#6b717f); // #7f796b
-@debug color.invert(#6b717f);
 
 // Hue 164deg becomes 344deg.
 @debug color.complement(#d2e1dd); // #e1d2d6
