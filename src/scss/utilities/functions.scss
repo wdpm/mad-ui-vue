@@ -148,9 +148,8 @@
 /**
  * Don't use color.lighten() which is often not the desired effect
  */
-@function lighten-custom($color) {
-  $default-lighten-weight: 80%;
-  @return scale-color($color, $lightness: $default-lighten-weight);
+@function lighten-custom($color,$weight:80%) {
+  @return scale-color($color, $lightness: $weight);
 }
 
 /**
@@ -189,7 +188,6 @@
 /**
  * Don't use color.darken() which is often not the desired effect
  */
-@function darken-custom($color) {
-  $default-darken-weight: -30%;
-  @return scale-color($color, $lightness: $default-darken-weight);
+@function darken-custom($color,$weight:-30%) {
+  @return scale-color($color, $lightness: $weight);
 }

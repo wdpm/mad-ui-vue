@@ -40,6 +40,14 @@ $danger-dark: darken-custom($danger) !default;
 
 // $light and $dark no light and dark variants
 
+
+//===============maybe useless=========================
+// text colors
+$text: $dark !default;
+$text-invert: invert-custom($text) !default;
+$text-light: lighten-custom($text) !default;
+$text-dark: darken-custom($text) !default;
+
 // border colors
 $border: $color-gray-200 !default;
 $border-hover: $color-gray-400 !default;
@@ -48,9 +56,9 @@ $border-light-hover: $color-gray-400 !default;
 
 // link colors
 $link: $color-black !default;
-$link-invert: invert($link, 50%) !default;
-$link-light: lighten($link, 50%) !default;
-$link-dark: darken($link, 50%) !default;
+$link-invert: invert-custom($link) !default;
+$link-light: lighten-custom($link) !default;
+$link-dark: darken-custom($link) !default;
 $link-visited: $color-orange-400 !default;
 
 $link-hover: $color-gray-800 !default;
@@ -64,9 +72,16 @@ $link-active-border: $color-gray-700 !default;
 
 // sizes
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default;
+//=======================================================
+
+// semantic sizes
+$size-small: $size-7 !default;
+$size-normal: $size-6 !default;
+$size-medium: $size-5 !default;
+$size-large: $size-4 !default;
 
 // colors map for color variants
-$colors-map: (
+$color-map: (
         'white':($color-white, $color-black),
         'black':($color-black, $color-white),
         'light':($light, $light-invert),

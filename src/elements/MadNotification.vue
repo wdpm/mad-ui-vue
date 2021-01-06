@@ -6,6 +6,9 @@
 </template>
 
 <script>
+/**
+ * TODO autoclose with delay
+ */
 export default {
   name: 'MadNotification',
   props: {
@@ -71,7 +74,7 @@ $notification-radius: $radius !default;
 // padding-right is more larger to make space for delete icon
 $notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem !default;
 
-$notification-colors: $colors-map !default;
+$notification-colors: $color-map !default;
 
 .notification {
   @include block();
