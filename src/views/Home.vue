@@ -1,58 +1,238 @@
 <template>
   <div class="home"></div>
-  <h2>no value</h2>
-  <mad-progress-bar></mad-progress-bar>
-
-  <h2>custom max value</h2>
-  <mad-progress-bar :max="200" :value="50"></mad-progress-bar>
-
-  <h2>with value</h2>
-  <mad-progress-bar :value="40"></mad-progress-bar>
+  <!--default style-->
+  <h2>default</h2>
+  <mad-table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frozen Yogurt</td>
+        <td>159</td>
+      </tr>
+      <tr>
+        <td>Ice cream sandwich</td>
+        <td>237</td>
+      </tr>
+      <tr>
+        <td>Eclair</td>
+        <td>262</td>
+      </tr>
+    </tbody>
+  </mad-table>
 
   <h2>colors</h2>
-  <!--colors-->
-  <mad-progress-bar
-    v-for="value in colorMapValuesNoLight"
-    :key="value"
-    :value="40"
-    :color="value"
-  ></mad-progress-bar>
+  <mad-table v-for="color in colorMapValues" :key="color" :color="color">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frozen Yogurt</td>
+        <td>159</td>
+      </tr>
+      <tr>
+        <td>Ice cream sandwich</td>
+        <td>237</td>
+      </tr>
+      <tr>
+        <td>Eclair</td>
+        <td>262</td>
+      </tr>
+    </tbody>
+  </mad-table>
 
-  <h2>sizes</h2>
-  <mad-progress-bar
-    v-for="size in sizes"
-    :key="size"
-    :value="40"
-    :size="size"
-  ></mad-progress-bar>
+  <h2>narrow</h2>
+  <mad-table narrow>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frozen Yogurt</td>
+        <td>159</td>
+      </tr>
+      <tr>
+        <td>Ice cream sandwich</td>
+        <td>237</td>
+      </tr>
+      <tr>
+        <td>Eclair</td>
+        <td>262</td>
+      </tr>
+    </tbody>
+  </mad-table>
 
-  <h2>indeterminate</h2>
-  <mad-progress-bar></mad-progress-bar>
+  <h2>fullwidth</h2>
+  <mad-table fullwidth>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frozen Yogurt</td>
+        <td>159</td>
+      </tr>
+      <tr>
+        <td>Ice cream sandwich</td>
+        <td>237</td>
+      </tr>
+      <tr>
+        <td>Eclair</td>
+        <td>262</td>
+      </tr>
+    </tbody>
+  </mad-table>
 
-  <h2>indeterminate with color</h2>
-  <mad-progress-bar
-    v-for="value in colorMapValuesNoLight"
-    :key="value"
-    :color="value"
-  ></mad-progress-bar>
+  <h2>horizontal-lined</h2>
+  <mad-table horizontal-lined>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frozen Yogurt</td>
+        <td>159</td>
+      </tr>
+      <tr>
+        <td>Ice cream sandwich</td>
+        <td>237</td>
+      </tr>
+      <tr>
+        <td>Eclair</td>
+        <td>262</td>
+      </tr>
+    </tbody>
+  </mad-table>
+
+  <h2>borderless</h2>
+  <mad-table borderless>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frozen Yogurt</td>
+        <td>159</td>
+      </tr>
+      <tr>
+        <td>Ice cream sandwich</td>
+        <td>237</td>
+      </tr>
+      <tr>
+        <td>Eclair</td>
+        <td>262</td>
+      </tr>
+    </tbody>
+  </mad-table>
+
+  <h2>striped</h2>
+  <mad-table striped>
+    <template v-slot:default>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Calories</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Frozen Yogurt</td>
+          <td>159</td>
+        </tr>
+        <tr>
+          <td>Ice cream sandwich</td>
+          <td>237</td>
+        </tr>
+        <tr>
+          <td>Eclair</td>
+          <td>262</td>
+        </tr>
+      </tbody>
+    </template>
+  </mad-table>
+
+  <h2>hoverable</h2>
+  <mad-table hoverable>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frozen Yogurt</td>
+        <td>159</td>
+      </tr>
+      <tr>
+        <td>Ice cream sandwich</td>
+        <td>237</td>
+      </tr>
+      <tr>
+        <td>Eclair</td>
+        <td>262</td>
+      </tr>
+    </tbody>
+  </mad-table>
+
+  <h2>combination</h2>
+  <mad-table striped hoverable narrow horizontal-lined borderless>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frozen Yogurt</td>
+        <td>159</td>
+      </tr>
+      <tr>
+        <td>Ice cream sandwich</td>
+        <td>237</td>
+      </tr>
+      <tr>
+        <td>Eclair</td>
+        <td>262</td>
+      </tr>
+    </tbody>
+  </mad-table>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import HelloWorld from '@/components/HelloWorld.vue'
-import MadProgressBar from '@/elements/MadProgressBar.vue'
-import { colorMapValuesNoLight, sizes } from '@/utils'
-
-const exclusives = ['light', 'white']
+import MadTable from '@/elements/MadTable.vue'
+import { colorMapValues } from '@/utils'
 
 @Options({
   components: {
     HelloWorld,
-    MadProgressBar,
+    MadTable,
   },
 })
 export default class Home extends Vue {
-  colorMapValuesNoLight: string[] = colorMapValuesNoLight
-  sizes: string[] = sizes
+  colorMapValues = colorMapValues
 }
 </script>

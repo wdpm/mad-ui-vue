@@ -40,8 +40,6 @@ $danger-dark: darken-custom($danger) !default;
 
 // $light and $dark no light and dark variants
 
-
-//===============maybe useless=========================
 // text colors
 $text: $dark !default;
 $text-invert: invert-custom($text) !default;
@@ -49,10 +47,10 @@ $text-light: lighten-custom($text) !default;
 $text-dark: darken-custom($text) !default;
 
 // border colors
-$border: $color-gray-200 !default;
-$border-hover: $color-gray-400 !default;
-$border-light: $color-gray-50 !default;
-$border-light-hover: $color-gray-400 !default;
+$border: $color-gray-300 !default;
+$border-hover: $color-gray-600 !default;
+$border-light: $color-gray-200 !default;
+$border-light-hover: $color-gray-600 !default;
 
 // link colors
 $link: $color-black !default;
