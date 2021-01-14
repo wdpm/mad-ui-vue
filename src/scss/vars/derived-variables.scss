@@ -57,16 +57,14 @@ $link: $color-black !default;
 $link-invert: invert-custom($link) !default;
 $link-light: lighten-custom($link) !default;
 $link-dark: darken-custom($link) !default;
+
 $link-visited: $color-orange-400 !default;
-
-$link-hover: $color-gray-800 !default;
-$link-hover-border: $color-gray-400 !default;
-
-$link-focus: $color-gray-800 !default;
-$link-focus-border: $color-blue-400 !default;
-
-$link-active: $color-gray-800 !default;
-$link-active-border: $color-gray-700 !default;
+$link-hover: $color-purple-400 !default;
+$link-hover-border: $color-purple-200 !default;
+$link-focus: $color-blue-400 !default;
+$link-focus-border: $color-blue-200 !default;
+$link-active: $color-green-400 !default;
+$link-active-border: $color-green-200 !default;
 
 // sizes
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default;
