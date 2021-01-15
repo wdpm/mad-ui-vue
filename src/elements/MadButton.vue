@@ -175,6 +175,8 @@ $button-focus-box-shadow-color: lighten(
 }
 
 .button {
+  display: flex;
+  align-items: center;
   outline: none;
   text-decoration: none;
   background-color: $button-background-color;

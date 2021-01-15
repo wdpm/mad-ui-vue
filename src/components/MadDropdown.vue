@@ -1,41 +1,130 @@
 <template>
-  <div class="dropdown">
-    <div class="dropdown-trigger">
-      <mad-button aria-controls="dropdown-menu">
-        <span>Dropdown button</span>
-        <span class="icon">
-          <i class="arrow"></i>
-        </span>
-        <!--        <span class="icon is-small">-->
-        <!--          <i class="fas fa-angle-down" aria-hidden="true"></i>-->
-        <!--        </span>-->
-      </mad-button>
+  <div
+    class="dropdown"
+    :class="[hoverableClass, stateActiveClass, alignmentClass]"
+  >
+    <div class="dropdown-trigger" @click="toggleStateActive">
+      <slot name="dropdown-trigger"></slot>
     </div>
-    <div class="dropdown-menu" id="dropdown-menu" role="menu">
-      <div class="dropdown-content">
-        <a href="#" class="dropdown-item"> Dropdown item </a>
-        <a class="dropdown-item"> Other dropdown item </a>
-        <a href="#" class="dropdown-item"> Active dropdown item </a>
-        <a href="#" class="dropdown-item"> Other dropdown item </a>
-        <hr class="dropdown-divider" />
-        <a href="#" class="dropdown-item"> With a divider </a>
-      </div>
+    <div class="dropdown-content">
+      <slot name="dropdown-content"></slot>
     </div>
   </div>
 </template>
 
 <script>
-import MadButton from '@/elements/MadButton'
-
 /**
  * An interactive dropdown menu for discoverable content
  */
 export default {
   name: 'MadDropdown',
-  components: {
-    MadButton,
+  props: {
+    hoverable: {
+      type: Boolean,
+      default: true,
+      required: false,
+    },
+    controlByJavaScript: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
+    alignment: {
+      type: String,
+      default: '',
+      required: false,
+      validator: function (value) {
+        return ['', 'left', 'right'].indexOf(value) !== -1
+      },
+    },
+  },
+  data() {
+    return {
+      // the class is for users who want to control the display of the dropdown with JavaScript
+      stateActive: false,
+    }
+  },
+  computed: {
+    hoverableClass() {
+      if (this.controlByJavaScript) return ''
+      return this.hoverable ? 'hoverable' : ''
+    },
+    stateActiveClass() {
+      return this.stateActive ? 'state-active' : ''
+    },
+    alignmentClass() {
+      return this.alignment ? `alignment-${this.alignment}` : ''
+    },
+  },
+  methods: {
+    toggleStateActive() {
+      if (this.controlByJavaScript) {
+        this.stateActive = !this.stateActive
+      }
+    },
   },
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@import 'src/scss/mixins/_all';
+
+.dropdown {
+  position: relative;
+  display: inline-flex;
+
+  ::v-deep &-content {
+    display: none;
+    top: 100%;
+    position: absolute;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    .dropdown-item {
+      color: black;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      display: block;
+      // item text no wrap for alignment
+      white-space: nowrap;
+
+      &:hover {
+        background-color: $light;
+      }
+    }
+  }
+
+  //show the dropdown content on hover or js
+  &.state-active,
+  &.hoverable:hover {
+    .dropdown-content {
+      display: block;
+    }
+  }
+
+  //alignment
+  &.alignment-right {
+    .dropdown-content {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  // default alignment
+  &.alignment-left {
+    .dropdown-content {
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+//arrow
+::v-deep .arrow {
+  @include arrow-base();
+
+  &.down {
+    @include arrow-direction($direction: down);
+  }
+}
+</style>

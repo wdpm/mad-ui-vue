@@ -40,7 +40,6 @@ $icon-dimensions-large: 2.5rem !default;
 
 .icon {
   position: relative;
-  background-color: beige;
   display: inline-flex;
   align-items: center;
   justify-content: center;
