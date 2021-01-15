@@ -1,17 +1,17 @@
 <template>
   <div class="home"></div>
-  <mad-media-demo></mad-media-demo>
+    <mad-dropdown-demo />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import HelloWorld from '@/components/HelloWorld.vue'
-import MadMediaDemo from '@/views/MadMediaDemo.vue'
+import MadDropdownDemo from '@/views/MadDropdownDemo.vue'
 
 @Options({
   components: {
     HelloWorld,
-    MadMediaDemo,
+    MadDropdownDemo,
   },
 })
 export default class Home extends Vue {}
