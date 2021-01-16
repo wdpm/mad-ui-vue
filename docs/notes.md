@@ -27,3 +27,4 @@ a:active { color: red; }         /* Active links */
 
 p:active { background: #eee; }   /* Active paragraphs */
 ```
+

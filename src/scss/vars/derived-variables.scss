@@ -13,7 +13,7 @@ $warning: $color-yellow-700 !default;
 $danger: $color-red-400 !default;
 
 $light: $color-gray-200 !default;
-$dark: $color-gray-700 !default;
+$dark: $color-gray-800 !default;
 
 // invert colors
 $primary-invert: invert-custom($primary) !default;
@@ -43,7 +43,7 @@ $danger-dark: darken-custom($danger) !default;
 // text colors
 $text: $dark !default;
 $text-invert: invert-custom($text) !default;
-$text-light: lighten-custom($text) !default;
+$text-light: $color-gray-700 !default;
 $text-dark: darken-custom($text) !default;
 
 // border colors
