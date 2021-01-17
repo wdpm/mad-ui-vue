@@ -1,7 +1,7 @@
 <template>
   <div class="namespace mad-ui">
     <nav
-      class="pagination mad-ui"
+      class="pagination"
       :class="[sizeClass]"
       role="navigation"
       aria-label="pagination"
@@ -71,6 +71,10 @@ $pagination-active-border-color: $link-active-border !default;
 $pagination-disabled-color: $text-light !default;
 $pagination-disabled-background-color: $border !default;
 $pagination-disabled-border-color: $border !default;
+
+$pagination-current-color: $color-white !default;
+$pagination-current-background-color: $color-blue-500 !default;
+$pagination-current-border-color: $color-blue-500 !default;
 
 .namespace.mad-ui {
   .pagination {
@@ -148,6 +152,15 @@ $pagination-disabled-border-color: $border !default;
         color: $pagination-disabled-color;
         opacity: 0.5;
         cursor: not-allowed;
+      }
+    }
+
+    //current link
+    .pagination-link {
+      &.current {
+        background-color: $pagination-current-background-color;
+        border-color: $pagination-current-border-color;
+        color: $pagination-current-color;
       }
     }
 

@@ -13,7 +13,7 @@
         <a class="pagination-link">5</a>
       </li>
       <li>
-        <a class="pagination-link">6</a>
+        <a class="pagination-link current">6</a>
       </li>
       <li>
         <a class="pagination-link">7</a>
@@ -42,7 +42,7 @@
         <a class="pagination-link">5</a>
       </li>
       <li>
-        <a class="pagination-link">6</a>
+        <a class="pagination-link current">6</a>
       </li>
       <li>
         <a class="pagination-link">7</a>
@@ -71,7 +71,7 @@
         <a class="pagination-link">5</a>
       </li>
       <li>
-        <a class="pagination-link">6</a>
+        <a class="pagination-link current">6</a>
       </li>
       <li>
         <a class="pagination-link">7</a>
@@ -100,7 +100,7 @@
         <a class="pagination-link">5</a>
       </li>
       <li>
-        <a class="pagination-link">6</a>
+        <a class="pagination-link current">6</a>
       </li>
       <li>
         <a class="pagination-link">7</a>
