@@ -1,17 +1,17 @@
 <template>
   <div class="home"></div>
-  <mad-modal-demo></mad-modal-demo>
+  <mad-pagination-demo></mad-pagination-demo>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import HelloWorld from '@/components/HelloWorld.vue'
-import MadModalDemo from '@/views/MadModalDemo.vue'
+import MadPaginationDemo from '@/views/MadPaginationDemo.vue'
 
 @Options({
   components: {
     HelloWorld,
-    MadModalDemo,
+    MadPaginationDemo,
   },
 })
 export default class Home extends Vue {}

@@ -59,8 +59,8 @@ $link-light: lighten-custom($link) !default;
 $link-dark: darken-custom($link) !default;
 
 $link-visited: $color-orange-400 !default;
-$link-hover: $color-purple-400 !default;
-$link-hover-border: $color-purple-200 !default;
+$link-hover: $color-gray-400 !default;
+$link-hover-border: $color-gray-200 !default;
 $link-focus: $color-blue-400 !default;
 $link-focus-border: $color-blue-200 !default;
 $link-active: $color-green-400 !default;
