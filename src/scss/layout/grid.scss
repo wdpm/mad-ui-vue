@@ -1,30 +1,72 @@
-// GRID
-// ==============================
+@import "../vars/breakpoints";
+@import "../mixins/breakpoint";
 
-$col-count: 12 !default;
-$col-spacing: 10px !default;
+$column-count: 12 !default;
+$column-spacing: 10px !default;
 $row-spacing: 10px !default;
+
+//semantic percentage width presets
+$width-map: (
+        'four-fifths': 80%,
+        'three-quarters': 75%,
+        'two-third': 66.6666%,
+        'three-fifths': 60%,
+        'half': 50%,
+        'two-fifths': 40%,
+        'one-third': 33.3333%,
+        'one-quarter': 25%,
+        'one-fifth': 20%
+) !default;
 
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; // wrap all items in parent container
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
   &.row-reverse {
     flex-direction: row-reverse;
   }
 
-  .col {
-    flex-grow: 1; // all col cells grow 1 factor
-    flex-basis: 100%;
-    max-width: 100%;
-    padding: $row-spacing/2 $col-spacing/2;
+  .column {
+    //flex-grow: 1; // all column cells grow 1 factor
+    //flex-basis: 100%;
+    //max-width: 100%;
 
-    &.col-reverse {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    padding: $row-spacing/2 $column-spacing/2;
+
+    background: white;
+    text-align: center;
+    padding: .75rem;
+    border: 1px solid black; //for debug
+
+    &.column-reverse {
       flex-direction: column-reverse;
     }
+
+    // widths
+    @each $name, $width in $width-map {
+      &.width-#{$name} {
+        flex: none;
+        width: $width;
+      }
+    }
+
+    // column-[number:1 - 12]
+    @for $i from 1 through $column-count {
+      &.column-#{$i} {
+        flex: none;
+        width: ($i / $column-count) * 100%;
+      }
+    }
+
+    //offsets
   }
 
   // viewport range description
@@ -34,82 +76,80 @@ $row-spacing: 10px !default;
 
   // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }
 
-  // Note: .col-* is alias of  .col-xs-*
+  // Note: .column-* is alias of  .column-xs-*
 
-  // from 1...$col-count, current ele is $i
-  // set .col-xs-#{$i} flex basis and max-width
-  @for $i from 1 through $col-count {
-    .col-#{$i},
-    .col-xs-#{$i} {
-      flex-basis: ($i / $col-count) * 100%;
-      max-width: ($i / $col-count) * 100%;
+  // from 1...$column-count, current ele is $i
+  // set .column-xs-#{$i} flex basis and max-width
+  @for $i from 1 through $column-count {
+    .column-#{$i},
+    .column-xs-#{$i} {
+      flex-basis: ($i / $column-count) * 100%;
+      max-width: ($i / $column-count) * 100%;
     }
-  }
 
-  // set .col-xs-#{$i} margin-left as offset
-  @for $i from 1 through $col-count {
-    .col-offset-#{$i},
-    .col-xs-offset-#{$i} {
-      margin-left: ($i / $col-count) * 100%;
+    // set .column-xs-#{$i} margin-left as offset
+    .column-offset-#{$i},
+    .column-xs-offset-#{$i} {
+      margin-left: ($i / $column-count) * 100%;
     }
   }
 
   // >= sm
   @include breakpoint-min($bp-small) {
-    @for $i from 1 through $col-count {
-      .col-sm-#{$i} {
-        flex-basis: ($i / $col-count) * 100%;
-        max-width: ($i / $col-count) * 100%;
+    @for $i from 1 through $column-count {
+      .column-sm-#{$i} {
+        flex-basis: ($i / $column-count) * 100%;
+        max-width: ($i / $column-count) * 100%;
       }
     }
-    @for $i from 1 through $col-count {
-      .col-sm-offset-#{$i} {
-        margin-left: ($i / $col-count) * 100%;
+    @for $i from 1 through $column-count {
+      .column-sm-offset-#{$i} {
+        margin-left: ($i / $column-count) * 100%;
       }
     }
   }
 
   // >= md
   @include breakpoint-min($bp-medium) {
-    @for $i from 1 through $col-count {
-      .col-md-#{$i} {
-        flex-basis: ($i / $col-count) * 100%;
-        max-width: ($i / $col-count) * 100%;
+    @for $i from 1 through $column-count {
+      .column-md-#{$i} {
+        flex-basis: ($i / $column-count) * 100%;
+        max-width: ($i / $column-count) * 100%;
       }
     }
-    @for $i from 1 through $col-count {
-      .col-md-offset-#{$i} {
-        margin-left: ($i / $col-count) * 100%;
+    @for $i from 1 through $column-count {
+      .column-md-offset-#{$i} {
+        margin-left: ($i / $column-count) * 100%;
       }
     }
   }
 
   // >=lg
   @include breakpoint-min($bp-large) {
-    @for $i from 1 through $col-count {
-      .col-lg-#{$i} {
-        flex-basis: ($i / $col-count) * 100%;
-        max-width: ($i / $col-count) * 100%;
+    @for $i from 1 through $column-count {
+      .column-lg-#{$i} {
+        flex-basis: ($i / $column-count) * 100%;
+        max-width: ($i / $column-count) * 100%;
       }
     }
-    @for $i from 1 through $col-count {
-      .col-lg-offset-#{$i} {
-        margin-left: ($i / $col-count) * 100%;
+    @for $i from 1 through $column-count {
+      .column-lg-offset-#{$i} {
+        margin-left: ($i / $column-count) * 100%;
       }
     }
   }
 
   // >=xlg
   @include breakpoint-min($bp-xlarge) {
-    @for $i from 1 through $col-count {
-      .col-xlg-#{$i} {
-        flex-basis: ($i / $col-count) * 100%;
-        max-width: ($i / $col-count) * 100%;
+    @for $i from 1 through $column-count {
+      .column-xlg-#{$i} {
+        flex-basis: ($i / $column-count) * 100%;
+        max-width: ($i / $column-count) * 100%;
       }
     }
-    @for $i from 1 through $col-count {
-      .col-xlg-offset-#{$i} {
-        margin-left: ($i / $col-count) * 100%;
+    @for $i from 1 through $column-count {
+      .column-xlg-offset-#{$i} {
+        margin-left: ($i / $column-count) * 100%;
       }
     }
   }

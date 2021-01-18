@@ -30,13 +30,13 @@
   - [ ] gap
   - [ ] options
 - [ ] layouts
-  - [ ] containers
+  - [ ] containers 
   - [ ] level
-  - [ ] media object(move to comps)
+  - [ ] ~~media object(move to comps)~~
   - [ ] hero(move to comps)
-  - [ ] section
-  - [ ] footer
-  - [ ] tiles
+  - [ ] ~~section~~
+  - [ ] ~~footer~~
+  - [ ] ~~tiles~~
 - [ ] form
   - [ ] general
   - [ ] input
