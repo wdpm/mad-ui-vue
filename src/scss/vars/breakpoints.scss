@@ -17,3 +17,10 @@ $bp-small: 425px !default;
 $bp-medium: 768px !default;
 $bp-large: 1024px !default;
 $bp-xlarge: 1440px !default;
+
+$display-map: (
+        'sm' : $bp-small,
+        'md' : $bp-medium,
+        'lg' : $bp-large,
+        'xlg' : $bp-xlarge
+) !default;

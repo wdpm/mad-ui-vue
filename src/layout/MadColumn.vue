@@ -1,5 +1,5 @@
 <template>
-  <div class="column" :class="[widthClass, columnClass]">
+  <div class="column" :class="[columnClass, offsetClass]">
     <slot></slot>
   </div>
 </template>
@@ -8,23 +8,23 @@
 export default {
   name: 'MadColumn',
   props: {
-    width: {
-      type: String,
-      default: '',
+    column: {
+      type: [Number, String],
+      default: null,
       required: false,
     },
-    column: {
-      type: Number,
+    offset: {
+      type: [Number, String],
       default: null,
       required: false,
     },
   },
   computed: {
-    widthClass() {
-      return this.width ? `width-${this.width}` : ''
-    },
     columnClass() {
       return this.column ? `column-${this.column}` : ''
+    },
+    offsetClass() {
+      return this.offset ? `offset-${this.offset}` : ''
     },
   },
 }
