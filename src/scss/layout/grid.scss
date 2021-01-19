@@ -2,6 +2,7 @@
 @import "../mixins/breakpoint";
 
 $column-count: 12 !default;
+$column-gap: .75rem !default;
 
 //semantic percentage width presets
 $width-map: (
@@ -40,7 +41,7 @@ $width-map: (
 
     background: white;
     text-align: center;
-    padding: .75rem;
+    padding: $column-gap;
     //border: 1px solid black; //for debug,remove it when finished
 
     // column percentage widths

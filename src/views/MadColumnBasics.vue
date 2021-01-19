@@ -226,6 +226,15 @@
     </mad-column>
     <mad-column><p class="column-auto">auto</p></mad-column>
   </mad-row>
+
+  <h2>column gap</h2>
+  <!--0 -8 level-->
+  <mad-row column-gap="8">
+    <mad-column><p class="column-demo">column 1</p></mad-column>
+    <mad-column><p class="column-demo">column 2</p></mad-column>
+    <mad-column><p class="column-demo">column 3</p></mad-column>
+    <mad-column><p class="column-demo">column 4</p></mad-column>
+  </mad-row>
 </template>
 
 <script>
