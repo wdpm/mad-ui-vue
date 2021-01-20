@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import MadContainer from '@/components/MadContainer'
+import MadContainer from '@/layout/MadContainer'
 
 export default {
   name: 'MadContainerDemo',

@@ -49,7 +49,7 @@ $text-dark: darken-custom($text) !default;
 
 // border colors
 $border: $color-gray-300 !default;
-$border-hover: $color-gray-600 !default;
+$border-hover: $color-gray-400 !default;
 $border-light: $color-gray-200 !default;
 $border-light-hover: $color-gray-600 !default;
 
@@ -89,4 +89,4 @@ $color-map: (
         "success": ($success, $success-invert, $success-light, $success-dark),
         "warning": ($warning, $warning-invert, $warning-light, $warning-dark),
         "danger": ($danger, $danger-invert, $danger-light, $danger-dark),
-)
+) !default;

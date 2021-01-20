@@ -38,13 +38,13 @@
   - [ ] ~~footer~~
   - [ ] ~~tiles~~
 - [ ] form
-  - [ ] general
+  - [ ] ~~general~~
   - [ ] input
   - [ ] textarea
   - [ ] select
   - [ ] checkbox
   - [ ] radio
-  - [ ] file
+  - [ ] ~~file~~
 - [ ] elements
   - [x] block
   - [x] box

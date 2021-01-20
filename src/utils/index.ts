@@ -14,6 +14,14 @@ export const colorMapValues = [
   'danger',
 ] as string[]
 
+export const colorMapSemanticValues = [
+  'primary',
+  'info',
+  'success',
+  'warning',
+  'danger',
+] as string[]
+
 export const removeByValue = (
   array: string[],
   value: string[] | string
