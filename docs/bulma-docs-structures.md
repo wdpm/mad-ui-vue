@@ -30,10 +30,10 @@
   - [ ] gap
   - [ ] options
 - [ ] layouts
-  - [ ] containers 
-  - [ ] level
+  - [ ] container
+  - [ ] ~~level~~
   - [ ] ~~media object(move to comps)~~
-  - [ ] hero(move to comps)
+  - [ ] ~~hero(move to comps)~~
   - [ ] ~~section~~
   - [ ] ~~footer~~
   - [ ] ~~tiles~~

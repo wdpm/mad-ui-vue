@@ -1,17 +1,17 @@
 <template>
   <div class="home"></div>
-  <mad-column-basics></mad-column-basics>
+  <mad-container-demo></mad-container-demo>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import HelloWorld from '@/components/HelloWorld.vue'
-import MadColumnBasics from '@/views/MadColumnBasics.vue'
+import MadContainerDemo from '@/views/MadContainerDemo.vue'
 
 @Options({
   components: {
     HelloWorld,
-    MadColumnBasics,
+    MadContainerDemo,
   },
 })
 export default class Home extends Vue {}

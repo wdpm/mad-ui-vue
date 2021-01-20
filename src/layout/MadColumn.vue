@@ -31,5 +31,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
+//TODO extract column style
 @import 'src/scss/layout/grid';
 </style>
