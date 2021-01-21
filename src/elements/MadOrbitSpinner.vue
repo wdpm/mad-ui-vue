@@ -16,7 +16,7 @@ export default {
   props: {
     animationDuration: {
       type: Number,
-      default: 1000,
+      default: 1500,
       required: false,
     },
     size: {

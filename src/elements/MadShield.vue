@@ -7,30 +7,30 @@
 
 <script>
 export default {
-  name: 'vue-shield',
+  name: 'MadShield',
   props: {
     title: {
       type: String,
-      default () {
-        return ''
-      }
+      default: '',
+      required: false,
     },
     content: {
       type: [String, Number],
-      default () {
-        return ''
-      }
-    }
-  }
+      default: '',
+      required: false,
+    },
+  },
 }
 </script>
 
 <style scoped lang="scss">
 .shield {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
-  font-size: .85em;
+  font-size: 0.75rem;
+  padding: 0.5em 0.75em;
+  margin-bottom: 0.5em;
 
   &-title {
     line-height: 1.2;

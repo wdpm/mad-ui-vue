@@ -1,18 +1,18 @@
 <template>
   <div class="home"></div>
-  <mad-orbit-spinner-demo></mad-orbit-spinner-demo>
+  <mad-shield-demo></mad-shield-demo>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import HelloWorld from '@/components/HelloWorld.vue'
-import MadRadioDemo from '@/usages/form/MadRadioDemo.vue'
 import MadOrbitSpinnerDemo from '@/usages/elements/MadOrbitSpinnerDemo.vue'
+import MadShieldDemo from '@/usages/elements/MadShieldDemo.vue'
 
 @Options({
   components: {
     HelloWorld,
-    MadOrbitSpinnerDemo,
+    MadShieldDemo,
   },
 })
 export default class Home extends Vue {}
