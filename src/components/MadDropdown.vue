@@ -110,7 +110,7 @@ export default {
     }
   }
 
-  // default alignment
+  // default alignment left
   &.alignment-left {
     .dropdown-content {
       left: 0;

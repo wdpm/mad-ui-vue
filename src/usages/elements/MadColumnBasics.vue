@@ -251,7 +251,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'src/scss/utilities/display';
+@import '../../scss/utilities/display';
 
 .column-demo {
   background: lightskyblue;
