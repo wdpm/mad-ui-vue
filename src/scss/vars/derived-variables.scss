@@ -83,7 +83,16 @@ $color-map: (
         'black':($color-black, $color-white),
         'light':($light, $light-invert),
         'dark':($dark, $dark-invert),
+  // merge semantic-color-map, NOT hard copy
   // these has variants
+        "primary": ($primary, $primary-invert, $primary-light, $primary-dark),
+        "info": ($info, $info-invert, $info-light, $info-dark),
+        "success": ($success, $success-invert, $success-light, $success-dark),
+        "warning": ($warning, $warning-invert, $warning-light, $warning-dark),
+        "danger": ($danger, $danger-invert, $danger-light, $danger-dark),
+) !default;
+
+$semantic-color-map: (
         "primary": ($primary, $primary-invert, $primary-light, $primary-dark),
         "info": ($info, $info-invert, $info-light, $info-dark),
         "success": ($success, $success-invert, $success-light, $success-dark),
