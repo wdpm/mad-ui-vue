@@ -1,4 +1,9 @@
-<template></template>
+<template>
+  <label class="checkbox">
+    <input type="checkbox" />
+    Remember me
+  </label>
+</template>
 
 <script>
 /**

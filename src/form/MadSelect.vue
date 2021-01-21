@@ -1,9 +1,6 @@
 <template>
   <div class="select-container" :class="[sizeClass]">
-    <select class="select">
-      <option>Select dropdown</option>
-      <option>With options</option>
-    </select>
+    <slot></slot>
   </div>
 </template>
 
@@ -45,6 +42,7 @@ export default {
   vertical-align: top;
   height: 2.5em;
 
+  select,
   .select {
     position: relative;
     appearance: none;

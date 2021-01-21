@@ -1,9 +1,19 @@
 <template>
   <h2>basic</h2>
-  <mad-select></mad-select>
+  <mad-select>
+    <select>
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </mad-select>
 
   <h2>sizes</h2>
-  <mad-select v-for="size in sizes" :key="size" :size="size"></mad-select>
+  <mad-select v-for="size in sizes" :key="size" :size="size">
+    <select>
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </mad-select>
 </template>
 
 <script>
