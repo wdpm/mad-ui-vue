@@ -1,17 +1,18 @@
 <template>
   <div class="home"></div>
-  <mad-after-image-demo></mad-after-image-demo>
+  <mad-circle-ripple-demo />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import HelloWorld from '@/components/HelloWorld.vue'
 import MadAfterImageDemo from '@/usages/patterns/MadAfterImageDemo.vue'
+import MadCircleRippleDemo from '@/usages/patterns/MadCircleRippleDemo.vue'
 
 @Options({
   components: {
     HelloWorld,
-    MadAfterImageDemo,
+    MadCircleRippleDemo,
   },
 })
 export default class Home extends Vue {}
