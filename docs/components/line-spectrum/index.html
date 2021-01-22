@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../../../dist/css/mad-ui.min.css" rel="stylesheet">
+    <title>line spectrum</title>
+</head>
+
+<body>
+
+<div class="line-spectrum">
+    <canvas id="lineSpectrumCanvas" class="line-spectrum-canvas"></canvas>
+    <div class="line-spectrum-body">
+        <p class="line-spectrum-content">you just can be the one you wanna be</p>
+    </div>
+</div>
+
+<script src="../../../src/js/vendor/sine-waves.min.js"></script>
+<script>
+    let w = window,
+        d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        width = w.innerWidth || e.clientWidth || g.clientWidth,
+        height = w.innerHeight || e.clientHeight || g.clientHeight;
+
+    let waves = new SineWaves({
+        el: document.getElementById('lineSpectrumCanvas'),
+
+        speed: 4,
+
+        width: function () {
+            return width;
+        },
+        height: function () {
+            return height;
+        },
+
+        ease: 'SineInOut',
+
+        wavesWidth: '150%',
+
+        waves: [
+            {
+                timeModifier: 1,//This is multiplied againse `speed`
+                lineWidth: 1,// Stroke width
+                amplitude: -25,// How tall is the wave
+                wavelength: 50,// How long is the wave,
+                strokeStyle: 'rgba(255, 0, 0, .5)'
+            },
+            {
+                timeModifier: 1,
+                lineWidth: 1,
+                amplitude: -25,
+                wavelength: 100,
+                strokeStyle: 'rgba(0, 255, 0, .5)'
+            },
+            {
+                timeModifier: 1,
+                lineWidth: 1,
+                amplitude: -25,
+                wavelength: 200,
+                strokeStyle: 'rgba(0, 0, 255, .5)'
+            }
+        ],
+
+        // Called on window resize
+        resizeEvent: function () {
+
+        }
+    });
+</script>
+</body>
+
+</html>

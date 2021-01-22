@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>button click particle</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .btn {
+            position: relative;
+        }
+
+        .btn > .particle {
+            position: absolute;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: -1;
+            opacity: 1;
+            border-radius: 50%;
+            background-color: #2e2649;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+<button class="btn" data-particle-count="30" data-particle-radius="300">
+    click
+</button>
+
+<script>
+    let buttons = document.querySelectorAll(".btn");
+    buttons.forEach((button, index, buttons) => {
+        button.addEventListener('click', (eventTarget) => {
+            let particleCount = parseInt(button.getAttribute("data-particle-count"));
+            let particleRadius = parseInt(button.getAttribute("data-particle-radius"));
+
+            // append span children to this button element
+            for (let i = 0; i < particleCount; i++) {
+                let span = document.createElement("span");
+                span.classList.add("particle");
+
+                // set opacity
+                if (i % 2 === 0) {
+                    span.style.opacity = ".7";
+                } else {
+                    span.style.opacity = "1";
+                }
+
+                //set random size
+                let size = random(5, 30);
+                span.style.width = `${size}px`;
+                span.style.height = `${size}px`;
+
+                // randomly change background color
+                // 30% are only border
+                if (Math.random() > 0.7) {
+                    span.style.backgroundColor = "transparent";
+                }
+
+                button.append(span);
+            }
+
+            //animate spans and finally remove them
+            let particles = button.querySelectorAll(".particle");
+            particles.forEach((particle, index, particles) => {
+                const left = `${random(-particleRadius, particleRadius)}px`;
+                const top = `${random(-particleRadius, particleRadius)}px`;
+
+                let keyframes = [
+                    {left: 0, top: 0},
+                    {left: left, top: top}
+                ]
+                let animationOptions = {
+                    duration: 500
+                }
+                particle.animate(keyframes, animationOptions)
+            })
+
+            function random(min, max) {
+                return Math.floor(Math.random() * (max - min) + min);
+            }
+
+            function removeParticles() {
+                particles.forEach((particle) => {
+                    particle.remove()
+                })
+            }
+
+            setTimeout(removeParticles, 500)
+        })
+    })
+</script>
+</body>
+</html>

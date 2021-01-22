@@ -20,13 +20,27 @@ module.exports = {
                   },
                 },
               ],
-            },
-            // match `<style>` or `<style scoped>`
+            }, // match `<style>` or `<style scoped>`
             {
               use: ['vue-style-loader', 'css-loader'],
             },
           ],
         },
+        // {
+        //   test: /\.(png|jpe?g)$/,
+        //   use: [
+        //     {
+        //       loader: 'file-loader',
+        //       options: {
+        //         // Here!!!
+        //         esModule: false,
+        //         outputPath: 'images',
+        //         publicPath: 'images',
+        //         name: '[name].[ext]',
+        //       },
+        //     },
+        //   ],
+        // },
       ],
     },
   },

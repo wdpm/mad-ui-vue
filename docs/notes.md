@@ -28,7 +28,17 @@ a:active { color: red; }         /* Active links */
 p:active { background: #eee; }   /* Active paragraphs */
 ```
 
-## misc
+## Difference between extend, placeholders and mixins
+> https://marksheet.io/sass-extend.html
+
+|	|Definition	|Referencing|	Combines selectors?|	Allows parameters?|	Can be used on its own?|
+|---|---|---|---|---|---|
+|Mixins|	@mixin name()|	@include name()|	No|	Yes	|No|
+|Extensions|	Any class|	@extend .class|	Yes|	No	|Yes|
+|Placeholders|	%placeholder|	@extend %placeholder|	Yes	|No	|No|
+
+
+## principles
 
 - 如果没有充分的文档，那么功能不存在。
 - 如果代码无法维护和理解，那么功能不存在。

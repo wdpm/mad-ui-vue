@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bg clip path</title>
+    <link href="../../../dist/css/mad-ui.min.css" rel="stylesheet">
+    <style>
+        /*1*/
+        .bg-clip-of-2-img {
+            width: 700px;
+            height: 300px;
+            background-image: url('../../../src/assets/7.jpg');
+        }
+
+        .bg-clip-of-2-img::before {
+            background-image: url('../../../src/assets/6.jpg');
+        }
+
+        /*2*/
+        .bg-clip-of-hexagon{
+            width: 150px;
+            height: 150px;
+            background-image: url('../../../src/assets/7.jpg');
+        }
+
+        /*3*/
+        .bg-clip-of-rhombus{
+            width: 150px;
+            height: 150px;
+            background-image: url('../../../src/assets/7.jpg');
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="bg-clip-path bg-clip-of-2-img">
+</div>
+
+<div class="bg-clip-path bg-clip-of-hexagon">
+</div>
+
+<div class="bg-clip-path bg-clip-of-rhombus">
+</div>
+
+</body>
+
+</html>

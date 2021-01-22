@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>firework 1</title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+    let t = 0;
+    const canvas = document.querySelector('canvas')
+    const ctx = canvas.getContext('2d')
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+
+    addEventListener('resize', () => {
+        canvas.width = innerWidth
+        canvas.height = innerHeight
+        init()
+    })
+
+    function draw() {
+        ctx.globalCompositeOperation = "source-over";
+        ctx.fillStyle = "hsla(0,0%,0%,1)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        let foo = Math.sin(t) * 2 * Math.PI;
+        for (let i = 0; i < 400; i++) {
+            let r = 400 * Math.sin(i * foo);
+            ctx.globalCompositeOperation = "";
+            ctx.fillStyle = `hsla(${i + 12},100%,60%,1)`;
+            ctx.beginPath();
+            ctx.arc(
+                Math.cos(i) * r + canvas.width / 2,
+                Math.sin(i) * r + canvas.height / 2,
+                2,
+                0,
+                Math.PI * 2,
+            );
+            ctx.fill();
+        }
+        t += 0.000005;
+        t %= 2 * Math.PI;
+    }
+
+    function init() {
+
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        draw();
+    }
+
+    init();
+    animate();
+</script>
+</body>
+</html>

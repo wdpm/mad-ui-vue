@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>typing</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .typing {
+            font-family: Consolas,serif;
+            position: relative;
+            color: transparent;
+            white-space: nowrap;
+        }
+
+        .typing::before {
+            position: absolute;
+            content: attr(data-text);
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: black;
+            overflow: hidden;
+            border-right: 2px solid black;
+            animation: typing 10s steps(38) infinite;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 100%;
+            }
+
+            100% {
+                width: 0;
+            }
+        }
+    </style>
+    <!--    width: 0 -> 100%, and then divides by steps-->
+</head>
+<body>
+<h1 class="typing" data-text="vanilla css & js to show typing effect">vanilla css & js to show typing effect</h1>
+</body>
+</html>

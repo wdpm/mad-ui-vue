@@ -10,5 +10,9 @@
 ## CSS 技巧  
 [1] magic-akari.Solved by Flexbox[EB/OL].[2020-1-21].https://magic-akari.github.io/solved-by-flexbox/.
 
+[2] bit.dev.orbit-spinner[EB/OL].[2020-1-21].https://bit.dev/epicmaxco/epic-spinners/orbit-spinner.
+
+[3] Standardista.HSLA Color Picker[EB/OL].[2020-1-22].http://standardista.com/webkit/ch7/hsla.html.
+
 ## CSS 框架
-[2] jgthms.Documentation | Bulma: Free, open source, and modern CSS framework based on Flexbox[EB/OL].[2020-1-21].https://bulma.io/documentation/.
+[4] jgthms.Documentation | Bulma: Free, open source, and modern CSS framework based on Flexbox[EB/OL].[2020-1-21].https://bulma.io/documentation/.
