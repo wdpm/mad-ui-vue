@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>circular text</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        div.circTxt {
+            position: relative;
+            /*allows for centering*/
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+
+<script>
+    function circularText (txt, radius, classIndex) {
+        txt = txt.split("")
+        classIndex = document.getElementsByClassName("circTxt")[classIndex]
+
+        var deg = 360 / txt.length
+        console.log(deg, txt.length)
+        var origin = 0
+
+        // transform-origin: 0 100%; as rotate center point
+        txt.forEach((ea) => {
+            ea = `<p style='height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${ea}</p>`
+            // use html fragment
+            classIndex.innerHTML += ea
+            origin += deg
+        })
+    }
+
+    // the more characters you have in your text, the larger the radius you’ll need to use
+    // (however, you can create some neat effects by using a radius that might initially appear to be too small)
+    circularText("Let DI help you design solutions to onboard, upskill or reskill your software development organization. ",
+        200, 0)
+</script>
+</body>
+</html>

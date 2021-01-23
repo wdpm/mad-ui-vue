@@ -1,17 +1,17 @@
 <template>
   <div class="home"></div>
-  <mad-border-composition-demo />
+  <mad-circular-text-group-demo />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import HelloWorld from '@/components/HelloWorld.vue'
-import MadBorderCompositionDemo from '@/usages/patterns/MadBorderCompositionDemo.vue'
+import MadCircularTextGroupDemo from '@/usages/patterns/MadCircularTextGroupDemo.vue'
 
 @Options({
   components: {
     HelloWorld,
-    MadBorderCompositionDemo,
+    MadCircularTextGroupDemo,
   },
 })
 export default class Home extends Vue {}
