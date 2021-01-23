@@ -8,7 +8,7 @@
 - size-? for size
 - variant-? for variant, such as light or dark, outlined
 
-## .scss or .sass
+## .scss vs .sass
 |SCSS|SASS|
 |---|---|
 | New syntax| Older syntax|

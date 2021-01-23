@@ -1,18 +1,17 @@
 <template>
   <div class="home"></div>
-  <mad-grid-demo />
+  <mad-line-noise-demo></mad-line-noise-demo>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import HelloWorld from '@/components/HelloWorld.vue'
-import MadInsetBorderDemo from '@/usages/patterns/MadInsetBorderDemo.vue'
-import MadGridDemo from '@/usages/patterns/MadGridDemo.vue'
+import MadLineNoiseDemo from '@/usages/patterns/MadLineNoiseDemo.vue'
 
 @Options({
   components: {
     HelloWorld,
-    MadGridDemo,
+    MadLineNoiseDemo,
   },
 })
 export default class Home extends Vue {}
