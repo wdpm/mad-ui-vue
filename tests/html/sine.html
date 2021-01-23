@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sine wave</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<h3>Sine Wave</h3>
+<canvas id="canvas" width="500" height="100"></canvas>
+</body>
+<script>
+    let canvas = document.getElementById('canvas')
+    let ctx = canvas.getContext('2d')
+    plotSine(ctx)
+
+    function plotSine (ctx) {
+        var width = ctx.canvas.width
+        var height = ctx.canvas.height
+
+        ctx.beginPath()
+        ctx.lineWidth = 1
+        ctx.strokeStyle = "red"
+
+        var x = 0
+        var y = 0
+        // https://en.wikipedia.org/wiki/Sine_wave
+        // y(t) = A sin(2πf t + φ) = A sin(ω t + φ)
+        // super parameters
+        var amplitude = 40 //振幅 A
+        var frequency = 0.05 // better: ω omega 值越大，震荡越频繁
+        var phase = 0 // 相位 φ => 偏移量
+        ctx.moveTo(x, y)
+        while (x < width) {
+            y = amplitude * Math.sin(x * frequency + phase) + height / 2
+            ctx.lineTo(x, y)
+            x = x + 1
+        }
+        console.log(x, y)
+        ctx.stroke()
+    }
+</script>
+</html>
