@@ -1,15 +1,15 @@
 <template>
   <div class="home">home</div>
-  <mad-cover-demo />
+  <mad-image-cross-demo />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import MadCoverDemo from '@/usages/patterns/MadCoverDemo.vue'
+import MadImageCrossDemo from '@/usages/patterns/MadImageCrossDemo.vue'
 
 @Options({
   components: {
-    MadCoverDemo,
+    MadImageCrossDemo,
   },
 })
 export default class Home extends Vue {}
