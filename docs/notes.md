@@ -44,3 +44,5 @@ p:active { background: #eee; }   /* Active paragraphs */
 - 如果代码无法维护和理解，那么功能不存在。
 - 如果功能实现不够简洁，那么应该被优化重构。
 - 功能实现的继承层级不能过高，例如，理论上不应该超过三层，否则会陷入继承地狱。
+- Whenever possible, prefer a HTML and CSS implementation over JavaScript
+- Whenever possible, use utilities over custom styles

@@ -1,3 +1,11 @@
+/**
+ *     window.addEventListener('resize', function (evt) {
+        console.group();
+        console.log(`BrowserUtil.getHeight(): ${BrowserUtil.getHeight()}`);
+        console.log(`BrowserUtil.getWidth() : ${BrowserUtil.getWidth()}`);
+        console.groupEnd();
+    })
+ */
 class BrowserUtil {
   static w = window
   static d = document

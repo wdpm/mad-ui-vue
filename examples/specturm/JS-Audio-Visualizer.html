@@ -47,6 +47,7 @@
 
             file.onchange = function () {
                 var files = this.files;
+                console.log(files[0])
                 audio.src = URL.createObjectURL(files[0]);
                 audio.load();
                 audio.play();

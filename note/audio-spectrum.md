@@ -95,7 +95,7 @@ const drawLineSegment = (ctx, x, y, width, isEven) => {
 };
 ```
 
-![](showcase/spectrum-curve.png)
+![](spectrum-curve.png)
 
 back to the draw() function.
 ```js

@@ -20,3 +20,7 @@
 
 ## CSS 框架
 [5] jgthms.Documentation | Bulma: Free, open source, and modern CSS framework based on Flexbox[EB/OL].[2020-1-21].https://bulma.io/documentation/.
+
+## CSS 框架设计方法论
+
+[6] Bootstrap team.Approach[EB/OL].[2020-1-24].https://v5.bootcss.com/docs/extend/approach/.
