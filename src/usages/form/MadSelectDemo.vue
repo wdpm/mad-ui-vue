@@ -18,7 +18,7 @@
 
 <script>
 import MadSelect from '@/form/MadSelect'
-import { sizes } from '@/utils'
+import { sizes } from '@/utils/propValidatorHelper'
 
 export default {
   name: 'MadSelectDemo',

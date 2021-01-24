@@ -1,16 +1,15 @@
 <template>
   <div class="home">home</div>
-  <mad-image-overlap-demo />
+  <mad-letter-paper-demo />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import MadGearDemo from '@/usages/patterns/MadGearDemo.vue'
-import MadImageOverlapDemo from '@/usages/patterns/MadImageOverlapDemo.vue'
+import MadLetterPaperDemo from '@/usages/patterns/MadLetterPaperDemo.vue'
 
 @Options({
   components: {
-    MadImageOverlapDemo,
+    MadLetterPaperDemo,
   },
 })
 export default class Home extends Vue {}

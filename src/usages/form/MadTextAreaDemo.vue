@@ -27,7 +27,7 @@
 
 <script>
 import MadTextArea from '@/form/MadTextArea'
-import { colorMapSemanticValues, sizes } from '@/utils'
+import { colorMapSemanticValues, sizes } from '@/utils/propValidatorHelper'
 
 export default {
   name: 'MadTextAreaDemo',

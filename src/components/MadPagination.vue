@@ -22,7 +22,7 @@
  *
  */
 
-import { sizes } from '@/utils'
+import { sizes } from '@/utils/propValidatorHelper'
 
 export default {
   name: 'MadPagination',

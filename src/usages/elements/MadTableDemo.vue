@@ -221,7 +221,7 @@
 
 <script>
 import MadTable from '@/elements/MadTable'
-import { colorMapValues } from '@/utils'
+import { colorMapValues } from '@/utils/propValidatorHelper'
 
 export default {
   name: 'MadTableDemo',

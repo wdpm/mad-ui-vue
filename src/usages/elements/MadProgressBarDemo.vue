@@ -38,7 +38,7 @@
 
 <script>
 import MadProgressBar from '@/elements/MadProgressBar'
-import { colorMapValuesNoLight, sizes } from '@/utils'
+import { colorMapValuesNoLight, sizes } from '@/utils/propValidatorHelper'
 
 export default {
   name: 'MadProgressBarDemo',

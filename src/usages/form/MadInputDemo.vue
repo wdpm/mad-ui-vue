@@ -13,7 +13,7 @@
 
 <script>
 import MadInput from '@/form/MadInput'
-import { colorMapSemanticValues } from '@/utils'
+import { colorMapSemanticValues } from '@/utils/propValidatorHelper'
 
 export default {
   name: 'MadInputDemo',

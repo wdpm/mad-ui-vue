@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { colorMapValuesNoLight, sizes } from '@/utils'
+import { colorMapValuesNoLight, sizes } from '@/utils/propValidatorHelper'
 
 export default {
   name: 'MadProgressBar',

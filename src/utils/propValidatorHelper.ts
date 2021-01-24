@@ -44,3 +44,15 @@ export const colorMapValuesNoLight = removeByValue(colorMapValues, [
 
 // '' means normal or default
 export const sizes = ['small', '', 'medium', 'large'] as string[]
+
+interface sizeValueEntry {
+  [key: string]: number
+}
+
+export const sizeValueMap = {
+  small: 0.75,
+  '': 1,
+  normal: 1,
+  medium: 1.25,
+  large: 1.5,
+} as sizeValueEntry
