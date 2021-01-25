@@ -13,7 +13,7 @@
  * color is as theme: use color-? such as color-info
  */
 
-import { colorMapValues, sizes } from '@/utils/propValidatorHelper'
+import { colorMapValues, sizes } from '@/utils/propValidateHelper'
 
 export default {
   name: 'MadTag',

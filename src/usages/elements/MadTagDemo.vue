@@ -39,7 +39,7 @@
 
 <script>
 import MadTag from '@/elements/MadTag'
-import { colorMapValuesNoLight, sizes } from '@/utils/propValidatorHelper'
+import { colorMapValuesNoLight, sizes } from '@/utils/propValidateHelper'
 
 export default {
   name: 'MadTagDemo',

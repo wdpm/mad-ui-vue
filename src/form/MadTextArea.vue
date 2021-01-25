@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { colorMapSemanticValues, sizes } from '@/utils/propValidatorHelper'
+import { colorMapSemanticValues, sizes } from '@/utils/propValidateHelper'
 
 /**
  * readonly

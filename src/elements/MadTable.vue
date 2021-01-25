@@ -12,7 +12,7 @@
  * custom height and show scroll bar [TODO]
  */
 
-import { colorMapValues } from '@/utils/propValidatorHelper'
+import { colorMapValues } from '@/utils/propValidateHelper'
 import { h } from 'vue'
 
 export default {

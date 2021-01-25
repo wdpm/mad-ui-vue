@@ -20,7 +20,7 @@
  * prop mode: pass text as prop data
  */
 
-import { sizes, sizeValueMap } from '@/utils/propValidatorHelper'
+import { sizes, sizeValueMap } from '@/utils/propValidateHelper'
 
 export default {
   name: 'MadLetterPaper',

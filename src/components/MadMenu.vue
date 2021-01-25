@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { sizes } from '@/utils/propValidatorHelper'
+import { sizes } from '@/utils/propValidateHelper'
 
 /**
  * sizes variants
