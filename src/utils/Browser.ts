@@ -6,13 +6,15 @@
         console.groupEnd();
     })
  */
-class BrowserUtil {
-  static w = window
-  static d = document
-  static e = this.d.documentElement
-  static body = this.d.getElementsByTagName('body')[0]
+export default class Browser {
+  static readonly w = window
+  static readonly d = document
+  static readonly e = Browser.d.documentElement
+  static readonly body = Browser.d.getElementsByTagName('body')[0]
 
-  constructor() {}
+  private constructor() {
+    //
+  }
 
   static getWidth() {
     return this.w.innerWidth || this.e.clientWidth || this.body.clientWidth

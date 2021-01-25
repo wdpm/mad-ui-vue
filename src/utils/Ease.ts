@@ -1,5 +1,7 @@
 export class Ease {
-  private constructor() {}
+  private constructor() {
+    //
+  }
 
   static linear(progress: number, amplitude: number) {
     return amplitude

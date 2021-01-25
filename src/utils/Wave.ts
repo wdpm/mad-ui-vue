@@ -1,5 +1,7 @@
 export class Wave {
-  private constructor() {}
+  private constructor() {
+    //
+  }
 
   static sine(x: number) {
     return Math.sin(x)

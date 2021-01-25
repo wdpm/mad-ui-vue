@@ -1,8 +1,8 @@
 import { Ease } from '@/utils/Ease'
 import { Wave } from '@/utils/Wave'
 
-interface Options {
-  running?: boolean
+export interface Options {
+  running: boolean
   initialize?: () => void
   resizeEvent?: () => void
   el: HTMLCanvasElement | undefined
@@ -15,7 +15,7 @@ interface Options {
   waves: Array<WaveOption> | null
 }
 
-interface WaveOption {
+export interface WaveOption {
   waveFn: any
   timeModifier: number
   amplitude: number
@@ -27,7 +27,9 @@ interface WaveOption {
 }
 
 export class SineWave {
+  // default options
   private options: Options = {
+    running: true,
     el: undefined,
     speed: 10,
     rotate: 0,
@@ -59,9 +61,9 @@ export class SineWave {
   private yAxis: number
   private easeFunction: any
   private rotation: number
-  private running: boolean = true
+  private running = true
   private waves: Array<WaveOption>
-  private time: number = 0
+  private time = 0
 
   constructor(options: Options) {
     // merge options
@@ -94,13 +96,14 @@ export class SineWave {
     // set the canvas rotation
     this.rotation = SineWave.degreeToRadian(this.options.rotate)
 
-    // running state
-    if (SineWave.isType(this.options.running, 'boolean')) {
-      this.running = this.options.running
-    }
+    // merge running state parameter
+    this.running = !!this.options.running
 
     // assign wave functions
     this.setupWaveFns()
+
+    //render first
+    this.update()
 
     // start animation loop
     this.loop()
@@ -120,8 +123,10 @@ export class SineWave {
    * @private
    */
   private updateDimensions() {
-    let width = this.getDimension('width')
-    let height = this.getDimension('height')
+    const width = this.getDimension('width')
+    const height = this.getDimension('height')
+
+    // console.log('update', width, height)
 
     // apply dpr for retina display
     this.width = this.el.width = width * this.dpr
@@ -183,19 +188,21 @@ export class SineWave {
   private setupUserFunctions() {
     // resize
     if (SineWave.isType(this.options.resizeEvent, 'function')) {
-      this.options.resizeEvent.call(this)
       window.addEventListener('resize', () => {
         this.options.resizeEvent()
       })
     }
-
     // init
     if (SineWave.isType(this.options.initialize, 'function')) {
       this.options.initialize.call(this)
     }
   }
 
-  private static getFunction(obj: {}, name: string, defaultName: string) {
+  private static getFunction(
+    obj: typeof Ease | Wave,
+    name: string,
+    defaultName: string
+  ) {
     if (SineWave.isType(name, 'function')) {
       return name
     } else if (
@@ -230,7 +237,7 @@ export class SineWave {
     if (this.running) {
       this.update()
     }
-    window.requestAnimationFrame(this.loop)
+    window.requestAnimationFrame(this.loop.bind(this))
   }
 
   private update() {
@@ -251,7 +258,7 @@ export class SineWave {
     const wavesLength = this.waves.length
     // draw each line
     for (let i = 0; i < wavesLength; i++) {
-      let timeModifier = this.waves[i].timeModifier || 1
+      const timeModifier = this.waves[i].timeModifier || 1
       this.drawWave(this.time * timeModifier, this.waves[i])
     }
 
@@ -279,7 +286,7 @@ export class SineWave {
 
     for (let i = 0; i < this.waveWidth; i += waveOption.segmentLength) {
       // Calculate where the next point is
-      let point = this.getPoint(time, i, waveOption)
+      const point = this.getPoint(time, i, waveOption)
       this.ctx.lineTo(point.x, point.y)
     }
 
@@ -289,6 +296,7 @@ export class SineWave {
   }
 
   private getPoint(time: number, position: number, waveOption: WaveOption) {
+    // key code logic
     let x =
       time * this.options.speed +
       (-this.yAxis + position) / waveOption.wavelength
