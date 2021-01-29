@@ -26,8 +26,8 @@ import MadCodeBlock from '@/document/MadCodeBlock'
 import MadDividerUsageLabel from '@/usages/elements/divider/MadDividerUsageLabel'
 import MadDividerUsageBasic from '@/usages/elements/divider/MadDividerUsageBasic'
 
-import MadDividerUsageLabelCode from '!raw-loader!@/usages/elements/divider/MadDividerUsageBasic'
-import MadDividerUsageSimpleCode from '!raw-loader!@/usages/elements/divider/MadDividerUsageLabel'
+import MadDividerUsageBasicCode from '!raw-loader!@/usages/elements/divider/MadDividerUsageBasic'
+import MadDividerUsageLabelCode from '!raw-loader!@/usages/elements/divider/MadDividerUsageLabel'
 import MadDocPage from '@/document/MadDocPage'
 
 export default {
@@ -40,7 +40,7 @@ export default {
   },
   data() {
     return {
-      MadDividerUsageSimpleCode,
+      MadDividerUsageBasicCode,
       MadDividerUsageLabelCode,
     }
   },
