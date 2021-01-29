@@ -10,6 +10,6 @@
 <style lang="scss">
 @import './scss/base/_all';
 
-// use this way to import highlight.css
+// use this way to import 3rd-party css
 @import './../node_modules/highlight.js/styles/github.css';
 </style>

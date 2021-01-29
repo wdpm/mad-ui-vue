@@ -1,15 +1,15 @@
 <template>
   <div class="home">home</div>
-  <mad-code-block-demo />
+  <mad-divider-demo></mad-divider-demo>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import MadCodeBlockDemo from '@/usages/document/MadCodeBlockDemo.vue'
+import MadDividerDemo from '@/usages/document/divider/index.vue'
 
 @Options({
   components: {
-    MadCodeBlockDemo,
+    MadDividerDemo,
   },
 })
 export default class Home extends Vue {}
