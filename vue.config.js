@@ -22,7 +22,15 @@ module.exports = {
               ],
             }, // match `<style>` or `<style scoped>`
             {
-              use: ['vue-style-loader', 'css-loader'],
+              use: [
+                'vue-style-loader',
+                {
+                  loader: 'css-loader',
+                  options: {
+                    modules: false,
+                  },
+                },
+              ],
             },
           ],
         },

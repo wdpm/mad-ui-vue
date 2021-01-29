@@ -1,15 +1,15 @@
 <template>
   <div class="home">home</div>
-  <mad-wave-demo/>
+  <mad-code-block-demo />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import MadWaveDemo from "@/usages/patterns/MadWaveDemo.vue";
+import MadCodeBlockDemo from '@/usages/document/MadCodeBlockDemo.vue'
 
 @Options({
   components: {
-    MadWaveDemo,
+    MadCodeBlockDemo,
   },
 })
 export default class Home extends Vue {}

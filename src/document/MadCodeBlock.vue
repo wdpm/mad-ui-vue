@@ -1,0 +1,118 @@
+<template>
+  <div class="code-block">
+    <div class="code-show">
+      <slot></slot>
+    </div>
+    <div class="code-info">
+      <strong class="code-title">{{ title }}</strong>
+      <slot name="desc" class="code-desc"></slot>
+      <a class="code-toggle" @click="visible = !visible"> code </a>
+    </div>
+    <div class="code-content" v-show="visible">
+      <pre><code ref="code" class="lang-html">{{ code }}</code></pre>
+    </div>
+  </div>
+</template>
+
+<script>
+import hljs from 'highlight.js'
+
+/**
+ * like this: https://v3.vuejs.org/guide/contributing/doc-style-guide.html#line-highlighting
+ */
+export default {
+  name: 'MadCodeBlock',
+  props: {
+    title: {
+      type: String,
+      default: '',
+      required: true,
+    },
+    code: {
+      type: String,
+      default: '',
+      required: true,
+    },
+    desc: {
+      type: String,
+      default: '',
+      required: true,
+    },
+  },
+  data() {
+    return {
+      visible: false,
+    }
+  },
+  mounted() {
+    hljs.highlightBlock(this.$refs.code)
+  },
+}
+</script>
+
+<style scoped lang="scss">
+.code-block {
+  margin-bottom: 25px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.code-show {
+  padding: 20px 30px;
+}
+
+.code-info {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px 30px;
+  line-height: 1.6;
+  border-top: 1px solid #e8e8e8;
+
+  p {
+    margin: 5px 0;
+  }
+}
+
+.code-title {
+  position: absolute;
+  top: -12px;
+  left: 36px;
+  padding: 0 12px;
+  line-height: 22px;
+  font-size: 15px;
+  background: #fff;
+}
+
+.code-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 8px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.code-content {
+  border-top: 1px solid #ddd;
+
+  pre {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .hljs {
+    padding: 18px 30px;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: Consolas, Helvetica, Arial, sans-serif;
+  }
+}
+</style>
