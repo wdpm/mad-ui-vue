@@ -105,7 +105,7 @@ export default {
   .hljs {
     padding: 18px 30px;
     line-height: 1.5;
-    font-size: 1em;
+    font-size: 0.875em;
     font-weight: 400;
     font-family: Consolas, Helvetica, Arial, sans-serif;
   }

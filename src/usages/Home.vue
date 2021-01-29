@@ -1,5 +1,4 @@
 <template>
-  <div class="home">home</div>
   <mad-divider-demo></mad-divider-demo>
 </template>
 
