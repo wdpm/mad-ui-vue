@@ -1,21 +1,23 @@
 <template>
-  <mad-code-block :code="sampleCode" title="title" desc="desc">
-    <p>code effect</p>
+  <mad-code-block :code="sampleCodeRaw" title="title" desc="desc">
+    <sample-code></sample-code>
   </mad-code-block>
 </template>
 
 <script>
 import MadCodeBlock from '@/document/MadCodeBlock'
-import sampleCode from '!raw-loader!./sampleCode'
+import SampleCodeRaw from '!raw-loader!@/document/SampleCode'
+import SampleCode from "@/document/SampleCode"
 
 export default {
   name: 'MadCodeBlockDemo',
   components: {
     MadCodeBlock,
+    SampleCode,
   },
   data() {
     return {
-      sampleCode,
+      sampleCodeRaw: SampleCodeRaw,
     }
   },
 }

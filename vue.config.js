@@ -26,9 +26,9 @@ module.exports = {
                 'vue-style-loader',
                 {
                   loader: 'css-loader',
-                  options: {
-                    modules: false,
-                  },
+                  // options: {
+                  //   modules: false,
+                  // },
                 },
               ],
             },
