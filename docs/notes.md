@@ -37,6 +37,10 @@ p:active { background: #eee; }   /* Active paragraphs */
 |Extensions|	Any class|	@extend .class|	Yes|	No	|Yes|
 |Placeholders|	%placeholder|	@extend %placeholder|	Yes	|No	|No|
 
+## docs
+- mad-divider-usage-basic 表示mad-divider组件的基本用法
+- mad-divider-usage-basic-code 表示mad-divider组件的基本用法的代码
+- index.vue 表示某个组件的入口vue
 
 ## principles
 

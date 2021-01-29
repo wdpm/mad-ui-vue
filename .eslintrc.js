@@ -10,11 +10,12 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    '@typescript-eslint/no-useless-constructor': 'off',
     'ban-ts-comment': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     'no-this-alias': 'off',
-    '@typescript-eslint/no-this-alias': 'off', // 'no-empty-function': 'off',
-    // '@typescript-eslint/no-empty-function': ['error'],
+    '@typescript-eslint/no-this-alias': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
   },
   overrides: [
     {

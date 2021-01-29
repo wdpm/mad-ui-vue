@@ -5,7 +5,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import MadDividerDemo from '@/usages/document/divider/index.vue'
+import MadDividerDemo from '@/usages/elements/divider/index.vue'
 
 @Options({
   components: {

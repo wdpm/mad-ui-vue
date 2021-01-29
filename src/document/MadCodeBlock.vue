@@ -5,7 +5,7 @@
     </div>
     <div class="code-info">
       <strong class="code-title">{{ title }}</strong>
-      <slot name="desc" class="code-desc"></slot>
+      <slot name="desc"></slot>
       <a class="code-toggle" @click="visible = !visible"> code </a>
     </div>
     <div class="code-content" v-show="visible">
@@ -105,7 +105,7 @@ export default {
   .hljs {
     padding: 18px 30px;
     line-height: 1.5;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 400;
     font-family: Consolas, Helvetica, Arial, sans-serif;
   }
