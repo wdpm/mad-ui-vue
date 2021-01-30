@@ -42,6 +42,20 @@ p:active { background: #eee; }   /* Active paragraphs */
 - mad-divider-usage-basic-code 表示mad-divider组件的基本用法的代码
 - index.vue 表示某个组件的入口vue
 
+### read time
+> https://github.com/ngryman/reading-time
+
+### emoji commit
+> https://github.com/ngryman/cz-emoji
+```
+? Select the type of change you are committing: (Use arrow keys)
+❯ feature   🌟  A new feature
+  fix       🐞  A bug fix
+  docs      📚  Documentation change
+  refactor  🎨  A code refactoring change
+  chore     🔩  A chore change
+```
+
 ## principles
 
 - 如果没有充分的文档，那么功能不存在。

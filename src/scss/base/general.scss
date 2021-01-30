@@ -8,8 +8,6 @@ html {
 }
 
 body {
-  //display: flex;
-  //flex-direction: column;
   min-height: 100vh;
   font-weight: 400;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -17,7 +15,3 @@ body {
   color: $body-text-color;
   background-color: $body-bg-color;
 }
-
-//main {
-//  flex: 1;
-//}

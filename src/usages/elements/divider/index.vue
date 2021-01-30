@@ -1,6 +1,6 @@
 <template>
   <mad-doc-page>
-    <mad-code-block title="基本用法" :code="MadDividerUsageSimpleCode">
+    <mad-code-block title="基本用法" :code="MadDividerUsageBasicCode">
       <mad-divider-usage-basic></mad-divider-usage-basic>
       <template v-slot:desc>
         <div><p>只是一条分割线。</p></div>
