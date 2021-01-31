@@ -1,14 +1,25 @@
 <template>
   <li>
-    <div class="tree-item" :class="{ bold: isFolder }" @click="toggle">
+    <component
+      :is="'a'"
+      class="tree-item"
+      :class="[
+        { bold: isFolder },
+        itemCssClasses,
+        { 'state-active': item.id === $route.name },
+      ]"
+      @click="toggle"
+    >
       {{ item.text }}
       <span v-if="isFolder">[{{ isOpen ? '-' : '+' }}]</span>
-    </div>
+    </component>
+
     <ul v-show="isOpen" v-if="isFolder" class="tree-item-list">
       <mad-tree-item
         v-for="(child, index) in item.children"
         :key="child.id || index"
         :item="child"
+        :item-css-classes="itemCssClasses"
         @click="onClick($event, child)"
       ></mad-tree-item>
     </ul>
@@ -19,7 +30,25 @@
 export default {
   name: 'MadTreeItem', // https://v3.vuejs.org/guide/migration/v-on-native-modifier-removed.html
   props: {
-    item: Object,
+    item: {
+      type: Object,
+      required: true,
+      default: function () {
+        return {}
+      },
+    },
+    itemCssClasses: {
+      type: [String, Array],
+      required: false,
+      default: '',
+    },
+    isHighlight: {
+      type: Function,
+      required: false,
+      default: function (node) {
+        return false
+      },
+    },
   },
   data() {
     return {
@@ -27,7 +56,7 @@ export default {
     }
   },
   computed: {
-    isFolder: function () {
+    isFolder() {
       return this.item.children && this.item.children.length
     },
   },
@@ -37,28 +66,27 @@ export default {
         this.isOpen = !this.isOpen
       }
     },
-    onClick($event, child) {
+    onClick($event, node) {
+      // console.log('$event', $event)
+      // console.log('node', node)
       // stop native click propagation
       $event.stopPropagation()
       // fire custom click event up
-      this.$emit('click', child)
+      this.$emit('click', node)
     },
   },
 }
 </script>
 
-<style lang="scss">
-li {
-  list-style: none;
-}
-
+<style scoped lang="scss">
+li,
 ul {
   list-style: none;
 }
 
 .tree-item {
   position: relative;
-  padding: 6px 20px;
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   color: #4a4a4a;
@@ -71,6 +99,12 @@ ul {
   &-list {
     background-clip: padding-box;
     padding-left: 1rem;
+  }
+
+  // state active style
+  &.state-active {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-right: rgba(0, 0, 0, 0.5) solid 2px;
   }
 }
 

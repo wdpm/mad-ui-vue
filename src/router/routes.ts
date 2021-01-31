@@ -1,12 +1,12 @@
-const components = [
+const elements = [
   {
     name: 'divider',
     text: '分割线',
   },
   {
-    name: 'treeitem',
-    text: 'tree item',
-  },
+    name: 'alert',
+    text: '提醒',
+  }
 ]
 
-export { components }
+export { elements }

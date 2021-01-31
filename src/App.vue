@@ -1,6 +1,6 @@
 <template>
   <div class="holy-grail">
-    <header class="header">header</header>
+    <header class="header">mad-ui | {{ this.$route.name }}</header>
     <div class="holy-grail-body">
       <main class="holy-grail-content">
         <router-view />
@@ -17,7 +17,8 @@
           </li>
           <mad-tree-item
             class="nav-list-item"
-            :item="componentTree"
+            :item-css-classes="['nav-list-item-link']"
+            :item="elementTree"
             @click="clickNode($event)"
           >
           </mad-tree-item>
@@ -32,7 +33,7 @@
 </template>
 
 <script>
-import { components } from './router/routes'
+import { elements } from '@/router/routes'
 
 import MadTreeItem from '@/components/MadTreeItem'
 
@@ -41,23 +42,25 @@ export default {
     MadTreeItem,
   },
   computed: {
-    // // pass css class to control style
-    componentTree() {
-      let comps = {
-        id: 'components',
-        text: '组件',
-        children: components.map((item) => ({
+    elementTree() {
+      let eles = {
+        id: 'elements',
+        text: '元素',
+        children: elements.map((item) => ({
           id: item.name,
           text: `${item.name} ${item.text}`,
         })),
       }
-      console.log(JSON.stringify(comps))
-      return comps
+      // console.log(JSON.stringify(eles))
+      return eles
     },
   },
   methods: {
     clickNode(node) {
-      console.log('click node:', node)
+      // change router
+      if (node.id) {
+        this.$router.push({ name: node.id })
+      }
     },
   },
 }
@@ -131,7 +134,7 @@ export default {
       cursor: pointer;
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.02);
+        background-color: rgba(0, 0, 0, 0.05);
       }
 
       // vue router link style
