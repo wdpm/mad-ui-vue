@@ -1,12 +1,16 @@
 const elements = [
   {
     name: 'divider',
-    text: '分割线',
+    text: 'Divider line',
   },
   {
     name: 'alert',
-    text: '提醒',
-  }
+    text: 'Alert',
+  },
+  {
+    name: 'block',
+    text: 'Block',
+  },
 ]
 
 export { elements }

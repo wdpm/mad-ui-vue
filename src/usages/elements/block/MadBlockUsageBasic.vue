@@ -4,10 +4,10 @@
 </template>
 
 <script>
-import MadBlock from '@/elements/MadBlock.vue'
+import MadBlock from '@/elements/MadBlock'
 
 export default {
-  name: 'MadBlockDemo',
+  name: 'MadBlockUsageBasic',
   components: {
     MadBlock,
   },

@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import MadTreeItemDemo from '@/usages/components/MadTreeItemDemo.vue'
+import MadTreeItemDemo from '@/usages/document/MadTreeItemDemo.vue'
 
 @Options({
   components: {
