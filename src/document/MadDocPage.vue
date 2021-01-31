@@ -29,12 +29,13 @@ export default {
     },
   },
   computed: {
-    routePath() {
-      return this.$route.name
-    },
     content() {
-      // use routePath to locate file
-      return require(`@/usages/elements/divider/divider.md`)
+      // example:
+      // {"fullPath":"/elements/alert","hash":"","query":{},"name":"alert","path":"/elements/alert","params":{}
+      const routePath = this.$route.path
+      const routeName = this.$route.name
+      // use $route to locate file
+      return require(`@/usages${routePath}/${routeName}.md`)
     },
     splitContent() {
       return this.content.split('<!--code-->')

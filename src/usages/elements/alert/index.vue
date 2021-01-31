@@ -1,15 +1,46 @@
 <template>
-  <p>alert</p>
+  <mad-doc-page>
+    <mad-code-block title="basic" :code="MadAlertUsageBasicCode">
+      <mad-alert-usage-basic></mad-alert-usage-basic>
+    </mad-code-block>
+    <mad-code-block title="colors" :code="MadAlertUsageColorsCode">
+      <mad-alert-usage-colors></mad-alert-usage-colors>
+    </mad-code-block>
+    <mad-code-block title="custom" :code="MadAlertUsageCustomCode">
+      <mad-alert-usage-custom></mad-alert-usage-custom>
+    </mad-code-block>
+  </mad-doc-page>
 </template>
 
 <script>
+import MadCodeBlock from '@/document/MadCodeBlock'
+import MadDocPage from '@/document/MadDocPage'
+
+import MadAlertUsageBasic from '@/usages/elements/alert/MadAlertUsageBasic'
+import MadAlertUsageColors from '@/usages/elements/alert/MadAlertUsageColors'
+import MadAlertUsageCustom from '@/usages/elements/alert/MadAlertUsageCustom'
+
+import MadAlertUsageBasicCode from '!raw-loader!@/usages/elements/alert/MadAlertUsageBasic'
+import MadAlertUsageColorsCode from '!raw-loader!@/usages/elements/alert/MadAlertUsageColors'
+import MadAlertUsageCustomCode from '!raw-loader!@/usages/elements/alert/MadAlertUsageCustom'
+
 export default {
-  name: 'MadDividerUsage',
-  components: {},
+  name: 'MadAlertUsage',
+  components: {
+    MadCodeBlock,
+    MadDocPage,
+    MadAlertUsageBasic,
+    MadAlertUsageColors,
+    MadAlertUsageCustom,
+  },
   data() {
-    return {}
+    return {
+      MadAlertUsageBasicCode,
+      MadAlertUsageColorsCode,
+      MadAlertUsageCustomCode,
+    }
   },
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped></style>

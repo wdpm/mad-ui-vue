@@ -1,6 +1,8 @@
 <template>
   <div class="holy-grail">
-    <header class="header">mad-ui | {{ this.$route.name }}</header>
+    <header class="header">
+      mad-ui | {{ this.$route.path }}
+    </header>
     <div class="holy-grail-body">
       <main class="holy-grail-content">
         <router-view />
@@ -35,7 +37,7 @@
 <script>
 import { elements } from '@/router/routes'
 
-import MadTreeItem from '@/components/MadTreeItem'
+import MadTreeItem from '@/document/MadTreeItem'
 
 export default {
   components: {

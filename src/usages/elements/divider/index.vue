@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import MadDocPage from '@/document/MadDocPage'
 import MadCodeBlock from '@/document/MadCodeBlock'
 
 import MadDividerUsageLabel from '@/usages/elements/divider/MadDividerUsageLabel'
@@ -28,7 +29,6 @@ import MadDividerUsageBasic from '@/usages/elements/divider/MadDividerUsageBasic
 
 import MadDividerUsageBasicCode from '!raw-loader!@/usages/elements/divider/MadDividerUsageBasic'
 import MadDividerUsageLabelCode from '!raw-loader!@/usages/elements/divider/MadDividerUsageLabel'
-import MadDocPage from '@/document/MadDocPage'
 
 export default {
   name: 'MadDividerUsage',

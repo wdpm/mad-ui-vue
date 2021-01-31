@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import MadTreeItem from '@/components/MadTreeItem'
+import MadTreeItem from '@/document/MadTreeItem'
 
 export default {
   name: 'MadTreeItemDemo',
