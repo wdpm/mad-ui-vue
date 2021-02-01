@@ -14,7 +14,7 @@ import MadBlockUsageBasic from '@/usages/elements/block/MadBlockUsageBasic'
 import MadBlockUsageBasicCode from '!raw-loader!@/usages/elements/block/MadBlockUsageBasic'
 
 export default {
-  name: 'Template',
+  name: 'MadBlockUsage',
   components: {
     MadCodeBlock,
     MadDocPage,

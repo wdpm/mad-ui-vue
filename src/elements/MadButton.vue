@@ -10,13 +10,13 @@ import { h } from 'vue'
  *
  * Colors: white, black, dark, black, text, primary,info,success,waring,danger
  *
- * is-light
+ * variant-light
  *
- * is-fullwidth
+ * variant-fullwidth
  *
- * is-outlined
+ * variant-outlined
  *
- * is-rounded
+ * variant-rounded
  *
  * disabled
  */
@@ -58,16 +58,16 @@ export default {
         )
       },
     },
-    isLight: {
+    light: {
       type: Boolean,
     },
-    isFullwidth: {
+    fullwidth: {
       type: Boolean,
     },
-    isOutlined: {
+    outlined: {
       type: Boolean,
     },
-    isRounded: {
+    rounded: {
       type: Boolean,
     },
     disabled: {
@@ -80,10 +80,10 @@ export default {
     const basicStyle = this.$style['button']
     const sizeStyle = this.size ? this.$style[this.size] : ''
     const colorStyle = this.color ? this.$style[this.color] : ''
-    const lightStyle = this.isLight ? this.$style['is-light'] : ''
-    const fullwidthStyle = this.isFullwidth ? this.$style['is-fullwidth'] : ''
-    const outlinedStyle = this.isOutlined ? this.$style['is-outlined'] : ''
-    const roundedStyle = this.isRounded ? this.$style['is-rounded'] : ''
+    const lightStyle = this.light ? this.$style['variant-light'] : ''
+    const fullwidthStyle = this.fullwidth ? this.$style['variant-fullwidth'] : ''
+    const outlinedStyle = this.outlined ? this.$style['variant-outlined'] : ''
+    const roundedStyle = this.rounded ? this.$style['variant-rounded'] : ''
     // fix `a` tag disabled='false' bug
     const disabledProp =
       this.tag === 'a' && !this.disabled ? null : { disabled: this.disabled }
@@ -143,15 +143,15 @@ $button-focus-box-shadow-color: lighten(
   }
 }
 
-@mixin is-light($color) {
-  &.is-light {
+@mixin variant-light($color) {
+  &.variant-light {
     color: darken($color, 30%);
     background-color: rgba($color, 0.2);
   }
 }
 
-@mixin is-outlined($color) {
-  &.is-outlined {
+@mixin variant-outlined($color) {
+  &.variant-outlined {
     color: $color;
     border-color: $color;
     background-color: transparent;
@@ -175,8 +175,8 @@ $button-focus-box-shadow-color: lighten(
 }
 
 .button {
-  display: flex;
-  align-items: center;
+  //display: flex;
+  //align-items: center;
   outline: none;
   text-decoration: none;
   background-color: $button-background-color;
@@ -188,6 +188,8 @@ $button-focus-box-shadow-color: lighten(
   padding: $button-padding-vertical $button-padding-horizontal;
   text-align: center;
   font-size: $button-size-normal;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
 
   // States => change border-color/color/shadow
   &:hover,
@@ -256,8 +258,8 @@ $button-focus-box-shadow-color: lighten(
     background-color: $primary;
     color: white;
     @include focus-box-shadow($primary);
-    @include is-light($primary);
-    @include is-outlined($primary);
+    @include variant-light($primary);
+    @include variant-outlined($primary);
     @include disabled($primary);
   }
 
@@ -265,8 +267,8 @@ $button-focus-box-shadow-color: lighten(
     background-color: $info;
     color: white;
     @include focus-box-shadow($info);
-    @include is-light($info);
-    @include is-outlined($info);
+    @include variant-light($info);
+    @include variant-outlined($info);
     @include disabled($info);
   }
 
@@ -274,8 +276,8 @@ $button-focus-box-shadow-color: lighten(
     background-color: $success;
     color: white;
     @include focus-box-shadow($success);
-    @include is-light($success);
-    @include is-outlined($success);
+    @include variant-light($success);
+    @include variant-outlined($success);
     @include disabled($success);
   }
 
@@ -283,8 +285,8 @@ $button-focus-box-shadow-color: lighten(
     background-color: $warning;
     color: black;
     @include focus-box-shadow($warning);
-    @include is-light($warning);
-    @include is-outlined($warning);
+    @include variant-light($warning);
+    @include variant-outlined($warning);
     @include disabled($warning);
   }
 
@@ -292,19 +294,19 @@ $button-focus-box-shadow-color: lighten(
     background-color: $danger;
     color: white;
     @include focus-box-shadow($danger);
-    @include is-light($danger);
-    @include is-outlined($danger);
+    @include variant-light($danger);
+    @include variant-outlined($danger);
     @include disabled($danger);
   }
 
-  // is fullwidth
-  &.is-fullwidth {
+  // fullwidth
+  &.variant-fullwidth {
     display: flex;
     width: 100%;
   }
 
   // is rounded
-  &.is-rounded {
+  &.variant-rounded {
     border-radius: $radius-rounded;
   }
 

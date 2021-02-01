@@ -11,6 +11,14 @@ const elements = [
     name: 'block',
     text: 'Block',
   },
+  {
+    name: 'box',
+    text: 'Box',
+  },
+  {
+    name: 'button',
+    text: 'Button',
+  },
 ]
 
 export { elements }

@@ -1,14 +1,15 @@
 <template>
-  <mad-tree-item-demo></mad-tree-item-demo>
+  <mad-button-demo></mad-button-demo>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import MadTreeItemDemo from '@/usages/document/MadTreeItemDemo.vue'
+import MadButtonDemo from "@/usages/elements/button/MadButtonDemo.vue";
 
 @Options({
   components: {
-    MadTreeItemDemo,
+    MadButtonDemo,
   },
 })
 export default class Home extends Vue {}
