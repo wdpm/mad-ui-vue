@@ -19,6 +19,10 @@ const elements = [
     name: 'button',
     text: 'Button',
   },
+  {
+    name: 'delete',
+    text: 'Delete',
+  },
 ]
 
 export { elements }
