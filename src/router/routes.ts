@@ -35,6 +35,10 @@ const elements = [
     name: 'notification',
     text: 'Notification',
   },
+  {
+    name: 'progressbar',
+    text: 'Progress Bar',
+  },
 ]
 
 export { elements }

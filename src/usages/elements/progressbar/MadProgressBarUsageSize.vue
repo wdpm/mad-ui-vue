@@ -1,0 +1,27 @@
+<template>
+  <mad-progress-bar
+    v-for="size in sizes"
+    :key="size"
+    :value="40"
+    :size="size"
+  ></mad-progress-bar>
+</template>
+
+<script>
+import { sizes } from '@/utils/propValidateHelper'
+import MadProgressBar from '@/elements/MadProgressBar'
+
+export default {
+  name: 'MadProgressBarUsageSize',
+  components: {
+    MadProgressBar,
+  },
+  data() {
+    return {
+      sizes,
+    }
+  },
+}
+</script>
+
+<style scoped></style>
