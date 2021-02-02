@@ -1,9 +1,5 @@
 const elements = [
   {
-    name: 'divider',
-    text: 'Divider line',
-  },
-  {
     name: 'alert',
     text: 'Alert',
   },
@@ -22,6 +18,18 @@ const elements = [
   {
     name: 'delete',
     text: 'Delete',
+  },
+  {
+    name: 'divider',
+    text: 'Divider',
+  },
+  {
+    name: 'icon',
+    text: 'Icon',
+  },
+  {
+    name: 'image',
+    text: 'Image',
   },
 ]
 

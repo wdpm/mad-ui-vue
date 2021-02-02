@@ -10,8 +10,8 @@
       'max-width': maxWidth,
     }"
   >
-    <figure class="image" :class="`is-${size}`">
-      <img :src="src" :alt="alt" :class="{ 'is-rounded': isRounded }" />
+    <figure class="image" :class="`ratio-${ratio}`">
+      <img :src="src" :alt="alt" :class="{ 'variant-rounded': rounded }" />
     </figure>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
   name: 'MadImage',
   props: {
     // size: aspect-ratio or explicit width x height size
-    size: {
+    ratio: {
       type: String,
       required: false,
     },
@@ -35,7 +35,7 @@ export default {
       required: true,
       default: '',
     },
-    isRounded: {
+    rounded: {
       type: Boolean,
       required: false,
     },
@@ -90,32 +90,34 @@ $ratios: '1by1', '1by2', '1by3', '2by1', '2by3', '3by1', '3by2', '3by4', '3by5',
       display: block;
       height: auto;
       width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%; // maybe can be api
 
-      &.is-rounded {
+      &.variant-rounded {
         border-radius: $radius-rounded;
       }
     }
 
-    &.is-fullwidth {
-      width: 100%;
-    }
+    //&.is-fullwidth {
+    //  width: 100%;
+    //}
 
     // Ratio
-    &.is-1by1,
-    &.is-5by4,
-    &.is-4by3,
-    &.is-3by2,
-    &.is-5by3,
-    &.is-16by9,
-    &.is-2by1,
-    &.is-3by1,
-    &.is-4by5,
-    &.is-3by4,
-    &.is-2by3,
-    &.is-3by5,
-    &.is-9by16,
-    &.is-1by2,
-    &.is-1by3 {
+    &.ratio-1by1,
+    &.ratio-5by4,
+    &.ratio-4by3,
+    &.ratio-3by2,
+    &.ratio-5by3,
+    &.ratio-16by9,
+    &.ratio-2by1,
+    &.ratio-3by1,
+    &.ratio-4by5,
+    &.ratio-3by4,
+    &.ratio-2by3,
+    &.ratio-3by5,
+    &.ratio-9by16,
+    &.ratio-1by2,
+    &.ratio-1by3 {
       img {
         @include overlay();
         width: 100%;
@@ -127,7 +129,7 @@ $ratios: '1by1', '1by2', '1by3', '2by1', '2by3', '3by1', '3by2', '3by4', '3by5',
     @each $ratio in $ratios {
       $map: str-split-to-map($ratio, 'by');
       @each $w, $h in $map {
-        &.is-#{$w}by#{$h} {
+        &.ratio-#{$w}by#{$h} {
           //use padding-top can also works
           padding-bottom: (
               (to-number($h) / to-number($w)) * 100
@@ -137,8 +139,9 @@ $ratios: '1by1', '1by2', '1by3', '2by1', '2by3', '3by1', '3by2', '3by4', '3by5',
     }
 
     // explicit sizes
+    // usage size= "128x128"
     @each $dimension in $dimensions {
-      &.is-#{$dimension}x#{$dimension} {
+      &.size-#{$dimension}x#{$dimension} {
         height: $dimension * 1px;
         width: $dimension * 1px;
       }

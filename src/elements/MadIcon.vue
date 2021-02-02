@@ -8,7 +8,6 @@
 /**
  * simple icon container
  *
- * sizes
  */
 import { sizes } from '@/utils/propValidateHelper'
 

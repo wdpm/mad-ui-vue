@@ -50,7 +50,7 @@ export default {
         text: '元素',
         children: elements.map((item) => ({
           id: item.name,
-          text: `${item.name} ${item.text}`,
+          text: item.text, // i18n zh_CN text
         })),
       }
       // console.log(JSON.stringify(eles))

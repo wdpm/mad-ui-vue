@@ -1,6 +1,6 @@
 <template>
   <mad-doc-page>
-    <mad-code-block title="'basic usage'" :code="'code'">
+    <mad-code-block title="basic" :code="'code'">
       <!--stub-->
     </mad-code-block>
   </mad-doc-page>

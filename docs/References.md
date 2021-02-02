@@ -7,7 +7,7 @@
 [序号] 主要责任者.题名:其他题名信息[电子文献/载体类型标志].出版地:出版者,出版年(更新或修改日期)[引用日期].获取和访问路径.
 ```
 
-## JavaScript/CSS 技巧  
+## JavaScript/CSS 工具/技巧  
 [1] magic-akari.Solved by Flexbox[EB/OL].[2020-1-21].https://magic-akari.github.io/solved-by-flexbox/.
 
 [2] bit.dev.orbit-spinner[EB/OL].[2020-1-21].https://bit.dev/epicmaxco/epic-spinners/orbit-spinner.
@@ -18,9 +18,15 @@
 
 [5] DevelopIntelligence.How to Make Circular/Curved Text with JavaScript[EB/OL].[2020-1-24].https://www.developintelligence.com/blog/2016/09/how-to-make-circularcurved-text-with-javascript/.
 
+[6] pocketjoso.Generate interactive Specificity Graphs for your CSS.[EB/OL].[2020-2-2].https://jonassebastianohlsson.com/specificity-graph/.
+
 ## CSS 框架
-[5] jgthms.Documentation | Bulma: Free, open source, and modern CSS framework based on Flexbox[EB/OL].[2020-1-21].https://bulma.io/documentation/.
+[] jgthms.Documentation | Bulma: Free, open source, and modern CSS framework based on Flexbox[EB/OL].[2020-1-21].https://bulma.io/documentation/.
 
 ## CSS 框架设计方法论
 
-[6] Bootstrap team.Approach[EB/OL].[2020-1-24].https://v5.bootcss.com/docs/extend/approach/.
+[] Bootstrap team.Approach[EB/OL].[2020-1-24].https://v5.bootcss.com/docs/extend/approach/.
+
+## CSS 预处理器
+
+[] Bourbon.A Lightweight Sass Tool Set.[EB/OL].[2020-2-2].https://www.bourbon.io/.

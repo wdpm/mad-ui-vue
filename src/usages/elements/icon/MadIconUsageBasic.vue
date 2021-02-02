@@ -5,13 +5,19 @@
   <mad-icon>
     <i class="arrow right"></i>
   </mad-icon>
+  <mad-icon>
+    <i class="arrow up"></i>
+  </mad-icon>
+  <mad-icon>
+    <i class="arrow down"></i>
+  </mad-icon>
 </template>
 
 <script>
 import MadIcon from '@/elements/MadIcon'
 
 export default {
-  name: 'MadIconDemo',
+  name: 'MadIconUsageBasic',
   components: {
     MadIcon,
   },
@@ -19,7 +25,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../../scss/mixins/all';
+@import 'src/scss/mixins/all';
 
 .arrow {
   @include arrow-base();
@@ -30,6 +36,14 @@ export default {
 
   &.left {
     @include arrow-direction($direction: left);
+  }
+
+  &.up {
+    @include arrow-direction($direction: up);
+  }
+
+  &.down {
+    @include arrow-direction($direction: down);
   }
 }
 </style>
