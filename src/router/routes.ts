@@ -31,6 +31,10 @@ const elements = [
     name: 'image',
     text: 'Image',
   },
+  {
+    name: 'notification',
+    text: 'Notification',
+  },
 ]
 
 export { elements }

@@ -1,5 +1,5 @@
 <template>
-  <div class="notification" :class="[colorClass, variantClass]">
+  <div class="notification" :class="[colorClass, lightClass, darkClass]">
     <button class="delete" @click="handleDelete"></button>
     <slot></slot>
   </div>
@@ -9,6 +9,9 @@
 /**
  * TODO autoclose with delay
  */
+
+import { colorMapValues } from '@/utils/propValidateHelper'
+
 export default {
   name: 'MadNotification',
   props: {
@@ -22,29 +25,14 @@ export default {
       required: false,
       default: '',
       validator: function (value) {
-        return (
-          [
-            '',
-            'white',
-            'black',
-            'light',
-            'dark',
-            'primary',
-            'info',
-            'success',
-            'warning',
-            'danger',
-          ].indexOf(value) !== -1
-        )
+        return [...colorMapValues].indexOf(value) !== -1
       },
     },
-    variant: {
-      type: String,
-      required: false,
-      default: '',
-      validator: function (value) {
-        return ['', 'light', 'dark'].indexOf(value) !== -1
-      },
+    light: {
+      type: Boolean,
+    },
+    dark: {
+      type: Boolean,
     },
   },
   computed: {
@@ -52,9 +40,13 @@ export default {
       if (!this.color) return ''
       return `color-${this.color}`
     },
-    variantClass() {
-      if (!this.variant) return ''
-      return `variant-${this.variant}`
+    lightClass() {
+      if (!this.light) return ''
+      return 'variant-light'
+    },
+    darkClass() {
+      if (!this.dark) return ''
+      return 'variant-dark'
     },
   },
   methods: {
