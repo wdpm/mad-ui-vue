@@ -1,8 +1,6 @@
 <template>
   <mad-doc-page>
-    <mad-code-block title="basic" :code="'code'">
-      <!--stub-->
-    </mad-code-block>
+    <mad-code-block title="basic" code=""> </mad-code-block>
   </mad-doc-page>
 </template>
 
@@ -11,7 +9,7 @@ import MadDocPage from '@/document/MadDocPage'
 import MadCodeBlock from '@/document/MadCodeBlock'
 
 export default {
-  name: 'Template',
+  name: 'IndexTemplate',
   components: {
     MadCodeBlock,
     MadDocPage,

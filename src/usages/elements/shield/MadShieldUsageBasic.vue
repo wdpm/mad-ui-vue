@@ -1,13 +1,12 @@
 <template>
-  <mad-shield :title="'shield'" :content="123" />
-  <mad-shield :title="'shield'" :content="'text'" />
+  <mad-shield title="shield" content="123" />
 </template>
 
 <script>
 import MadShield from '@/elements/MadShield'
 
 export default {
-  name: 'MadShieldDemo',
+  name: 'MadShieldUsageBasic',
   components: {
     MadShield,
   },

@@ -39,6 +39,14 @@ const elements = [
     name: 'progressbar',
     text: 'Progress Bar',
   },
+  {
+    name: 'shield',
+    text: 'Shield',
+  },
+  {
+    name: 'spinner',
+    text: 'Spinner',
+  },
 ]
 
 export { elements }
