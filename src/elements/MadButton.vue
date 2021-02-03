@@ -1,5 +1,6 @@
 <script>
 import { h } from 'vue'
+import { colorMapValues, sizes } from '@/utils/propValidateHelper'
 
 /**
  * button, in different colors, sizes, and states.
@@ -34,28 +35,14 @@ export default {
       type: String,
       default: '',
       validator: function (value) {
-        return ['small', 'normal', 'medium', 'large', ''].indexOf(value) !== -1
+        return [...sizes].indexOf(value) !== -1
       },
     },
     color: {
       type: String,
       default: '',
       validator: function (value) {
-        return (
-          [
-            'white',
-            'light',
-            'dark',
-            'black',
-            'text',
-            'primary',
-            'info',
-            'success',
-            'warning',
-            'danger',
-            '',
-          ].indexOf(value) !== -1
-        )
+        return [...colorMapValues].indexOf(value) !== -1
       },
     },
     light: {
@@ -81,7 +68,9 @@ export default {
     const sizeStyle = this.size ? this.$style[this.size] : ''
     const colorStyle = this.color ? this.$style[this.color] : ''
     const lightStyle = this.light ? this.$style['variant-light'] : ''
-    const fullwidthStyle = this.fullwidth ? this.$style['variant-fullwidth'] : ''
+    const fullwidthStyle = this.fullwidth
+      ? this.$style['variant-fullwidth']
+      : ''
     const outlinedStyle = this.outlined ? this.$style['variant-outlined'] : ''
     const roundedStyle = this.rounded ? this.$style['variant-rounded'] : ''
     // fix `a` tag disabled='false' bug

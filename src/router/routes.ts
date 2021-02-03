@@ -62,6 +62,10 @@ const components = [
     name: 'breadcrumb',
     text: 'Breadcrumb',
   },
+  {
+    name: 'dropdown',
+    text: 'Dropdown',
+  },
 ]
 
 export { elements, components }

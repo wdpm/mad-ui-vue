@@ -24,7 +24,7 @@ export default {
       default: true,
       required: false,
     },
-    controlByJavaScript: {
+    controlByJs: {
       type: Boolean,
       default: false,
       required: false,
@@ -46,7 +46,7 @@ export default {
   },
   computed: {
     hoverableClass() {
-      if (this.controlByJavaScript) return ''
+      if (this.controlByJs) return ''
       return this.hoverable ? 'hoverable' : ''
     },
     stateActiveClass() {
@@ -58,7 +58,7 @@ export default {
   },
   methods: {
     toggleStateActive() {
-      if (this.controlByJavaScript) {
+      if (this.controlByJs) {
         this.stateActive = !this.stateActive
       }
     },
