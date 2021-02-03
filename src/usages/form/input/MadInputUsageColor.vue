@@ -1,13 +1,4 @@
 <template>
-  <h2>basic</h2>
-  <mad-input placeholder="custom placeholder"></mad-input>
-
-  <h2>sizes</h2>
-  <mad-input size="small"></mad-input>
-  <mad-input size="medium"></mad-input>
-  <mad-input size="large"></mad-input>
-
-  <h2>colors</h2>
   <mad-input v-for="color in colors" :key="color" :color="color"></mad-input>
 </template>
 
@@ -16,7 +7,7 @@ import MadInput from '@/form/MadInput'
 import { colorMapSemanticValues } from '@/utils/propValidateHelper'
 
 export default {
-  name: 'MadInputDemo',
+  name: 'MadInputUsageColor',
   components: {
     MadInput,
   },

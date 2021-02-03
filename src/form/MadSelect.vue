@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'src/scss/mixins/_all';
+@import '../scss/mixins/all';
 
 .select-container {
   display: inline-block;

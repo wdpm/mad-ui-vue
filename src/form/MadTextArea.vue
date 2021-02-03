@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'src/scss/form/input-base';
+@import '../scss/form/input-base';
 
 $textarea-padding: calc(0.75em - 1px) !default;
 

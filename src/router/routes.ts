@@ -84,4 +84,11 @@ const components = [
   },
 ]
 
-export { elements, components }
+const formElements = [
+  {
+    name: 'input',
+    text: 'Input',
+  },
+]
+
+export { elements, components, formElements }

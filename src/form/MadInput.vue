@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'src/scss/form/input-base';
+@import '../scss/form/input-base';
 
 .input {
   @include input-base();

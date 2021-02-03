@@ -5,8 +5,8 @@
 
 let fs = require('fs')
 // API
-let category = 'components'
-let goal = 'pagination'
+let category = 'form'
+let goal = 'input'
 
 let path = `../src/usages/${category}/${goal}`
 
