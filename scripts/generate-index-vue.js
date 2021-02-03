@@ -5,8 +5,8 @@
 
 let fs = require('fs')
 // API
-let category = 'elements'
-let goal = 'tag'
+let category = 'components'
+let goal = 'breadcrumb'
 
 let path = `../src/usages/${category}/${goal}`
 

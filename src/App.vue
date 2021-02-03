@@ -22,6 +22,13 @@
             @click="clickNode($event)"
           >
           </mad-tree-item>
+          <mad-tree-item
+            class="nav-list-item"
+            :item-css-classes="['nav-list-item-link']"
+            :item="componentTree"
+            @click="clickNode($event)"
+          >
+          </mad-tree-item>
         </ul>
       </nav>
       <aside class="holy-grail-aside">
@@ -33,7 +40,7 @@
 </template>
 
 <script>
-import { elements } from '@/router/routes'
+import { elements, components } from '@/router/routes'
 
 import MadTreeItem from '@/document/MadTreeItem'
 
@@ -51,8 +58,18 @@ export default {
           text: item.text, // i18n zh_CN text
         })),
       }
-      // console.log(JSON.stringify(eles))
       return eles
+    },
+    componentTree() {
+      let comps = {
+        id: 'components',
+        text: '组件',
+        children: components.map((item) => ({
+          id: item.name,
+          text: item.text, // i18n zh_CN text
+        })),
+      }
+      return comps
     },
   },
   methods: {

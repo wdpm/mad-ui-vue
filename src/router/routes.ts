@@ -57,4 +57,11 @@ const elements = [
   },
 ]
 
-export { elements }
+const components = [
+  {
+    name: 'breadcrumb',
+    text: 'Breadcrumb',
+  },
+]
+
+export { elements, components }
