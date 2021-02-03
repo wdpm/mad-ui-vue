@@ -12,8 +12,6 @@
 
         <div class="modal-footer">
           <slot name="footer">
-            default footer
-            <br />
             <mad-button class="modal-button-cancel" @click="$emit('cancel')">
               Cancel
             </mad-button>
@@ -43,7 +41,7 @@ export default {
 // or use vue3 teleport to body
 .modal-mask {
   position: fixed;
-  z-index: 9998;
+  z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
@@ -62,19 +60,24 @@ export default {
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
-}
 
-.modal-header h3 {
-  margin-top: 0;
-}
+  &-header {
+    border-bottom: 1px solid black;
 
-.modal-body {
-  margin: 20px 0;
-}
+    h3 {
+      margin-top: 0;
+    }
+  }
 
-.modal-button-ok,
-.modal-button-cancel {
-  display: inline-block;
-  margin-top: 1rem;
+  &-body {
+    border-bottom: 1px solid black;
+    margin: 20px 0;
+    padding-bottom: 1rem;
+  }
+
+  &-button-ok,
+  &-button-cancel {
+    display: inline-block;
+  }
 }
 </style>

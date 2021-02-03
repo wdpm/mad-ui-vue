@@ -1,6 +1,5 @@
 <template>
   <button id="show-modal" @click="showModal = true">Show Modal</button>
-  <!-- use the modal component, pass in the prop -->
   <mad-modal v-if="showModal" @ok="handleOK" @cancel="handleCancel">
     <!--
       you can use custom content here to overwrite
@@ -24,7 +23,7 @@
 import MadModal from '@/components/MadModal'
 
 export default {
-  name: 'MadModalDemo',
+  name: 'MadModalUsageBasic.vue',
   components: {
     MadModal,
   },

@@ -74,6 +74,10 @@ const components = [
     name: 'menu',
     text: 'Menu',
   },
+  {
+    name: 'modal',
+    text: 'Modal',
+  },
 ]
 
 export { elements, components }
