@@ -70,9 +70,6 @@ export default {
     margin-top: 1.25rem;
   }
 
-  ol,
-  ul,
-  dl,
   pre,
   table,
   blockquote {

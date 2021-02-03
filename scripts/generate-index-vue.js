@@ -6,7 +6,7 @@
 let fs = require('fs')
 // API
 let category = 'components'
-let goal = 'modal'
+let goal = 'pagination'
 
 let path = `../src/usages/${category}/${goal}`
 

@@ -78,6 +78,10 @@ const components = [
     name: 'modal',
     text: 'Modal',
   },
+  {
+    name: 'pagination',
+    text: 'Pagination',
+  },
 ]
 
 export { elements, components }
