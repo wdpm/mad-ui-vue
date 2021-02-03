@@ -6,7 +6,7 @@
 let fs = require('fs')
 // API
 let category = 'elements'
-let goal = 'table'
+let goal = 'tag'
 
 let path = `../src/usages/${category}/${goal}`
 

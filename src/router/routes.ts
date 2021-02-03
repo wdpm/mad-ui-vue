@@ -51,6 +51,10 @@ const elements = [
     name: 'table',
     text: 'Table',
   },
+  {
+    name: 'tag',
+    text: 'Tag',
+  },
 ]
 
 export { elements }

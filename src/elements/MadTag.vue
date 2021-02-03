@@ -90,6 +90,7 @@ $corner-skew-width: 60px !default;
   border: 1px solid black;
   border-left-width: 1rem;
   width: fit-content;
+  margin: 0.5rem;
 
   &-body {
     padding: 0.25em 0.5em;
