@@ -7,7 +7,7 @@
 <script>
 import MadCodeBlock from '@/document/MadCodeBlock'
 import SampleCodeRaw from '!raw-loader!@/document/SampleCode'
-import SampleCode from "@/document/SampleCode"
+import SampleCode from "@/usages/document/SampleCode"
 
 export default {
   name: 'MadCodeBlockDemo',
