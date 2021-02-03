@@ -47,6 +47,10 @@ const elements = [
     name: 'spinner',
     text: 'Spinner',
   },
+  {
+    name: 'table',
+    text: 'Table',
+  },
 ]
 
 export { elements }

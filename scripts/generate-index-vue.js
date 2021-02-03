@@ -6,7 +6,7 @@
 let fs = require('fs')
 // API
 let category = 'elements'
-let goal = 'spinner'
+let goal = 'table'
 
 let path = `../src/usages/${category}/${goal}`
 

@@ -93,28 +93,28 @@ export default {
     }
   }
 
-  table {
-    width: 100%;
-    overflow: auto;
-    font-family: Consolas, Menlo, Monaco, 'Courier New', monospace, sans-serif;
-
-    thead {
-      background-color: #f6f8fa;
-    }
-
-    th {
-      text-align: left;
-    }
-
-    th,
-    td {
-      padding: 6px 12px;
-      border: 1px solid #dfe2e5;
-    }
-
-    code {
-      font-family: inherit;
-    }
-  }
+  //table {
+  //  width: 100%;
+  //  overflow: auto;
+  //  font-family: Consolas, Menlo, Monaco, 'Courier New', monospace, sans-serif;
+  //
+  //  thead {
+  //    background-color: #f6f8fa;
+  //  }
+  //
+  //  th {
+  //    text-align: left;
+  //  }
+  //
+  //  th,
+  //  td {
+  //    padding: 6px 12px;
+  //    border: 1px solid #dfe2e5;
+  //  }
+  //
+  //  code {
+  //    font-family: inherit;
+  //  }
+  //}
 }
 </style>

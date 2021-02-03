@@ -1,8 +1,6 @@
 <template>
   <div class="holy-grail">
-    <header class="header">
-      mad-ui | {{ this.$route.path }}
-    </header>
+    <header class="header">mad-ui | {{ this.$route.path }}</header>
     <div class="holy-grail-body">
       <main class="holy-grail-content">
         <router-view />
@@ -95,6 +93,7 @@ export default {
   // use hamburger icon on header left
   &-nav {
     flex: 0 0 12rem;
+    height: 100vh;
     display: none;
   }
 
