@@ -66,6 +66,10 @@ const components = [
     name: 'dropdown',
     text: 'Dropdown',
   },
+  {
+    name: 'media',
+    text: 'Media',
+  },
 ]
 
 export { elements, components }

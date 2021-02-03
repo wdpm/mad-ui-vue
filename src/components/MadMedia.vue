@@ -1,6 +1,6 @@
 <template>
   <div class="media">
-    <div class="media-figure" :class="[figurePullRightClass]">
+    <div class="media-figure" :class="[figureOnRightClass]">
       <slot name="figure"></slot>
     </div>
     <div class="media-body">
@@ -13,15 +13,15 @@
 export default {
   name: 'MadMedia',
   props: {
-    figurePullRight: {
+    figureOnRight: {
       type: Boolean,
       default: false,
       required: false,
     },
   },
   computed: {
-    figurePullRightClass() {
-      return this.figurePullRight ? 'figure-pull-right' : ''
+    figureOnRightClass() {
+      return this.figureOnRight ? 'figure-on-right' : ''
     },
   },
 }
@@ -43,7 +43,7 @@ export default {
   &-figure {
     margin-right: 1em;
 
-    &.figure-pull-right {
+    &.figure-on-right {
       margin-right: 0;
       margin-left: 1em;
       order: 1;
