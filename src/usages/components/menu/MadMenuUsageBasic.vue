@@ -34,7 +34,7 @@
 import MadMenu from '@/components/MadMenu'
 
 export default {
-  name: 'MadMenuDemo',
+  name: 'MadMenuUsageBasic',
   components: {
     MadMenu,
   },

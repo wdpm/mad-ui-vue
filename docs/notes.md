@@ -64,3 +64,7 @@ p:active { background: #eee; }   /* Active paragraphs */
 - 功能实现的继承层级不能过高，例如，理论上不应该超过三层，否则会陷入继承地狱。
 - Whenever possible, prefer a HTML and CSS implementation over JavaScript
 - Whenever possible, use utilities over custom styles
+
+## Todo
+
+- remove all namespace.mad-ui css class ,replaced by :v-deep

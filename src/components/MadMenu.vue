@@ -67,19 +67,6 @@ $menu-label-spacing: 1em !default;
   .menu {
     font-size: $size-normal;
 
-    // Sizes
-    &.size-small {
-      font-size: $size-small;
-    }
-
-    &.size-medium {
-      font-size: $size-medium;
-    }
-
-    &.size-large {
-      font-size: $size-large;
-    }
-
     &-label {
       color: $menu-label-color;
       font-size: $menu-label-font-size;
@@ -123,6 +110,19 @@ $menu-label-spacing: 1em !default;
         margin: $menu-nested-list-margin;
         padding-left: $menu-nested-list-padding-left;
       }
+    }
+
+    // Sizes
+    &.size-small {
+      font-size: $size-small;
+    }
+
+    &.size-medium {
+      font-size: $size-medium;
+    }
+
+    &.size-large {
+      font-size: $size-large;
     }
   }
 }

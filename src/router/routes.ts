@@ -70,6 +70,10 @@ const components = [
     name: 'media',
     text: 'Media',
   },
+  {
+    name: 'menu',
+    text: 'Menu',
+  },
 ]
 
 export { elements, components }
