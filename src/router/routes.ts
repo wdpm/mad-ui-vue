@@ -89,6 +89,10 @@ const formElements = [
     name: 'input',
     text: 'Input',
   },
+  {
+    name: 'input-add-on',
+    text: 'Input AddOn',
+  },
 ]
 
 export { elements, components, formElements }

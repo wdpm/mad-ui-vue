@@ -6,7 +6,7 @@
 let fs = require('fs')
 // API
 let category = 'form'
-let goal = 'input'
+let goal = 'input-add-on'
 
 let path = `../src/usages/${category}/${goal}`
 

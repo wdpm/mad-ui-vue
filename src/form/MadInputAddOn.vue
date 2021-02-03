@@ -52,6 +52,8 @@ export default {
     color: #666666;
     border: 1px solid rgba(147, 128, 108, 0.25);
     padding: 0.5em 0.75em;
+    display: inline-flex;
+    align-items: center;
 
     &:first-child {
       border-radius: 2px 0 0 2px;
