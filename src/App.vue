@@ -16,23 +16,11 @@
             </router-link>
           </li>
           <mad-tree-item
+            v-for="(tree, index) in trees"
+            :key="tree.id || index"
             class="nav-list-item"
             :item-css-classes="['nav-list-item-link']"
-            :item="elementTree"
-            @click="clickNode($event)"
-          >
-          </mad-tree-item>
-          <mad-tree-item
-            class="nav-list-item"
-            :item-css-classes="['nav-list-item-link']"
-            :item="componentTree"
-            @click="clickNode($event)"
-          >
-          </mad-tree-item>
-          <mad-tree-item
-            class="nav-list-item"
-            :item-css-classes="['nav-list-item-link']"
-            :item="formTree"
+            :item="tree"
             @click="clickNode($event)"
           >
           </mad-tree-item>
@@ -47,7 +35,7 @@
 </template>
 
 <script>
-import { elements, components, formElements } from '@/router/routes'
+import { elements, components, formElements, layout } from '@/router/routes'
 
 import MadTreeItem from '@/document/MadTreeItem'
 
@@ -56,6 +44,14 @@ export default {
     MadTreeItem,
   },
   computed: {
+    trees() {
+      return [
+        this.elementTree,
+        this.componentTree,
+        this.formTree,
+        this.layoutTree,
+      ]
+    },
     elementTree() {
       let eles = {
         id: 'elements',
@@ -88,6 +84,17 @@ export default {
         })),
       }
       return form
+    },
+    layoutTree() {
+      let layoutTree = {
+        id: 'layout',
+        text: '布局',
+        children: layout.map((item) => ({
+          id: item.name,
+          text: item.text, // i18n zh_CN text
+        })),
+      }
+      return layoutTree
     },
   },
   methods: {

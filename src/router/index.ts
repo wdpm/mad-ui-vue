@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../usages/Home.vue'
-import { elements, components, formElements } from '@/router/routes'
+import { elements, components, formElements, layout } from '@/router/routes'
 
 const mapRoutes = (items, path) =>
   items.map((item) => ({
@@ -12,6 +12,7 @@ const mapRoutes = (items, path) =>
 const elementRoutes = mapRoutes(elements, 'elements')
 const componentRoutes = mapRoutes(components, 'components')
 const formRoutes = mapRoutes(formElements, 'form')
+const layoutRoutes = mapRoutes(layout, 'layout')
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -28,7 +29,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () =>
       import(/* webpackChunkName: "about" */ '../usages/About.vue'),
   },
-].concat(elementRoutes, componentRoutes, formRoutes)
+].concat(elementRoutes, componentRoutes, formRoutes, layoutRoutes)
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

@@ -1,12 +1,11 @@
 /**
  * 该文件主要为了自动生成第一版index.vue，大幅度减少文档书写工作量
- * @type {module:fs}
  */
 
 let fs = require('fs')
 // API
-let category = 'form'
-let goal = 'text-area'
+let category = 'layout'
+let goal = 'column'
 
 let path = `../src/usages/${category}/${goal}`
 

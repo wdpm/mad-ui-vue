@@ -103,4 +103,15 @@ const formElements = [
   },
 ]
 
-export { elements, components, formElements }
+const layout = [
+  {
+    name: 'column',
+    text: 'Column',
+  },
+  // {
+  //   name: 'container',
+  //   text: 'Container',
+  // },
+]
+
+export { elements, components, formElements, layout }
