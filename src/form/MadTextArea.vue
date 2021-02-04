@@ -72,6 +72,7 @@ $textarea-min-height: 8em !default;
   max-height: $textarea-max-height;
   min-height: $textarea-min-height;
   padding: $textarea-padding;
+  margin-bottom: 0.5rem;
   resize: vertical;
 
   font-family: inherit;

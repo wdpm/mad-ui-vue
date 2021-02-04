@@ -5,10 +5,6 @@
 </template>
 
 <script>
-/**
- * sizes
- */
-
 import { sizes } from '@/utils/propValidateHelper'
 
 export default {
@@ -42,8 +38,7 @@ export default {
   vertical-align: top;
   height: 2.5em;
 
-  select,
-  .select {
+  ::v-deep select {
     position: relative;
     appearance: none;
     cursor: pointer;
