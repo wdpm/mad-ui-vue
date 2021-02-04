@@ -5,7 +5,7 @@
 let fs = require('fs')
 // API
 let category = 'layout'
-let goal = 'column'
+let goal = 'container'
 
 let path = `../src/usages/${category}/${goal}`
 

@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../scss/mixins/all';
+@import 'src/scss/mixins/all';
 
 // horizontal gap, which acts as the offset for breakpoints
 $gap: 32px !default;
