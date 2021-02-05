@@ -1,11 +1,7 @@
 <template>
   <div
     class="letter-paper"
-    :class="[sizeClass]"
     :style="{
-      '--background-y-size': finalLineGap,
-      '--line-height': lineHeight,
-      '--min-line-height': minLineHeight,
       transform: transform,
     }"
   >
@@ -17,27 +13,11 @@
 /**
  * slot mode: just copy text to here and use `<pre>` wrapper
  *
- * prop mode: pass text as prop data
+ * think: how to custom font-size. chrome BUG?
  */
-
-import { sizes, sizeValueMap } from '@/utils/propValidateHelper'
-
 export default {
   name: 'MadLetterPaper',
   props: {
-    lineHeight: {
-      type: Number,
-      default: 1.5,
-      required: false,
-    },
-    size: {
-      type: String,
-      default: '',
-      required: false,
-      validator: function (value) {
-        return [...sizes].indexOf(value) !== -1
-      },
-    },
     noBackground: {
       type: Boolean,
       default: false,
@@ -49,33 +29,6 @@ export default {
       required: false,
     },
   },
-  data() {
-    return {}
-  },
-  mounted() {
-    // console.log(this.transform)
-  },
-  computed: {
-    sizeClass() {
-      return this.size ? `size-${this.size}` : ''
-    },
-    minLineHeight() {
-      return this.lineHeight + 'em'
-    },
-    sizeToFontSizeMap() {
-      let sizeValueMapCopy = { ...sizeValueMap }
-      for (let [key, value] of Object.entries(sizeValueMapCopy)) {
-        sizeValueMapCopy[key] = value * 16
-      }
-      //e.g large: 24 (px)
-      return sizeValueMapCopy
-    },
-    finalLineGap() {
-      let lineGap = this.lineHeight * this.sizeToFontSizeMap[this.size]
-      // console.log(lineGap, this.lineHeight, this.sizeToFontSizeMap, this.size)
-      return lineGap + 'px'
-    },
-  },
 }
 </script>
 
@@ -83,16 +36,14 @@ export default {
 @import 'src/scss/mixins/_all';
 
 .letter-paper {
-  //API
   /* default: 16px * line-height = 24px = bg line gap*/
-  --background-y-size: 24px; //= (paragraph font-size) * (paragraph line-height) px
-  --background-y-gradient-size: calc(var(--background-y-size) - 1px); // 23px
+  --background-y-size: 1.5rem; //= (paragraph font-size) * (paragraph line-height) px
+  --background-y-gradient-size: calc(1.5rem - 1px); // 23px
   --line-height: 1.5;
   --min-line-height: 1.5em; //same as line-height, computed
 
   margin: 0 auto;
   padding: 0 1.25rem;
-  //border: 1px solid black;
   width: 640px;
   background: linear-gradient(
     transparent var(--background-y-gradient-size),
@@ -108,22 +59,8 @@ export default {
   ::v-deep &-paragraph {
     margin: 0;
     font-family: inherit;
-    font-size: inherit;
     line-height: var(--line-height);
     min-height: var(--min-line-height);
-  }
-
-  // sizes
-  &.size-small {
-    font-size: $size-small;
-  }
-
-  &.size-medium {
-    font-size: $size-medium;
-  }
-
-  &.size-large {
-    font-size: $size-large;
   }
 }
 

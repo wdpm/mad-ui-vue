@@ -5,7 +5,7 @@
 let fs = require('fs')
 // API
 let category = 'patterns'
-let goal = 'inset-border'
+let goal = 'letter-paper'
 
 let path = `../src/usages/${category}/${goal}`
 

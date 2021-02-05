@@ -159,6 +159,14 @@ const patterns = [
     name: 'inset-border',
     text: 'Inset Border',
   },
+  {
+    name: 'letter-box',
+    text: 'Letter box',
+  },
+  {
+    name: 'letter-paper',
+    text: 'Letter paper',
+  },
 ]
 
 export { elements, components, formElements, layout, patterns }

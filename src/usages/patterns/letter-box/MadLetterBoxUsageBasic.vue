@@ -1,5 +1,4 @@
 <template>
-  <h2>basic</h2>
   <mad-letter-box
     :src="require('@/assets/2.jpg').default"
     bottom-text="bottom-text"
@@ -11,7 +10,7 @@
 import MadLetterBox from '@/patterns/MadLetterBox'
 
 export default {
-  name: 'MadLetterBoxDemo',
+  name: 'MadLetterBoxUsageBasic',
   components: {
     MadLetterBox,
   },

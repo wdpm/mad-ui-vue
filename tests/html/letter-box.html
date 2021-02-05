@@ -1,29 +1,49 @@
-<template>
-  <h2>basic</h2>
-  <mad-letter-paper>
-    <p class="text-indent">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae,
-      consectetur corporis culpa, distinctio dolorem ea earum fugiat fugit id
-      minus possimus quo reprehenderit velit, vero voluptate voluptatibus. Ab at
-      atque aut commodi cum deserunt doloribus error eum eveniet excepturi
-      expedita explicabo fuga fugit incidunt inventore ipsum iste iusto
-      laboriosam laudantium molestiae molestias nemo nisi nobis non odit omnis
-      optio perferendis placeat, porro possimus quae quasi quis quod saepe
-      tenetur vel voluptatem? Accusantium assumenda eos facere harum impedit,
-      natus nihil nulla perspiciatis praesentium quaerat quas quibusdam quod
-      tempora veritatis voluptatum. Aspernatur delectus esse, iusto minus natus
-      nobis nostrum saepe sequi!
-    </p>
-    <!--empty line-->
-    <p></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>letter box</title>
+    <style>
+        .letter-paper {
+            /*--background-y-size: 1.5rem;*/
+            /*--background-y-gradient-size: calc(1.5rem - 1px);*/
+            /*--line-height: 1.5;*/
+            /*--min-line-height: 1.5em;*/
+            /*padding: 0 1.25rem;*/
+            width: 640px;
+            background: linear-gradient(
+                    transparent 23px,
+                    black 24px
+            );
+            background-size: 100% 24px;
+            font-size: 1rem;
+            transform-origin: center center;
+        }
 
-    <p class="align-right">some one</p>
-    <p class="align-right">2020-1-1</p>
-  </mad-letter-paper>
+        .letter-paper p,
+        .letter-paper pre {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            /*line-height: 1.5;*/
+            /*min-height: 1.5em;*/
+        }
 
-  <h2>configurable</h2>
-  <mad-letter-paper size="medium">
-    <!--slot mode, need pre-process(remove line-leading space)-->
+        /*.letter-paper.size-small {*/
+        /*    font-size: .75rem;*/
+        /*}*/
+
+        /*.letter-paper.size-medium {*/
+        /*    font-size: 1.25rem;*/
+        /*}*/
+
+        /*.letter-paper.size-large {*/
+        /*    font-size: 1.5rem;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="letter-paper">
     <pre class="letter-spacing">
     手紙 ~拝啓 十五の君へ~
 
@@ -119,72 +139,8 @@
 
     幸せな事を願います
     能够幸福
-        </pre
-    >
-  </mad-letter-paper>
+        </pre>
+</div>
 
-  <h2>transform 3d as background</h2>
-  <div class="letter-paper-container">
-    <mad-letter-paper
-      size="medium"
-      transform="rotateX(-53deg) rotateY(6deg) rotateZ(-23deg) scale(1.2)"
-    >
-      <!--slot mode, need pre-process(remove line-leading space)-->
-      <pre class="letter-spacing">
-    苦しい中で今を生きている
-    在痛苦中活在当下
-
-    今を生きている
-    活在当下
-
-    拝啓ありがとう十五のあなたに伝えたい事があるのです
-    敬启者 十分感谢，我有事情想要对十五岁的你说
-
-    自分とは何でどこへ向かうべきか 問い続ければ見えてくる
-    自己应走向何方？如果继续问的话就会看到答案
-
-    荒れた青春の海は厳しいけれど
-    荒废的青春之海有艰难险阻
-
-    明日の岸辺へと夢の舟よ進め
-    乘着梦想之舟向明天的彼岸进发
-
-    今負けないで 泣かないで 消えてしまいそうな時は
-    现在，不要认输,不要哭泣，即将没有存在感的时候
-
-    自分の声を信じ歩けばいいの
-    相信自己的声音一直向前就可以了
-
-    大人の僕も傷ついて眠れない夜はあるけど
-    成年的我也有受着伤的无眠之夜
-
-    苦くて甘い今を生きている
-    痛苦而甜蜜地活在当下
-
-    人生の全てに意味があるから恐れずにあなたの夢を育てて
-    人生中的一切都有意义，因此不要害怕去呵护你的梦想
-
-    Keep on believing
-    Keep on believing
-        </pre
-      >
-    </mad-letter-paper>
-  </div>
-</template>
-
-<script>
-import MadLetterPaper from '@/patterns/MadLetterPaper'
-
-export default {
-  name: 'MadLetterPaperDemo.vue',
-  components: {
-    MadLetterPaper,
-  },
-}
-</script>
-
-<style scoped lang="scss">
-.letter-paper-container {
-  overflow: hidden;
-}
-</style>
+</body>
+</html>
