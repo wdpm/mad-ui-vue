@@ -6,7 +6,7 @@
 import MadImageCross from '@/patterns/MadImageCross'
 
 export default {
-  name: 'MadImageCrossDemo.vue',
+  name: 'MadImageCrossUsageBasic',
   components: {
     MadImageCross,
   },

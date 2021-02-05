@@ -147,6 +147,10 @@ const patterns = [
     name: 'grid',
     text: 'Grid',
   },
+  {
+    name: 'image-cross',
+    text: 'Image cross',
+  },
 ]
 
 export { elements, components, formElements, layout, patterns }
