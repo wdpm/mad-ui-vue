@@ -143,6 +143,10 @@ const patterns = [
     name: 'gear',
     text: 'Gear',
   },
+  {
+    name: 'grid',
+    text: 'Grid',
+  },
 ]
 
 export { elements, components, formElements, layout, patterns }

@@ -1,8 +1,4 @@
 <template>
-  <h2>basic</h2>
-  <mad-grid></mad-grid>
-
-  <h2>configurable</h2>
   <mad-grid
     row="10"
     column="40"
@@ -16,7 +12,7 @@
 import MadGrid from '@/patterns/MadGrid'
 
 export default {
-  name: 'MadGridDemo',
+  name: 'MadGridUsageCustom',
   components: {
     MadGrid,
   },

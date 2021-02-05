@@ -5,7 +5,7 @@
 let fs = require('fs')
 // API
 let category = 'patterns'
-let goal = 'gear'
+let goal = 'grid'
 
 let path = `../src/usages/${category}/${goal}`
 
