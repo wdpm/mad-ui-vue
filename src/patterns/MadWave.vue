@@ -16,6 +16,9 @@
 <script>
 import { SineWave } from '@/utils/SineWave'
 
+/**
+ * do better: 错开左侧每条线的初始点。给一定的y offset 效果会更好
+ */
 export default {
   name: 'MadWave',
   props: {
@@ -51,21 +54,21 @@ export default {
           {
             timeModifier: 1, //This is multiplied against `speed`
             lineWidth: 1, // Stroke width
-            amplitude: -125, // How tall is the wave
+            amplitude: -75, // How tall is the wave
             wavelength: 500, // How long is the wave,
             strokeStyle: 'rgba(255, 0, 0, .5)',
           },
           {
             timeModifier: 1,
             lineWidth: 1,
-            amplitude: -125,
+            amplitude: -75,
             wavelength: 300,
             strokeStyle: 'rgba(0, 255, 0, .5)',
           },
           {
             timeModifier: 1,
             lineWidth: 1,
-            amplitude: -125,
+            amplitude: -75,
             wavelength: 400,
             strokeStyle: 'rgba(0, 0, 255, .5)',
           },

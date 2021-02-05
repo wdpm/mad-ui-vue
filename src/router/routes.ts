@@ -167,6 +167,18 @@ const patterns = [
     name: 'letter-paper',
     text: 'Letter paper',
   },
+  {
+    name: 'line-noise',
+    text: 'Line noise',
+  },
+  {
+    name: 'reveal-image',
+    text: 'Reveal image',
+  },
+  {
+    name: 'wave',
+    text: 'Wave',
+  },
 ]
 
 export { elements, components, formElements, layout, patterns }

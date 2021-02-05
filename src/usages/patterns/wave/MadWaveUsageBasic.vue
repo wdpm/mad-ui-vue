@@ -6,7 +6,7 @@
 import MadWave from '@/patterns/MadWave'
 
 export default {
-  name: 'MadWaveDemo',
+  name: 'MadWaveUsageBasic',
   components: {
     MadWave,
   },
