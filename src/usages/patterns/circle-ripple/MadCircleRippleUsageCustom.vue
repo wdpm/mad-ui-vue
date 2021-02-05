@@ -1,10 +1,4 @@
 <template>
-  <h2>basic</h2>
-  <mad-circle-ripple>
-    <p>some text just text ...</p>
-  </mad-circle-ripple>
-
-  <h2>configurable</h2>
   <mad-circle-ripple
     inner-circle-starting-diameter="100px"
     inner-circle-ending-diameter="500px"
@@ -15,7 +9,7 @@
     background-color="white"
   >
     <!--you should set proper text color because i don't know what you need-->
-    <p class="text-black">some text just text ...</p>
+    <p class="text-black">虽心有所觉，但亦作不解。</p>
   </mad-circle-ripple>
 </template>
 
@@ -23,7 +17,7 @@
 import MadCircleRipple from '@/patterns/MadCircleRipple'
 
 export default {
-  name: 'MadCircleRippleDemo',
+  name: 'MadCircleRippleUsageCustom',
   components: {
     MadCircleRipple,
   },

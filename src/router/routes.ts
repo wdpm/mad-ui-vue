@@ -114,4 +114,19 @@ const layout = [
   },
 ]
 
-export { elements, components, formElements, layout }
+const patterns = [
+  {
+    name: 'after-image',
+    text: 'After Image',
+  },
+  {
+    name: 'border-composition',
+    text: 'Border Composition',
+  },
+  {
+    name: 'circle-ripple',
+    text: 'Circle Ripple',
+  },
+]
+
+export { elements, components, formElements, layout, patterns }

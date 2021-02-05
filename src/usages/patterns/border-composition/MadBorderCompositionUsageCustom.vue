@@ -1,10 +1,4 @@
 <template>
-  <h2>basic</h2>
-  <mad-border-composition>
-    <div class="demo">hover to see effect</div>
-  </mad-border-composition>
-
-  <h2>configurable</h2>
   <mad-border-composition border-color="pink" border-width="2px">
     <div class="demo">hover to see effect</div>
   </mad-border-composition>
@@ -14,7 +8,7 @@
 import MadBorderComposition from '@/patterns/MadBorderComposition'
 
 export default {
-  name: 'MadBorderCompositionDemo',
+  name: 'MadBorderCompositionUsageCustom',
   components: {
     MadBorderComposition,
   },

@@ -4,8 +4,8 @@
 
 let fs = require('fs')
 // API
-let category = 'layout'
-let goal = 'container'
+let category = 'patterns'
+let goal = 'circle-ripple'
 
 let path = `../src/usages/${category}/${goal}`
 

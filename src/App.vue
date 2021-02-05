@@ -35,7 +35,13 @@
 </template>
 
 <script>
-import { elements, components, formElements, layout } from '@/router/routes'
+import {
+  elements,
+  components,
+  formElements,
+  layout,
+  patterns,
+} from '@/router/routes'
 
 import MadTreeItem from '@/document/MadTreeItem'
 
@@ -50,6 +56,7 @@ export default {
         this.componentTree,
         this.formTree,
         this.layoutTree,
+        this.patternTree,
       ]
     },
     elementTree() {
@@ -95,6 +102,17 @@ export default {
         })),
       }
       return layoutTree
+    },
+    patternTree() {
+      let patternTree = {
+        id: 'patterns',
+        text: '模式',
+        children: patterns.map((item) => ({
+          id: item.name,
+          text: item.text, // i18n zh_CN text
+        })),
+      }
+      return patternTree
     },
   },
   methods: {
