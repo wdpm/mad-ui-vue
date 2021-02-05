@@ -127,6 +127,22 @@ const patterns = [
     name: 'circle-ripple',
     text: 'Circle Ripple',
   },
+  {
+    name: 'circular-text-group',
+    text: 'Circular Text Group',
+  },
+  {
+    name: 'clip-path',
+    text: 'Clip Path',
+  },
+  {
+    name: 'cover',
+    text: 'Cover',
+  },
+  {
+    name: 'gear',
+    text: 'Gear',
+  },
 ]
 
 export { elements, components, formElements, layout, patterns }

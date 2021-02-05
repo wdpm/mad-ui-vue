@@ -65,6 +65,12 @@ p:active { background: #eee; }   /* Active paragraphs */
 - Whenever possible, prefer a HTML and CSS implementation over JavaScript
 - Whenever possible, use utilities over custom styles
 
+## canvas vs div
+> 什么时候使用canvas 绘制图形，什么时候使用div足够？
+
+- Canvas 适合绘制背景，绘制大量的图形，或者复杂的图形。
+- div 适合简单背景，少量DOM的图形，简单的图形。
+
 ## Todo
 
 - remove all namespace.mad-ui css class ,replaced by :v-deep

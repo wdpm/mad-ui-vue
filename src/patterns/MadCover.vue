@@ -49,7 +49,7 @@ export default {
     right: 0;
     height: 100%;
     width: 40%;
-    background-color: rgba(241, 238, 238, 0.5);
+    background-color: rgba(255, 255, 255, 0.4);
 
     display: flex;
     flex-direction: column;

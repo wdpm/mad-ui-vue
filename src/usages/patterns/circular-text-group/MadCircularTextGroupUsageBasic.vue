@@ -27,7 +27,7 @@ import MadCircularText from '@/patterns/MadCircularText'
 import MadCircularTextGroup from '@/patterns/MadCircularTextGroup'
 
 export default {
-  name: 'MadCircularTextGroupDemo',
+  name: 'MadCircularTextGroupUsageBasic',
   components: {
     MadCircularText,
     MadCircularTextGroup,

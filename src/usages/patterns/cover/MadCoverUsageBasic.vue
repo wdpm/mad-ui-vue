@@ -21,7 +21,7 @@
 import MadCover from '@/patterns/MadCover'
 
 export default {
-  name: 'MadCoverDemo.vue',
+  name: 'MadCoverUsageBasic',
   components: {
     MadCover,
   },
