@@ -5,7 +5,7 @@
 let fs = require('fs')
 // API
 let category = 'patterns'
-let goal = 'image-cross'
+let goal = 'inset-border'
 
 let path = `../src/usages/${category}/${goal}`
 

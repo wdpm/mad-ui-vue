@@ -6,7 +6,7 @@
 import MadImageOverlap from '@/patterns/MadImageOverlap'
 
 export default {
-  name: 'MadImageOverlapDemo',
+  name: 'MadImageOverlapUsageBasic',
   components: {
     MadImageOverlap,
   },

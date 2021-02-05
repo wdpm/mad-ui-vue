@@ -1,24 +1,5 @@
 <template>
-  <h2>basic</h2>
-  <mad-inset-border :src="require('@/assets/1.png').default"></mad-inset-border>
-
-  <h2>lined</h2>
-  <mad-inset-border
-    :src="require('@/assets/2.jpg').default"
-    lined
-  ></mad-inset-border>
-
-  <h2>
-    with animation
-    (background-slide-up/background-slide-down/background-scale-down)
-  </h2>
-  <mad-inset-border
-    :src="require('@/assets/2.jpg').default"
-    lined
-    animation="background-slide-up"
-  ></mad-inset-border>
-
-  <h2>group</h2>
+  <p>note: reload page to see effect</p>
   <div class="inset-border-group">
     <mad-row>
       <mad-column>
@@ -49,7 +30,7 @@ import MadRow from '@/layout/MadRow'
 import MadColumn from '@/layout/MadColumn'
 
 export default {
-  name: 'MadInsetBorderDemo',
+  name: 'MadInsetBorderUsageGroup',
   components: {
     MadColumn,
     MadRow,

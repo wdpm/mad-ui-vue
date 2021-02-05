@@ -151,6 +151,14 @@ const patterns = [
     name: 'image-cross',
     text: 'Image cross',
   },
+  {
+    name: 'image-overlap',
+    text: 'Image overlap',
+  },
+  {
+    name: 'inset-border',
+    text: 'Inset Border',
+  },
 ]
 
 export { elements, components, formElements, layout, patterns }
