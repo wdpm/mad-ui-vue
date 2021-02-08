@@ -156,6 +156,10 @@ const patterns = [
     text: 'Image overlap',
   },
   {
+    name: 'image-parallax',
+    text: 'Image parallax',
+  },
+  {
     name: 'inset-border',
     text: 'Inset Border',
   },

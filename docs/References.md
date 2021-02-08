@@ -20,6 +20,8 @@
 
 [6] pocketjoso.Generate interactive Specificity Graphs for your CSS.[EB/OL].[2020-2-2].https://jonassebastianohlsson.com/specificity-graph/.
 
+[] bennettfeely.CSS clip-path maker.[EB/OL].[2020-2-8].https://bennettfeely.com/clippy/.
+
 ## CSS 框架
 [] jgthms.Documentation | Bulma: Free, open source, and modern CSS framework based on Flexbox[EB/OL].[2020-1-21].https://bulma.io/documentation/.
 

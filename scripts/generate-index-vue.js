@@ -5,7 +5,7 @@
 let fs = require('fs')
 // API
 let category = 'patterns'
-let goal = 'wave'
+let goal = 'image-parallax'
 
 let path = `../src/usages/${category}/${goal}`
 

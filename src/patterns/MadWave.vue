@@ -54,22 +54,22 @@ export default {
           {
             timeModifier: 1, //This is multiplied against `speed`
             lineWidth: 1, // Stroke width
-            amplitude: -75, // How tall is the wave
-            wavelength: 500, // How long is the wave,
+            amplitude: -40, // How tall is the wave
+            wavelength: 250, // How long is the wave,
             strokeStyle: 'rgba(255, 0, 0, .5)',
           },
           {
             timeModifier: 1,
             lineWidth: 1,
-            amplitude: -75,
-            wavelength: 300,
+            amplitude: -50,
+            wavelength: 200,
             strokeStyle: 'rgba(0, 255, 0, .5)',
           },
           {
             timeModifier: 1,
             lineWidth: 1,
-            amplitude: -75,
-            wavelength: 400,
+            amplitude: -60,
+            wavelength: 300,
             strokeStyle: 'rgba(0, 0, 255, .5)',
           },
         ]
