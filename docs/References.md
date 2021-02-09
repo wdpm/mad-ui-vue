@@ -32,3 +32,7 @@
 ## CSS 预处理器
 
 [] Bourbon.A Lightweight Sass Tool Set.[EB/OL].[2020-2-2].https://www.bourbon.io/.
+
+## JS 框架
+
+[] vuejs.Vue 3 core documentation.[EB/OL].[2020-2-9].https://v3.vuejs.org/guide.

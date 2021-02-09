@@ -74,3 +74,4 @@ p:active { background: #eee; }   /* Active paragraphs */
 ## Todo
 
 - remove all namespace.mad-ui css class ,replaced by :v-deep
+- replace highlight.js with prism.js for showing line numbers and line highlight

@@ -6,9 +6,9 @@
     <div class="code-info">
       <strong class="code-title">{{ title }}</strong>
       <slot name="desc"></slot>
-      <a class="code-toggle" @click="visible = !visible"> code </a>
+      <a class="code-toggle" @click="toggleCode"> code </a>
     </div>
-    <div class="code-content" v-show="visible">
+    <div class="code-content" ref="codeContent">
       <pre><code ref="code" class="lang-html">{{ code }}</code></pre>
     </div>
   </div>
@@ -16,12 +16,14 @@
 
 <script>
 import hljs from 'highlight.js'
+import MadTransition from '@/document/MadTransition'
 
 /**
  * like this: https://v3.vuejs.org/guide/contributing/doc-style-guide.html#line-highlighting
  */
 export default {
   name: 'MadCodeBlock',
+  components: { MadTransition },
   props: {
     title: {
       type: String,
@@ -32,15 +34,23 @@ export default {
       type: String,
       default: '',
       required: true,
-    }
-  },
-  data() {
-    return {
-      visible: false,
-    }
+    },
   },
   mounted() {
     hljs.highlightBlock(this.$refs.code)
+  },
+  methods: {
+    toggleCode() {
+      let codeContent = this.$refs.codeContent
+      //  if already expended, then collapse
+      console.log(codeContent.style.maxHeight)
+      if (codeContent.style.maxHeight) {
+        codeContent.style.maxHeight = null
+      } else {
+        // if collapsed, then expand
+        codeContent.style.maxHeight = codeContent.scrollHeight + 'px'
+      }
+    },
   },
 }
 </script>
@@ -95,6 +105,9 @@ export default {
 }
 
 .code-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
   border-top: 1px solid #ddd;
 
   pre {
