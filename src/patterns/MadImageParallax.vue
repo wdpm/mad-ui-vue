@@ -54,8 +54,8 @@ export default {
       let clientWidth = this.$refs.front.clientWidth
       let clientHeight = this.$refs.front.clientHeight
 
-      let moveX = (clientWidth / 2 - e.pageX) * 0.1
-      let moveY = (clientHeight / 2 - e.pageY) * 0.1
+      let moveX = (clientWidth / 2 - e.clientX) * 0.1
+      let moveY = (clientHeight / 2 - e.clientY) * 0.1
 
       this.$refs.back.style.marginLeft = moveX + 'px'
       this.$refs.back.style.marginTop = moveY + 'px'

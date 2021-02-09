@@ -4,8 +4,8 @@
 
 let fs = require('fs')
 // API
-let category = 'patterns'
-let goal = 'image-parallax'
+let category = 'components'
+let goal = 'header'
 
 let path = `../src/usages/${category}/${goal}`
 

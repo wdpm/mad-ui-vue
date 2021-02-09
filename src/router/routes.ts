@@ -67,6 +67,10 @@ const components = [
     text: 'Dropdown',
   },
   {
+    name: 'header',
+    text: 'Header',
+  },
+  {
     name: 'media',
     text: 'Media',
   },
