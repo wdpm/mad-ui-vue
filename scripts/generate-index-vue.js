@@ -4,8 +4,8 @@
 
 let fs = require('fs')
 // API
-let category = 'components'
-let goal = 'header'
+let category = 'views'
+let goal = 'timeline'
 
 let path = `../src/usages/${category}/${goal}`
 

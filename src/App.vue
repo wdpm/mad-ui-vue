@@ -41,6 +41,7 @@ import {
   formElements,
   layout,
   patterns,
+  views
 } from '@/router/routes'
 
 import MadTreeItem from '@/document/MadTreeItem'
@@ -57,6 +58,7 @@ export default {
         this.formTree,
         this.layoutTree,
         this.patternTree,
+        this.viewTree
       ]
     },
     elementTree() {
@@ -114,6 +116,17 @@ export default {
       }
       return patternTree
     },
+    viewTree(){
+      let viewTree = {
+        id: 'views',
+        text: '视图',
+        children: views.map((item) => ({
+          id: item.name,
+          text: item.text, // i18n zh_CN text
+        })),
+      }
+      return viewTree
+    }
   },
   methods: {
     clickNode(node) {

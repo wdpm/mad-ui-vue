@@ -189,4 +189,10 @@ const patterns = [
   },
 ]
 
-export { elements, components, formElements, layout, patterns }
+const views = [
+  {
+    name: 'timeline',
+    text: 'Timeline',
+  },
+]
+export { elements, components, formElements, layout, patterns, views }

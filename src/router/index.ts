@@ -6,6 +6,7 @@ import {
   formElements,
   layout,
   patterns,
+  views,
 } from '@/router/routes'
 
 const mapRoutes = (items, path) =>
@@ -20,6 +21,7 @@ const componentRoutes = mapRoutes(components, 'components')
 const formRoutes = mapRoutes(formElements, 'form')
 const layoutRoutes = mapRoutes(layout, 'layout')
 const patternRoutes = mapRoutes(patterns, 'patterns')
+const viewRoutes = mapRoutes(views, 'views')
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -41,7 +43,8 @@ const routes: Array<RouteRecordRaw> = [
   componentRoutes,
   formRoutes,
   layoutRoutes,
-  patternRoutes
+  patternRoutes,
+  viewRoutes
 )
 
 const router = createRouter({
