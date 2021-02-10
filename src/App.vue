@@ -1,36 +1,33 @@
 <template>
-  <div class="holy-grail">
+  <div>
     <header class="header">mad-ui | {{ this.$route.path }}</header>
-    <div class="holy-grail-body">
-      <main class="holy-grail-content">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <router-link to="/" class="nav-list-item-link">Home</router-link>
+        </li>
+        <li class="nav-list-item">
+          <router-link to="/about" class="nav-list-item-link"
+            >About
+          </router-link>
+        </li>
+        <mad-tree-item
+          v-for="(tree, index) in trees"
+          :key="tree.id || index"
+          class="nav-list-item"
+          :item-css-classes="['nav-list-item-link']"
+          :item="tree"
+          @click="clickNode($event)"
+        >
+        </mad-tree-item>
+      </ul>
+    </nav>
+    <main class="main">
+      <div class="page">
         <router-view />
-      </main>
-      <nav class="holy-grail-nav">
-        <ul class="nav-list">
-          <li class="nav-list-item">
-            <router-link to="/" class="nav-list-item-link">Home</router-link>
-          </li>
-          <li class="nav-list-item">
-            <router-link to="/about" class="nav-list-item-link"
-              >About
-            </router-link>
-          </li>
-          <mad-tree-item
-            v-for="(tree, index) in trees"
-            :key="tree.id || index"
-            class="nav-list-item"
-            :item-css-classes="['nav-list-item-link']"
-            :item="tree"
-            @click="clickNode($event)"
-          >
-          </mad-tree-item>
-        </ul>
-      </nav>
-      <aside class="holy-grail-aside">
-        <p>toc</p>
-      </aside>
-    </div>
-    <footer class="footer">footer</footer>
+      </div>
+      <!-- toc-->
+    </main>
   </div>
 </template>
 
@@ -41,7 +38,7 @@ import {
   formElements,
   layout,
   patterns,
-  views
+  views,
 } from '@/router/routes'
 
 import MadTreeItem from '@/document/MadTreeItem'
@@ -58,7 +55,7 @@ export default {
         this.formTree,
         this.layoutTree,
         this.patternTree,
-        this.viewTree
+        this.viewTree,
       ]
     },
     elementTree() {
@@ -116,7 +113,7 @@ export default {
       }
       return patternTree
     },
-    viewTree(){
+    viewTree() {
       let viewTree = {
         id: 'views',
         text: '视图',
@@ -126,7 +123,7 @@ export default {
         })),
       }
       return viewTree
-    }
+    },
   },
   methods: {
     clickNode(node) {
@@ -145,53 +142,30 @@ export default {
 // use this way to import 3rd-party css
 @import './../node_modules/highlight.js/styles/github.css';
 
-// mobile first
-.holy-grail {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+// make header fixed
+.nav {
+  position: fixed;
+  top: 3.6rem;
+  left: 0;
+  bottom: 0;
+  width: 16rem;
+  z-index: 10;
+  margin: 0;
+  font-size: 1rem;
+  background-color: #fff;
+  border-right: 1px solid #eaecef;
+  overflow-y: auto;
+}
 
-  // make sticky footer
-  &-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
+.main {
+  padding-left: 16rem;
+  padding-bottom: 2rem;
+  display: block;
+}
 
-  &-content {
-    flex: 1;
-    padding: 0.5em 0.75rem;
-  }
-
-  // use hamburger icon on header left
-  &-nav {
-    flex: 0 0 12rem;
-    height: 100vh;
-    display: none;
-  }
-
-  &-aside {
-    flex: 0 0 12rem;
-    order: -1;
-  }
-
-  // expand on wide screen
-  @media screen and(min-width: 768px) {
-    &-body {
-      flex-direction: row;
-    }
-
-    &-nav {
-      display: block;
-      order: -1;
-      border-right: 1px solid lightgray;
-    }
-
-    &-aside {
-      order: 1;
-      border-left: 1px solid lightgray;
-    }
-  }
+.page {
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
 }
 
 .nav-list {
@@ -222,12 +196,16 @@ export default {
 }
 
 .header {
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid darkgrey;
-}
-
-.footer {
-  padding: 0.75rem 1rem;
-  border-top: 1px solid darkgrey;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.6rem;
+  padding: 0.7rem 1.5rem;
+  line-height: 2.2rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eaecef;
 }
 </style>
