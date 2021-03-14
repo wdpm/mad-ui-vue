@@ -7,6 +7,15 @@
 <script>
 /**
  * Center your content horizontally.
+ *
+ * Maybe can refactor by:
+ * <pre>
+ *    // then 350px * 2 =700 is content width
+ *     header, section, footer {
+ *       padding: 1em calc(50% - 350px);
+ *      }
+ * </pre>
+ *
  */
 export default {
   name: 'MadContainer',

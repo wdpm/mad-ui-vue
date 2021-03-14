@@ -43,7 +43,7 @@ export default {
     toggleCode() {
       let codeContent = this.$refs.codeContent
       //  if already expended, then collapse
-      console.log(codeContent.style.maxHeight)
+      // console.log(codeContent.style.maxHeight)
       if (codeContent.style.maxHeight) {
         codeContent.style.maxHeight = null
       } else {
@@ -108,7 +108,6 @@ export default {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
-  border-top: 1px solid #ddd;
 
   pre {
     margin-bottom: 0;

@@ -1,5 +1,5 @@
 <template>
-  <div class="namespace mad-ui">
+  <div class="mad-menu">
     <aside class="menu" :class="[sizeClass]">
       <slot></slot>
     </aside>
@@ -63,7 +63,7 @@ $menu-label-spacing: 1em !default;
 // 1. css module not work for inner element
 // 1. keep scoped css,not global css
 
-.namespace.mad-ui {
+.mad-menu {
   .menu {
     font-size: $size-normal;
 

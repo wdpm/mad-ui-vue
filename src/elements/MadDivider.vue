@@ -23,7 +23,7 @@ export default {
 // ui-divider is 41px height
 .divider {
   position: relative;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   width: 100%;
   height: 1px;
   background-color: #e8e8e8;

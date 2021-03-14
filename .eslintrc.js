@@ -17,6 +17,12 @@ module.exports = {
     '@typescript-eslint/no-this-alias': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     'vue/no-unused-components': 'off',
+    // disable the rule for all files
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['off'],
+    'vue/valid-template-root': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
   },
   overrides: [
     {

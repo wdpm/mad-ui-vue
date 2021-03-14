@@ -11,7 +11,7 @@
       <a class="dropdown-item"> Other dropdown item </a>
       <a href="#" class="dropdown-item"> dropdown item </a>
       <a href="#" class="dropdown-item"> Other dropdown item with long text</a>
-      <hr/>
+      <hr />
       <a href="#" class="dropdown-item"> With a divider </a>
     </template>
   </mad-dropdown>

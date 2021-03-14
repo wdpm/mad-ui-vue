@@ -55,6 +55,10 @@ const elements = [
     name: 'tag',
     text: 'Tag',
   },
+  {
+    name: 'text',
+    text: 'Text',
+  },
 ]
 
 const components = [

@@ -1,6 +1,7 @@
 <template>
   <h3>
-    with animation (background-slide-up/background-slide-down/background-scale-down)
+    with animation
+    (background-slide-up/background-slide-down/background-scale-down)
   </h3>
   <p>note: reload page to see effect</p>
   <mad-inset-border
@@ -21,5 +22,4 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

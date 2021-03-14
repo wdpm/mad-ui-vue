@@ -2,9 +2,7 @@
  * Created by thephpjo on 21.04.14.
  */
 
-
 var helpers = {
-
   /**
    * debouncing, executes the function if there was no new event in $wait milliseconds
    * @param func
@@ -13,16 +11,17 @@ var helpers = {
    * @returns {Function}
    */
   debounce: function (func, wait, scope) {
-    var timeout;
+    var timeout
     return function () {
-      var context = scope || this, args = arguments;
+      var context = scope || this,
+        args = arguments
       var later = function () {
-        timeout = null;
-        func.apply(context, args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
+        timeout = null
+        func.apply(context, args)
+      }
+      clearTimeout(timeout)
+      timeout = setTimeout(later, wait)
+    }
   },
 
   /**
@@ -33,25 +32,24 @@ var helpers = {
    * @returns {Function}
    */
   throttle: function (fn, threshhold, scope) {
-    threshhold || (threshhold = 250);
-    var last,
-      deferTimer;
+    threshhold || (threshhold = 250)
+    var last, deferTimer
     return function () {
-      var context = scope || this;
+      var context = scope || this
 
-      var now = +new Date,
-        args = arguments;
+      var now = +new Date(),
+        args = arguments
       if (last && now < last + threshhold) {
         // hold on to it
-        clearTimeout(deferTimer);
+        clearTimeout(deferTimer)
         deferTimer = setTimeout(function () {
-          last = now;
-          fn.apply(context, args);
-        }, threshhold);
+          last = now
+          fn.apply(context, args)
+        }, threshhold)
       } else {
-        last = now;
-        fn.apply(context, args);
+        last = now
+        fn.apply(context, args)
       }
-    };
-  }
+    }
+  },
 }

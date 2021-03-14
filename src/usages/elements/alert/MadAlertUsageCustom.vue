@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import MadAlert from "@/elements/MadAlert"
+import MadAlert from '@/elements/MadAlert'
 
 export default {
   name: 'MadAlertUsageCustom',

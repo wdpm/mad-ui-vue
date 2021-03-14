@@ -80,7 +80,7 @@ export default {
 @import 'src/scss/utilities/animation';
 @import 'src/scss/utilities/background';
 @import 'src/scss/utilities/border';
-@import 'src/scss/utilities/text';
+//@import 'src/scss/utilities/text';
 
 .circle-ripple {
   position: relative;

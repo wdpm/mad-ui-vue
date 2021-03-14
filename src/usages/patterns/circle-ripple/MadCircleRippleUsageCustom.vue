@@ -25,5 +25,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'src/scss/utilities/text';
+.text-black {
+  color: black;
+}
 </style>

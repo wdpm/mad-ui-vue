@@ -53,7 +53,7 @@ export default {
         this.alignmentClass,
         this.sizeClass,
         this.separatorClass,
-      ].map((value, index, array) => {
+      ].map((value) => {
         return value ? this.$style[value] : ''
       })
     },

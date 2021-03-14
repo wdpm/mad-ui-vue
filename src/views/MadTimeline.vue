@@ -6,6 +6,9 @@
 </template>
 
 <script>
+/**
+ * one-side mode, text all on right
+ */
 export default {
   name: 'MadTimeline',
 }

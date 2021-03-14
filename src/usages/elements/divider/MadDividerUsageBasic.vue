@@ -6,11 +6,11 @@
   </div>
 </template>
 <script>
-import MadDivider from "@/elements/MadDivider"
+import MadDivider from '@/elements/MadDivider'
 
 export default {
   components: {
-    MadDivider
-  }
+    MadDivider,
+  },
 }
 </script>

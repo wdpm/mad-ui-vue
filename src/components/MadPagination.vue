@@ -1,5 +1,5 @@
 <template>
-  <div class="namespace mad-ui">
+  <div class="mad-pagination">
     <nav
       class="pagination"
       :class="[sizeClass]"
@@ -76,7 +76,7 @@ $pagination-current-color: $color-white !default;
 $pagination-current-background-color: $color-blue-500 !default;
 $pagination-current-border-color: $color-blue-500 !default;
 
-.namespace.mad-ui {
+.mad-pagination {
   .pagination {
     @include block();
     font-size: $size-normal;

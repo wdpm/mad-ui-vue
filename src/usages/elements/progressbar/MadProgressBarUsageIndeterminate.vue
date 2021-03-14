@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { colorMapValuesNoLight} from '@/utils/propValidateHelper'
+import { colorMapValuesNoLight } from '@/utils/propValidateHelper'
 import MadProgressBar from '@/elements/MadProgressBar'
 
 export default {
@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      colorMapValuesNoLight
+      colorMapValuesNoLight,
     }
   },
 }

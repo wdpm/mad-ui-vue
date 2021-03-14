@@ -6,8 +6,7 @@ const elements = [
 ]
 
 let res = elements.map((item) => ({
-  'name': item.name
+  name: item.name,
 }))
-
 
 console.log(res)

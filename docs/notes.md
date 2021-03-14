@@ -41,6 +41,16 @@ p:active { background: #eee; }   /* Active paragraphs */
 - mad-divider-usage-basic 表示mad-divider组件的基本用法
 - mad-divider-usage-basic-code 表示mad-divider组件的基本用法的代码
 - index.vue 表示某个组件的入口vue
+- api-view component for API document. Can be generated from some script, use api.js or api.json to store. 
+
+Breadcrumbs Props
+
+|参数	|介绍	|类型	|可选值	|默认值|
+|---|---|---|---|---|
+|divider|分隔符|	String|	—|	‘/’|
+
+## search docs
+algolia
 
 ### read time
 > https://github.com/ngryman/reading-time
@@ -75,3 +85,22 @@ p:active { background: #eee; }   /* Active paragraphs */
 
 - remove all namespace.mad-ui css class ,replaced by :v-deep
 - replace highlight.js with prism.js for showing line numbers and line highlight
+
+- 手风琴 组件 => 参考代码折叠的实现
+- 轮播图 组件
+
+## 粒子系统
+- 烟花
+- 萤火虫
+- 樱花飞舞（类似AE，将粒子type改为图片形式来替代）
+- 下雨
+- 下雪
+
+这些都看成是粒子。这样就能快速给出通用的实现。
+
+## directives and mixins, utils
+参考：muse-ui 代码 muse-ui\src\internal
+
+## .eslintrc.js 中rule规则的自定义
+
+这个rule可以自行定义，可以定义地很严格，也可以定义地很宽松。取决于你。

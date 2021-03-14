@@ -18,7 +18,7 @@
     <p class="align-right">some one</p>
     <p class="align-right">2020-1-1</p>
   </mad-letter-paper>
-  <br/>
+  <br />
   <mad-letter-paper>
     <!--slot mode, need pre-process(remove line-leading space)-->
     <pre class="letter-spacing">
@@ -117,7 +117,7 @@
     幸せな事を願います
     能够幸福
         </pre
-        >
+    >
   </mad-letter-paper>
 </template>
 
@@ -132,5 +132,4 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

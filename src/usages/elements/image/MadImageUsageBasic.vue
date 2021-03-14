@@ -1,17 +1,9 @@
 <template>
   <!--respect ratio, fixed width-->
-  <mad-image
-    :src="src"
-    :ratio="'16by9'"
-    :width="'300px'"
-  ></mad-image>
+  <mad-image :src="src" :ratio="'16by9'" :width="'300px'"></mad-image>
   <hr />
   <!-- respect ratio, fixed height-->
-  <mad-image
-    :src="src"
-    :ratio="'3by1'"
-    :height="'200px'"
-  ></mad-image>
+  <mad-image :src="src" :ratio="'3by1'" :height="'200px'"></mad-image>
   <hr />
   <!-- respect ratio,fixed height and max-width-->
   <mad-image
@@ -30,11 +22,11 @@ export default {
   components: {
     MadImage,
   },
-  data(){
-    return{
-      src: require('@/assets/12.jpg').default
+  data() {
+    return {
+      src: require('@/assets/12.jpg').default,
     }
-  }
+  },
 }
 </script>
 

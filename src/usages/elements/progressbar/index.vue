@@ -6,7 +6,10 @@
     <mad-code-block title="color" :code="MadProgressBarUsageColorCode">
       <mad-progress-bar-usage-color></mad-progress-bar-usage-color>
     </mad-code-block>
-    <mad-code-block title="Indeterminate" :code="MadProgressBarUsageIndeterminateCode">
+    <mad-code-block
+      title="Indeterminate"
+      :code="MadProgressBarUsageIndeterminateCode"
+    >
       <mad-progress-bar-usage-indeterminate></mad-progress-bar-usage-indeterminate>
     </mad-code-block>
     <mad-code-block title="size" :code="MadProgressBarUsageSizeCode">
