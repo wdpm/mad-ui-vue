@@ -14,7 +14,7 @@ import MadExpansionUsageBasic from '@/usages/components/expansion/MadExpansionUs
 import MadExpansionUsageBasicCode from '!raw-loader!@/usages/components/expansion/MadExpansionUsageBasic'
 
 export default {
-  name: 'IndexTemplate',
+  name: 'MadExpansionUsage',
   components: {
     MadCodeBlock,
     MadDocPage,

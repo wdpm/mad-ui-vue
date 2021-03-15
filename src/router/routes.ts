@@ -71,6 +71,10 @@ const components = [
     text: 'Dropdown',
   },
   {
+    name: 'expansion',
+    text: 'Expansion',
+  },
+  {
     name: 'header',
     text: 'Header',
   },

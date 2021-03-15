@@ -1,52 +1,93 @@
 <template>
   <div class="expansion">
     <div class="expansion-header">
-      <strong class="expansion-title">some text</strong>
-      <a class="expansion-toggle" @click="toggle"> click </a>
+      <p class="expansion-title">
+        <slot name="header"></slot>
+      </p>
+      <mad-icon @click="toggle">
+        <i class="arrow" :class="[arrowDirectionClass]"></i>
+      </mad-icon>
     </div>
-    <div class="expansion-container" ref="expansion-container">
-      <div class="expansion-content">expansion content</div>
+    <div class="expansion-container" ref="expansionContainer">
+      <div class="expansion-content">
+        <slot name="default"></slot>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import MadIcon from '@/elements/MadIcon'
+
 export default {
   name: 'MadExpansion',
+  components: { MadIcon },
+  data() {
+    return {
+      containerIsVisible: false,
+    }
+  },
+  computed: {
+    arrowDirectionClass() {
+      return this.containerIsVisible ? 'down' : 'up'
+    },
+  },
   methods: {
     toggle() {
-      let codeContent = this.$refs.expansionContainer
-      //  if already expended, then collapse
-      // console.log(codeContent.style.maxHeight)
-      if (codeContent.style.maxHeight) {
-        codeContent.style.maxHeight = null
+      // toggle content
+      let container = this.$refs.expansionContainer
+      if (container.style.maxHeight) {
+        container.style.maxHeight = null
       } else {
-        // if collapsed, then expand
-        codeContent.style.maxHeight = codeContent.scrollHeight + 'px'
+        container.style.maxHeight = container.scrollHeight + 'px'
       }
+
+      // toggle arrow direction
+      this.containerIsVisible = !this.containerIsVisible
     },
   },
 }
 </script>
 
 <style scoped lang="scss">
-.code-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  border-top: 1px solid #ddd;
+@import 'src/scss/mixins/arrow.scss';
 
-  pre {
-    margin-bottom: 0;
-    padding: 0;
+.expansion {
+  padding: 0 1.5rem;
+  line-height: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  &-header {
+    display: flex;
+    padding: 0.5rem 0;
   }
 
-  .hljs {
-    padding: 18px 30px;
-    line-height: 1.5;
-    font-size: 0.875em;
-    font-weight: 400;
-    font-family: Consolas, Helvetica, Arial, sans-serif;
+  &-title {
+    width: 100%;
+  }
+
+  &-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  &-content {
+    padding-bottom: 0.5rem;
+  }
+
+  .arrow {
+    @include arrow-base();
+    // css animation for direction change
+    transition: transform 0.2s linear;
+
+    &.up {
+      @include arrow-direction($direction: up);
+    }
+
+    &.down {
+      @include arrow-direction($direction: down);
+    }
   }
 }
 </style>
