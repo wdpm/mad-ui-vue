@@ -22,14 +22,12 @@
         </mad-tree-item>
       </ul>
     </nav>
-    <mad-circular-ripple>
-      <main class="main">
-        <div class="page">
-          <router-view />
-        </div>
-        <!-- toc-->
-      </main>
-    </mad-circular-ripple>
+    <main class="main">
+      <div class="page">
+        <router-view />
+      </div>
+      <!-- toc-->
+    </main>
   </div>
 </template>
 
@@ -40,6 +38,7 @@ import {
   formElements,
   layout,
   patterns,
+  plugins,
   views,
 } from '@/router/routes'
 
@@ -57,9 +56,11 @@ export default {
         this.formTree,
         this.layoutTree,
         this.patternTree,
+        this.pluginTree,
         this.viewTree,
       ]
     },
+    // refactor XXX tree code to method. too messy
     elementTree() {
       let eles = {
         id: 'elements',
@@ -114,6 +115,17 @@ export default {
         })),
       }
       return patternTree
+    },
+    pluginTree() {
+      let pluginTree = {
+        id: 'plugins',
+        text: '插件',
+        children: plugins.map((item) => ({
+          id: item.name,
+          text: item.text, // i18n zh_CN text
+        })),
+      }
+      return pluginTree
     },
     viewTree() {
       let viewTree = {

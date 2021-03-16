@@ -4,8 +4,8 @@
 
 let fs = require('fs')
 // API
-let category = 'views'
-let goal = 'timeline'
+let category = 'plugins'
+let goal = 'circular-ripple'
 
 let path = `../src/usages/${category}/${goal}`
 

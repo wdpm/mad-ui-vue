@@ -6,6 +6,7 @@ import {
   formElements,
   layout,
   patterns,
+  plugins,
   views,
 } from '@/router/routes'
 
@@ -21,6 +22,7 @@ const componentRoutes = mapRoutes(components, 'components')
 const formRoutes = mapRoutes(formElements, 'form')
 const layoutRoutes = mapRoutes(layout, 'layout')
 const patternRoutes = mapRoutes(patterns, 'patterns')
+const pluginRoutes = mapRoutes(plugins, 'plugins')
 const viewRoutes = mapRoutes(views, 'views')
 
 const routes: Array<RouteRecordRaw> = [
@@ -44,6 +46,7 @@ const routes: Array<RouteRecordRaw> = [
   formRoutes,
   layoutRoutes,
   patternRoutes,
+  pluginRoutes,
   viewRoutes
 )
 

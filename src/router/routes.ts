@@ -197,10 +197,17 @@ const patterns = [
   },
 ]
 
+const plugins = [
+  {
+    name: 'circular-ripple',
+    text: 'Circular ripple',
+  },
+]
+
 const views = [
   {
     name: 'timeline',
     text: 'Timeline',
   },
 ]
-export { elements, components, formElements, layout, patterns, views }
+export { elements, components, formElements, layout, patterns, plugins, views }
