@@ -104,7 +104,8 @@ export default {
 
 .code-content {
   max-height: 0;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: auto;
   transition: max-height 0.3s ease-out;
 
   pre {
