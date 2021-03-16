@@ -16,14 +16,12 @@
 
 <script>
 import hljs from 'highlight.js'
-import MadTransition from '@/document/MadTransition'
 
 /**
  * like this: https://v3.vuejs.org/guide/contributing/doc-style-guide.html#line-highlighting
  */
 export default {
   name: 'MadCodeBlock',
-  components: { MadTransition },
   props: {
     title: {
       type: String,

@@ -9,18 +9,20 @@
 import { defineComponent } from 'vue'
 import { addClass, removeClass } from '@/utils/dom'
 
+const COLLAPSE_TRANSITION_CLASS = 'mad-collapse-transition'
+
 /**
  * use transition to encapsulate container animation/transition
  *
  * copy implementation from element-plus.git\packages\transition\collapse-transition\index.vue
  */
 export default defineComponent({
-  name: 'MadTransition',
+  name: 'MadCollapseTransition',
   setup() {
     return {
       on: {
         beforeEnter(el) {
-          addClass(el, 'collapse-transition')
+          addClass(el, COLLAPSE_TRANSITION_CLASS)
           if (!el.dataset) el.dataset = {}
 
           el.dataset.oldPaddingTop = el.style.paddingTop
@@ -48,7 +50,7 @@ export default defineComponent({
 
         afterEnter(el) {
           // for safari: remove class then reset height is necessary
-          removeClass(el, 'collapse-transition')
+          removeClass(el, COLLAPSE_TRANSITION_CLASS)
           el.style.height = '' //reset to initial
           el.style.overflow = el.dataset.oldOverflow
         },
@@ -66,7 +68,7 @@ export default defineComponent({
         leave(el) {
           if (el.scrollHeight !== 0) {
             // for safari: add class after set height, or it will jump to zero height suddenly, weired
-            addClass(el, 'collapse-transition')
+            addClass(el, COLLAPSE_TRANSITION_CLASS)
             // in vue3.0.4, transitionProperty is set 'none' to avoid 'v-leave-from' issue
             el.style.transitionProperty = 'height'
             el.style.height = 0
@@ -76,7 +78,7 @@ export default defineComponent({
         },
 
         afterLeave(el) {
-          removeClass(el, 'collapse-transition')
+          removeClass(el, COLLAPSE_TRANSITION_CLASS)
           el.style.height = '' //reset to initial
           el.style.overflow = el.dataset.oldOverflow
           el.style.paddingTop = el.dataset.oldPaddingTop
@@ -89,7 +91,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.collapse-transition {
+.mad-collapse-transition {
   transition: 0.3s height ease-in-out, 0.3s padding-top ease-in-out,
     0.3s padding-bottom ease-in-out;
 }

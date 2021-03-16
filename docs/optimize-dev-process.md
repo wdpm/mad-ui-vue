@@ -52,12 +52,15 @@ $ standard-version
 √ outputting changes to CHANGELOG.md
 √ committing package-lock.json and package.json and CHANGELOG.md
 ```
-说明：根据 主版本（major）,次版本（ minor） or 修订版（patch） 规则生成版本号。
-一般是递增patch版本号，除非手动指定。
 
-- -r 指定版本号
-- -p 预发版本命名
-- -t tag 前缀
+这步修改了package.json的版本号，创建/修改了 changelog.md,并且执行了 git commit。其中git commit的信息类似于: chore(release): 0.1.4
+
+说明：根据 主版本（major）,次版本（ minor） or 修订版（patch） 规则生成版本号。 一般是递增patch版本号，除非手动指定。
+
+- `-r` 指定版本号
+- `-p` 预发版本命名
+- `-t` tag 前缀
 
 ## finally
+
 集成 npm，这步就是将上述一些指令写到npm scripts中，这样就不用多次手动输入了。

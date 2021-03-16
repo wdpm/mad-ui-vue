@@ -154,7 +154,12 @@ export default {
   font-size: 1rem;
   background-color: #fff;
   border-right: 1px solid #eaecef;
-  overflow-y: auto;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .main {

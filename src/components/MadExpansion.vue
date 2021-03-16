@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     arrowDirectionClass() {
-      return this.containerIsVisible ? 'down' : 'up'
+      return this.containerIsVisible ? 'up' : 'down'
     },
   },
   methods: {

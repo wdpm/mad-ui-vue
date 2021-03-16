@@ -86,9 +86,6 @@ algolia
 - remove all namespace.mad-ui css class ,replaced by :v-deep
 - replace highlight.js with prism.js for showing line numbers and line highlight
 
-- 手风琴 组件 => 参考代码折叠的实现
-- 轮播图 组件
-
 ## 粒子系统
 - 烟花
 - 萤火虫
@@ -100,6 +97,9 @@ algolia
 
 ## directives and mixins, utils
 参考：muse-ui 代码 muse-ui\src\internal
+
+工具类。
+
 
 ## .eslintrc.js 中rule规则的自定义
 

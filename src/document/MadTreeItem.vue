@@ -10,25 +10,33 @@
       ]"
       @click="toggle"
     >
-      {{ item.text }}
-      <span v-if="isFolder">[{{ isOpen ? '-' : '+' }}]</span>
+      <span class="tree-item-text">{{ item.text }}</span>
+      <span v-if="isFolder" class="tree-item-toggle"
+        >[{{ isOpen ? '-' : '+' }}]</span
+      >
     </component>
 
-    <ul v-show="isOpen" v-if="isFolder" class="tree-item-list">
-      <mad-tree-item
-        v-for="(child, index) in item.children"
-        :key="child.id || index"
-        :item="child"
-        :item-css-classes="itemCssClasses"
-        @click="onClick($event, child)"
-      ></mad-tree-item>
-    </ul>
+    <mad-collapse-transition>
+      <ul v-show="isOpen" v-if="isFolder" class="tree-item-list">
+        <mad-tree-item
+          v-for="(child, index) in item.children"
+          :key="child.id || index"
+          :item="child"
+          :item-css-classes="itemCssClasses"
+          @click="onClick($event, child)"
+        ></mad-tree-item>
+      </ul>
+    </mad-collapse-transition>
   </li>
 </template>
 
 <script>
+import MadCollapseTransition from '@/document/MadCollapseTransition'
+
 export default {
-  name: 'MadTreeItem', // https://v3.vuejs.org/guide/migration/v-on-native-modifier-removed.html
+  name: 'MadTreeItem',
+  components: { MadCollapseTransition },
+  // https://v3.vuejs.org/guide/migration/v-on-native-modifier-removed.html
   props: {
     item: {
       type: Object,
@@ -94,6 +102,15 @@ ul {
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  &-text {
+    width: 100%;
+  }
+
+  &-toggle {
+    display: inline-block;
+    justify-self: end;
   }
 
   &-list {
