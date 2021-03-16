@@ -6,5 +6,3 @@ Doc.
 
 ## API
 
-### Props
-
