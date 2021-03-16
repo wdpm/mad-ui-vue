@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-content">
     <header class="header">mad-ui | {{ this.$route.path }}</header>
     <nav class="nav">
       <ul class="nav-list">
@@ -22,12 +22,14 @@
         </mad-tree-item>
       </ul>
     </nav>
-    <main class="main">
-      <div class="page">
-        <router-view />
-      </div>
-      <!-- toc-->
-    </main>
+    <mad-circular-ripple>
+      <main class="main">
+        <div class="page">
+          <router-view />
+        </div>
+        <!-- toc-->
+      </main>
+    </mad-circular-ripple>
   </div>
 </template>
 

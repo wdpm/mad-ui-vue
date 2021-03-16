@@ -17,7 +17,7 @@ commitizen init cz-conventional-changelog --save-dev --save-exact
 use commitizen to write more clear and readable commit message.
 
 ```
-cz
+cz -a # -a 表示也会同时添加文件，即git add
 ```
 
 ```

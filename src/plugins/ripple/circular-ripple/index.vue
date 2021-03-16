@@ -1,17 +1,17 @@
 <template>
-  <div class="mad-circle-ripple-wrapper" @click="handleClick">
+  <div class="mad-ripple-wrapper" @click="onClick">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MadCircleRipple',
+  name: 'MadCircularRipple',
   methods: {
-    handleClick() {
+    onClick(event) {
       // creat ripple el
       const ripple = document.createElement('div')
-      ripple.classList.add('mad-circle-ripple')
+      ripple.classList.add('mad-circular-ripple')
       this.$el.appendChild(ripple)
 
       // set styles
@@ -28,5 +28,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'src/scss/plugins/circle-ripple';
+@import 'src/scss/plugins/circular-ripple';
 </style>

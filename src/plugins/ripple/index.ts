@@ -1,8 +1,8 @@
 import { App } from 'vue'
-import MadCircleRipple from './circle-ripple/index.vue'
+import MadCircularRipple from './circular-ripple/index.vue'
 
 export default (app: App): void => {
-  app.component(MadCircleRipple.name, MadCircleRipple)
+  app.component(MadCircularRipple.name, MadCircularRipple)
 }
 
-export { MadCircleRipple }
+export { MadCircularRipple }

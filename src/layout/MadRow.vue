@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'src/scss/layout/grid';
+@import 'src/scss/layout/row';
 
 .row.variant-gap {
   --columnGap: $column-gap;
