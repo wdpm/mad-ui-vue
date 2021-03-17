@@ -17,9 +17,9 @@
 
 <script>
 import MadDocPage from '@/../website/document/MadDocPage'
-import MadCodeBlock from '@/document/MadCodeBlock'
+import MadCodeBlock from '@/../packages/document/MadCodeBlock'
 
-import MadBreadcrumbUsageAlignment from '@/../website/components/breadcrumb/MadBreadcrumbUsageAlignment'
+import MadBreadcrumbUsageAlignment from '@/components/breadcrumb/MadBreadcrumbUsageAlignment'
 import MadBreadcrumbUsageAlignmentCode from '!raw-loader!@/../website/components/breadcrumb/MadBreadcrumbUsageAlignment'
 
 import MadBreadcrumbUsageBasic from '@/../website/components/breadcrumb/MadBreadcrumbUsageBasic'

@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'src/scss/utilities/display';
+@import '../../../packages/scss/utilities/display';
 
 .column-demo {
   background: lightskyblue;

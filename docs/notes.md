@@ -85,6 +85,8 @@ algolia
 
 - remove all namespace.mad-ui css class ,replaced by :v-deep
 - replace highlight.js with prism.js for showing line numbers and line highlight
+- alias for paths, not use ../../../path/to
+- all component use mad- prefix
 
 ## 粒子系统
 - 烟花

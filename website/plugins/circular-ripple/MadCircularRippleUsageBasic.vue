@@ -3,7 +3,8 @@
 </template>
 
 <script>
-import MadCircularRipple from '@/plugins/circular-ripple'
+
+import {MadCircularRipple} from "@/plugins/index";
 
 export default {
   name: 'MadCircularRippleUsageBasic',

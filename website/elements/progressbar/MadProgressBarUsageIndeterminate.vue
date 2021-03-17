@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { colorMapValuesNoLight } from '@/utils/propValidateHelper'
+import { colorMapValuesNoLight } from '@/../../../packages/utils/propValidateHelper'
 import MadProgressBar from '@/elements/MadProgressBar'
 
 export default {

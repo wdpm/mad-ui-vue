@@ -30,7 +30,7 @@
 
 <script>
 import MadPagination from '@/components/MadPagination'
-import { sizes } from '@/utils/propValidateHelper'
+import { sizes } from '@/../../../packages/utils/propValidateHelper'
 
 export default {
   name: 'MadPaginationUsageSize',

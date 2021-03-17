@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { sizes } from '@/utils/propValidateHelper'
+import { sizes } from '@/../../../packages/utils/propValidateHelper'
 import MadProgressBar from '@/elements/MadProgressBar'
 
 export default {

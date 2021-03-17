@@ -11,15 +11,15 @@
             >About
           </router-link>
         </li>
-        <mad-tree-item
-          v-for="(tree, index) in trees"
-          :key="tree.id || index"
-          class="nav-list-item"
-          :item-css-classes="['nav-list-item-link']"
-          :item="tree"
-          @click="clickNode($event)"
-        >
-        </mad-tree-item>
+<!--        <mad-tree-item-->
+<!--          v-for="(tree, index) in trees"-->
+<!--          :key="tree.id || index"-->
+<!--          class="nav-list-item"-->
+<!--          :item-css-classes="['nav-list-item-link']"-->
+<!--          :item="tree"-->
+<!--          @click="clickNode($event)"-->
+<!--        >-->
+<!--        </mad-tree-item>-->
       </ul>
     </nav>
     <main class="main">
@@ -42,11 +42,11 @@ import {
   views,
 } from './router/routes'
 
-import MadTreeItem from '@/document/MadTreeItem'
+// import MadTreeItem from '@/document/MadTreeItem'
 
 export default {
   components: {
-    MadTreeItem,
+    // MadTreeItem,
   },
   computed: {
     trees() {
@@ -151,7 +151,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'src/scss/base/_all';
+@import '../packages/scss/base/_all';
 
 // use this way to import 3rd-party css
 @import './../node_modules/highlight.js/styles/github.css';

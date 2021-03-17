@@ -11,7 +11,7 @@
 
 <script>
 import MadTag from '@/elements/MadTag'
-import { colorMapValuesNoLight, sizes } from '@/utils/propValidateHelper'
+import { colorMapValuesNoLight, sizes } from '@/../../../packages/utils/propValidateHelper'
 
 export default {
   name: 'MadTagUsageSkewCorner',

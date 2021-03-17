@@ -25,7 +25,7 @@
 
 <script>
 import MadTable from '@/elements/MadTable'
-import { colorMapValues } from '@/utils/propValidateHelper'
+import { colorMapValues } from '@/../../../packages/utils/propValidateHelper'
 
 export default {
   name: 'MadTableUsageColor',

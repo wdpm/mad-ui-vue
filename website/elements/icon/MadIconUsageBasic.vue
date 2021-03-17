@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'src/scss/mixins/all';
+@import '../../../packages/scss/mixins/all';
 
 .arrow {
   @include arrow-base();

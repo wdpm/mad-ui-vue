@@ -1,7 +1,7 @@
 @use 'sass:color';
 
-@import "../../src/scss/utilities/functions";
-@import "../../src/scss/vars/derived-variables";
+@import "../../packages/scss/utilities/functions";
+@import "../../packages/scss/vars/derived-variables";
 
 // test luminance and lightness
 $primary-luminance: luminance($primary) !default;

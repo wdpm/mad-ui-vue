@@ -86,7 +86,7 @@
 </template>
 
 <script>
-import MadTimeline from '@/views/MadTimeline'
+import MadTimeline from '@/../../../packages/views/MadTimeline'
 
 export default {
   name: 'MadTimelineUsageBasic',

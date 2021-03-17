@@ -4,7 +4,7 @@
 
 <script>
 import MadTextArea from '@/form/MadTextArea'
-import { colorMapSemanticValues, sizes } from '@/utils/propValidateHelper'
+import { colorMapSemanticValues, sizes } from '@/../../../packages/utils/propValidateHelper'
 
 export default {
   name: 'MadTextAreaUsageSize',
