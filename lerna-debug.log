@@ -1,22 +1,21 @@
 0 silly argv {
-0 silly argv   _: [ 'create' ],
+0 silly argv   _: [ 'bootstrap' ],
 0 silly argv   lernaVersion: '4.0.0',
-0 silly argv   '$0': '..\\..\\node_modules\\lerna\\cli.js',
-0 silly argv   name: '@mad-ui/time-line'
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js'
 0 silly argv }
 1 notice cli v4.0.0
 2 verbose rootPath D:\Code\WebStormProjects\mad-ui-vue
 3 info versioning independent
-4 error Error: canceled
-4 error     at Interface.<anonymous> (D:\Code\WebStormProjects\mad-ui-vue\node_modules\read\lib\read.js:66:13)
-4 error     at Interface.emit (events.js:315:20)
-4 error     at Interface._ttyWrite (readline.js:875:16)
-4 error     at ReadStream.onkeypress (readline.js:213:10)
-4 error     at ReadStream.emit (events.js:315:20)
-4 error     at emitKeys (internal/readline/utils.js:345:14)
-4 error     at emitKeys.next (<anonymous>)
-4 error     at ReadStream.onData (readline.js:1144:36)
-4 error     at ReadStream.emit (events.js:315:20)
-4 error     at addChunk (_stream_readable.js:309:12)
-4 error     at readableAddChunk (_stream_readable.js:284:9)
-4 error     at ReadStream.Readable.push (_stream_readable.js:223:10)
+4 error JSONError: Unexpected token "/" (0x2F) in JSON at position 2445 while parsing near "...ee-item\": \"^0.0.0\",\n//    \"@mad-ui/utils..." in packages\mad-ui\package.json
+4 error
+4 error [0m [90m 79 |[39m     [32m"@mad-ui/timeline"[39m[33m:[39m [32m"^0.0.0"[39m[33m,[39m[0m
+4 error [0m [90m 80 |[39m     [32m"@mad-ui/tree-item"[39m[33m:[39m [32m"^0.0.0"[39m[33m,[39m[0m
+4 error [0m[31m[1m>[22m[39m[90m 81 |[39m [90m//    "@mad-ui/utils": "^0.0.0",[39m[0m
+4 error [0m [90m    |[39m [31m[1m^[22m[39m[0m
+4 error [0m [90m 82 |[39m     [32m"@mad-ui/wave"[39m[33m:[39m [32m"^0.0.0"[39m[0m
+4 error [0m [90m 83 |[39m   }[0m
+4 error [0m [90m 84 |[39m }[0m
+4 error
+4 error     at parseJson (D:\Code\WebStormProjects\mad-ui-vue\node_modules\parse-json\index.js:29:21)
+4 error     at parse (D:\Code\WebStormProjects\mad-ui-vue\node_modules\load-json-file\index.js:15:9)
+4 error     at module.exports (D:\Code\WebStormProjects\mad-ui-vue\node_modules\load-json-file\index.js:18:47)

@@ -32,17 +32,15 @@
 </template>
 
 <script>
-import {
-  elements,
-  components,
-  formElements,
-  layout,
-  patterns,
-  plugins,
-  views,
-} from './router/routes'
-
-// import MadTreeItem from '@/document/MadTreeItem'
+// import {
+//   elements,
+//   components,
+//   formElements,
+//   layout,
+//   patterns,
+//   plugins,
+//   views,
+// } from './router/routes'
 
 export default {
   components: {
@@ -151,7 +149,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../packages/scss/base/_all';
+@import 'packages/styles/base/_all';
 
 // use this way to import 3rd-party css
 @import './../node_modules/highlight.js/styles/github.css';

@@ -1,8 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/index'
-// import MadRipplePlugin from '@/plugins/index'
+import MadUI from 'mad-ui'
 
 const app = createApp(App)
-// app.use(MadRipplePlugin)
-app.use(router).mount('#app')
+app.use(MadUI)
+app.use(router)
+app.mount('#app')

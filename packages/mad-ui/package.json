@@ -1,0 +1,84 @@
+{
+  "name": "mad-ui",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "'wdpm' <1137299673@qq.com>",
+  "homepage": "https://github.com/mad-center/mad-ui-vue#readme",
+  "license": "ISC",
+  "main": "lib/mad-ui.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mad-center/mad-ui-vue.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/mad-center/mad-ui-vue/issues"
+  },
+  "dependencies": {
+    "@mad-ui/after-image": "^0.0.0",
+    "@mad-ui/alert": "^0.0.0",
+    "@mad-ui/block": "^0.0.0",
+    "@mad-ui/box": "^0.0.0",
+    "@mad-ui/breadcrumb": "^0.0.0",
+    "@mad-ui/button": "^0.0.0",
+    "@mad-ui/circle-ripple": "^0.0.0",
+    "@mad-ui/circular-ripple": "^0.0.0",
+    "@mad-ui/circular-text": "^0.0.0",
+    "@mad-ui/circular-text-group": "^0.0.0",
+    "@mad-ui/clip-path": "^0.0.0",
+    "@mad-ui/code-block": "^0.0.0",
+    "@mad-ui/collapse-transition": "^0.0.0",
+    "@mad-ui/column": "^0.0.0",
+    "@mad-ui/container": "^0.0.0",
+    "@mad-ui/cover": "^0.0.0",
+    "@mad-ui/delete": "^0.0.0",
+    "@mad-ui/divider": "^0.0.0",
+    "@mad-ui/dropdown": "^0.0.0",
+    "@mad-ui/expansion": "^0.0.0",
+    "@mad-ui/gear": "^0.0.0",
+    "@mad-ui/grid": "^0.0.0",
+    "@mad-ui/header": "^0.0.0",
+    "@mad-ui/icon": "^0.0.0",
+    "@mad-ui/image": "^0.0.0",
+    "@mad-ui/image-cross": "^0.0.0",
+    "@mad-ui/image-overlap": "^0.0.0",
+    "@mad-ui/image-parallax": "^0.0.0",
+    "@mad-ui/image-reveal": "^0.0.0",
+    "@mad-ui/input": "^0.0.0",
+    "@mad-ui/input-add-on": "^0.0.0",
+    "@mad-ui/inset-border": "^0.0.0",
+    "@mad-ui/letter-box": "^0.0.0",
+    "@mad-ui/letter-paper": "^0.0.0",
+    "@mad-ui/media": "^0.0.0",
+    "@mad-ui/menu": "^0.0.0",
+    "@mad-ui/modal": "^0.0.0",
+    "@mad-ui/notification": "^0.0.0",
+    "@mad-ui/orbit-spinner": "^0.0.0",
+    "@mad-ui/pagination": "^0.0.0",
+    "@mad-ui/progress": "^0.0.0",
+    "@mad-ui/row": "^0.0.0",
+    "@mad-ui/select": "^0.0.0",
+    "@mad-ui/shield": "^0.0.0",
+    "@mad-ui/shutter": "^0.0.0",
+    "@mad-ui/table": "^0.0.0",
+    "@mad-ui/tag": "^0.0.0",
+    "@mad-ui/text": "^0.0.0",
+    "@mad-ui/text-area": "^0.0.0",
+    "@mad-ui/timeline": "^0.0.0",
+    "@mad-ui/tree-item": "^0.0.0",
+    "@mad-ui/utils": "^0.0.0",
+    "@mad-ui/wave": "^0.0.0"
+  }
+}
