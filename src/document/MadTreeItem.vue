@@ -12,7 +12,7 @@
     >
       <span class="tree-item-text">{{ item.text }}</span>
       <span v-if="isFolder" class="tree-item-toggle"
-        >[{{ isOpen ? '-' : '+' }}]</span
+        >{{ isOpen ? '-' : '+' }}</span
       >
     </component>
 

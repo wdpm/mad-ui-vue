@@ -1,4 +1,8 @@
 module.exports = {
+  // change entry file
+  pages: {
+    index: 'website/main.ts',
+  },
   configureWebpack: {
     //  https://vue-loader.vuejs.org/guide/css-modules.html
     module: {
