@@ -32,15 +32,15 @@
 </template>
 
 <script>
-// import {
-//   elements,
-//   components,
-//   formElements,
-//   layout,
-//   patterns,
-//   plugins,
-//   views,
-// } from './router/routes'
+import {
+  elements,
+  components,
+  formElements,
+  layout,
+  patterns,
+  plugins,
+  views,
+} from './router/routes'
 
 export default {
   components: {
