@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const notification = require('..');
+const notification = require('..')
 
 describe('@mad-ui/notification', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

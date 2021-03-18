@@ -64,3 +64,12 @@ $ standard-version
 ## finally
 
 集成 npm，这步就是将上述一些指令写到npm scripts中，这样就不用多次手动输入了。
+
+---
+updated:
+
+1. 使用 commitizen 规范提交格式
+2. commitlint 检查格式(husky commit-msg hook)  => 保证提交信息规范
+3. 执行npm run lint-fix(husky pre-commit hook) => 保证代码已格式化
+4. 执行npm run test(husky pre-pushhook) => 保证代码测试已经通过
+5. push with confidence

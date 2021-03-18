@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const circularTextGroup = require('..');
+const circularTextGroup = require('..')
 
 describe('@mad-ui/circular-text-group', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const wave = require('..');
+const wave = require('..')
 
 describe('@mad-ui/wave', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

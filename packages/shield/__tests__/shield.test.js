@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const shield = require('..');
+const shield = require('..')
 
 describe('@mad-ui/shield', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

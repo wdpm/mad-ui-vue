@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const header = require('..');
+const header = require('..')
 
 describe('@mad-ui/header', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

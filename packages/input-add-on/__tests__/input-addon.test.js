@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const inputAddon = require('..');
+const inputAddon = require('..')
 
 describe('@mad-ui/input-addon', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

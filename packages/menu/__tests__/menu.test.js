@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const menu = require('..');
+const menu = require('..')
 
 describe('@mad-ui/menu', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

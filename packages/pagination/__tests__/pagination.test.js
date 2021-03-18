@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const pagination = require('..');
+const pagination = require('..')
 
 describe('@mad-ui/pagination', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const progress = require('..');
+const progress = require('..')
 
 describe('@mad-ui/progress', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

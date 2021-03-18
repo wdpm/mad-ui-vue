@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const circularText = require('..');
+const circularText = require('..')
 
 describe('@mad-ui/circular-text', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

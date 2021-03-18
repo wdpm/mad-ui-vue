@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const revealImage = require('..');
+const revealImage = require('..')
 
 describe('@mad-ui/reveal-image', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

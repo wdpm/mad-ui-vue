@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const letterBox = require('..');
+const letterBox = require('..')
 
 describe('@mad-ui/letter-box', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

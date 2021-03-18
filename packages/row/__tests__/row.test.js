@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const row = require('..');
+const row = require('..')
 
 describe('@mad-ui/row', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

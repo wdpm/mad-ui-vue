@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const imageCross = require('..');
+const imageCross = require('..')
 
 describe('@mad-ui/image-cross', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

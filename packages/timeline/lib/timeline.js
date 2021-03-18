@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-module.exports = timeline;
+module.exports = timeline
 
 function timeline() {
-    // TODO
+  // TODO
 }

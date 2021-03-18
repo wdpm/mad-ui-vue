@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const letterPaper = require('..');
+const letterPaper = require('..')
 
 describe('@mad-ui/letter-paper', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

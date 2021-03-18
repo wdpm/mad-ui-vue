@@ -1,13 +1,30 @@
 module.exports = {
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
+  root: true,
+
+  extends: [
+    'plugin:vue/essential',
+    'plugin:vue/vue3-recommended',
+    'plugin:@typescript-eslint/recommended',
+    '@vue/typescript',
+  ],
+
+  plugins: ['@typescript-eslint'],
+
   env: {
-    browser: true,
     node: true,
+    builtin: true,
+    es6: true,
   },
-  extends: ['plugin:vue/vue3-essential', 'eslint:recommended', '@vue/typescript/recommended', '@vue/prettier', '@vue/prettier/@typescript-eslint'],
+
+  parser: 'vue-eslint-parser',
+
+  parserOptions: {
+    extraFileExtensions: ['.vue'],
+    parser: '@typescript-eslint/parser',
+    project: './tsconfig.json',
+    sourceType: 'module',
+  },
+
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -18,7 +35,6 @@ module.exports = {
     '@typescript-eslint/no-this-alias': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     'vue/no-unused-components': 'off',
-    // disable the rule for all files
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['off'],

@@ -177,5 +177,5 @@ export {
 }
 
 export default {
-  install
+  install,
 }

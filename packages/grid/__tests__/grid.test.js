@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const grid = require('..');
+const grid = require('..')
 
 describe('@mad-ui/grid', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

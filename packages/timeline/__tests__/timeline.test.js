@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const timeline = require('..');
+const timeline = require('..')
 
 describe('@mad-ui/timeline', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

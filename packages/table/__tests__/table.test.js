@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const table = require('..');
+const table = require('..')
 
 describe('@mad-ui/table', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const collapseTransition = require('..');
+const collapseTransition = require('..')
 
 describe('@mad-ui/collapse-transition', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

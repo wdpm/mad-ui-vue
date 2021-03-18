@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const tag = require('..');
+const tag = require('..')
 
 describe('@mad-ui/tag', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

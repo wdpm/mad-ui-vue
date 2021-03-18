@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const orbitSpinner = require('..');
+const orbitSpinner = require('..')
 
 describe('@mad-ui/orbit-spinner', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const clipPath = require('..');
+const clipPath = require('..')
 
 describe('@mad-ui/clip-path', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

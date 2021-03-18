@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const codeBlock = require('..');
+const codeBlock = require('..')
 
 describe('@mad-ui/code-block', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

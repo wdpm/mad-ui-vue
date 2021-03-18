@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const image = require('..');
+const image = require('..')
 
 describe('@mad-ui/image', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

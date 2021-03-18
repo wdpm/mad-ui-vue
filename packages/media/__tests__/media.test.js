@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const media = require('..');
+const media = require('..')
 
 describe('@mad-ui/media', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

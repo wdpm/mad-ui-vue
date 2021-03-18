@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const gear = require('..');
+const gear = require('..')
 
 describe('@mad-ui/gear', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const textArea = require('..');
+const textArea = require('..')
 
 describe('@mad-ui/text-area', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

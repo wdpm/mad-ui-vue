@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const imageParallax = require('..');
+const imageParallax = require('..')
 
 describe('@mad-ui/image-parallax', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

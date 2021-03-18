@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const treeItem = require('..');
+const treeItem = require('..')
 
 describe('@mad-ui/tree-item', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

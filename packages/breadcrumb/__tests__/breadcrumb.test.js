@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const breadcrumb = require('..');
+const breadcrumb = require('..')
 
 describe('@mad-ui/breadcrumb', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

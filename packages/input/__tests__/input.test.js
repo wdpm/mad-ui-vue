@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const input = require('..');
+const input = require('..')
 
 describe('@mad-ui/input', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

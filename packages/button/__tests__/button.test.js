@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const button = require('..');
+const button = require('..')
 
 describe('@mad-ui/button', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

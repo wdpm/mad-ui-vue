@@ -19,8 +19,24 @@
       "dom",
       "dom.iterable",
       "scripthost"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@type/*": [
+        "./@types/*"
+      ],
+      "@component/*": [
+        "./website/components/*"
+      ]
+    }
   },
+  "include": [
+    "./@types/**/*.d.ts",
+    "./website/**/*.ts",
+    "./website/**/*.vue",
+    "./packages/**/*.ts",
+    "./packages/**/*.vue"
+  ],
   "exclude": [
     "node_modules"
   ]

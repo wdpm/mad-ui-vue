@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const box = require('..');
+const box = require('..')
 
 describe('@mad-ui/box', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

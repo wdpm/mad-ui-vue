@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const shutter = require('..');
+const shutter = require('..')
 
 describe('@mad-ui/shutter', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

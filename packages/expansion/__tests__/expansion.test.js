@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const expansion = require('..');
+const expansion = require('..')
 
 describe('@mad-ui/expansion', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

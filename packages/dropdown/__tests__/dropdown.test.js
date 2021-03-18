@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const dropdown = require('..');
+const dropdown = require('..')
 
 describe('@mad-ui/dropdown', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

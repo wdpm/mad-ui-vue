@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const circleRipple = require('..');
+const circleRipple = require('..')
 
 describe('@mad-ui/circle-ripple', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

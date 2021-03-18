@@ -10,20 +10,21 @@ import {
   views,
 } from './routes'
 
-const mapRoutes = (items, path) =>
-  items.map((item) => ({
-    name: item.name,
-    path: `/${path}/${item.name}`,
-    component: require(`@/../website/${path}/${item.name}/index`).default,
-  }))
+// const mapRoutes = (items, path) => {
+//   return items.map((item) => ({
+//     name: item.name,
+//     path: `/${path}/${item.name}`,
+//     component: require(`@/../website/${path}/${item.name}/index`).default,
+//   }))
+// }
 
-const elementRoutes = mapRoutes(elements, 'elements')
-const componentRoutes = mapRoutes(components, 'components')
-const formRoutes = mapRoutes(formElements, 'form')
-const layoutRoutes = mapRoutes(layout, 'layout')
-const patternRoutes = mapRoutes(patterns, 'patterns')
-const pluginRoutes = mapRoutes(plugins, 'plugins')
-const viewRoutes = mapRoutes(views, 'views')
+// const elementRoutes = mapRoutes(elements, 'elements')
+// const componentRoutes = mapRoutes(components, 'components')
+// const formRoutes = mapRoutes(formElements, 'form')
+// const layoutRoutes = mapRoutes(layout, 'layout')
+// const patternRoutes = mapRoutes(patterns, 'patterns')
+// const pluginRoutes = mapRoutes(plugins, 'plugins')
+// const viewRoutes = mapRoutes(views, 'views')
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -34,18 +35,18 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/about',
     name: 'About',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../About.vue'),
+    component: () => import(/* webpackChunkName: "about" */ '../About.vue'),
   },
-].concat(
-  elementRoutes,
-  componentRoutes,
-  formRoutes,
-  layoutRoutes,
-  patternRoutes,
-  pluginRoutes,
-  viewRoutes
-)
+]
+  .concat
+  // elementRoutes,
+  // componentRoutes,
+  // formRoutes,
+  // layoutRoutes,
+  // patternRoutes,
+  // pluginRoutes,
+  // viewRoutes
+  ()
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

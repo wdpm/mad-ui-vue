@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const select = require('..');
+const select = require('..')
 
 describe('@mad-ui/select', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

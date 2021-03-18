@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const divider = require('..');
+const divider = require('..')
 
 describe('@mad-ui/divider', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

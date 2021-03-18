@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const container = require('..');
+const container = require('..')
 
 describe('@mad-ui/container', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

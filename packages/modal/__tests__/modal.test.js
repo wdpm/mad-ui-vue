@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const modal = require('..');
+const modal = require('..')
 
 describe('@mad-ui/modal', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})
